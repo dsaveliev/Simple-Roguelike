@@ -1,4 +1,4 @@
-from world import *
+from modules import *
 
 class Control(object):
   def __init__(self):

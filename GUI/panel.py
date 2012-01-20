@@ -1,5 +1,4 @@
-import textwrap
-from world import *
+from modules import *
 
 class Panel(object):
   """docstring for Panel"""

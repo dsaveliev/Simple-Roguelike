@@ -1,4 +1,4 @@
-from world import *
+from modules import *
 
 class Map(object):
   """ Description for map """
