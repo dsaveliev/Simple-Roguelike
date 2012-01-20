@@ -47,8 +47,7 @@ class World(object):
     objects = Creature.get_by_position(x, y)
     for object in objects:
       if object and not object.passable:
-        if object: return object
-        else: return True
+        return object
 
   def generate_objects(self):
     for room in self.map.rooms:
