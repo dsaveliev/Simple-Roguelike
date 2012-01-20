@@ -1,5 +1,3 @@
-from initialize import *
-
 class World(object):
   _instance = None
   _initialized = None
@@ -101,23 +99,5 @@ class World(object):
     libtcod.console_flush()
     self.turn()
 
-import text as Text
-from GUI.control      import Control
-from GUI.panel        import Panel
-from GUI.menu         import Menu
 
-from Module.ai        import Ai
-from Module.fight     import Fight
-from Module.stat      import Stat
-from Module.stats     import Stats
-import Module.effect      as Effect
-import Module.action      as Action
-
-from Objects.object   import Object
-from Objects.tile     import Tile
-from Objects.item     import Item
-from Objects.creature import Creature
-from Objects.player   import Player
-
-from map              import Map
-
+from modules import *

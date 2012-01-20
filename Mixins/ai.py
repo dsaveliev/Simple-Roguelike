@@ -1,7 +1,3 @@
-from world import *
-import operator
-import math
-
 class Ai(object):
   """docstring for Ai"""
   def __init__(self):
@@ -54,3 +50,5 @@ class Ai(object):
 
   def take_turn(self):
     self.behavior()
+
+from modules import *

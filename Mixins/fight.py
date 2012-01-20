@@ -1,5 +1,3 @@
-from world import *
-
 class Fight(object):
   """docstring for Fighter"""
   def __init__(self):
@@ -28,3 +26,5 @@ class Fight(object):
     else:
       Text.event_unsuccessful_attack(self.world.panel, self.name, target.name)
 
+
+from modules import *

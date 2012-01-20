@@ -1,5 +1,3 @@
-from world import *
-
 ### self - Item, owner - Creation
 def apply_all(item, owner):
   if item.effects_use == 'ALL':
@@ -54,5 +52,5 @@ def confusion(params, owner):
     Text.event_confusion(owner.world.panel, target.name, str(params[0]))
     target.confuse(params[0])
   
-
     
+from modules import *

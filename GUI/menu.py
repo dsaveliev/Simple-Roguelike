@@ -1,4 +1,4 @@
-from world import *
+from modules import *
 
 class Menu(object):
   """docstring for Menu"""

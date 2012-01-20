@@ -1,4 +1,4 @@
-from initialize import *
+from modules import *
 
 ### TEXT
 def corpse_name(name):

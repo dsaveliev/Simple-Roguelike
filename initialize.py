@@ -1,4 +1,4 @@
-from config import *
+from modules import *
 
 ### Set terminal font
 libtcod.console_set_custom_font(FONT, libtcod.FONT_TYPE_GREYSCALE | libtcod.FONT_LAYOUT_TCOD)

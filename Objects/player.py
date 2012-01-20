@@ -1,4 +1,4 @@
-from world import *
+from modules import *
 
 class Player(Creature):
   """ Description of player """

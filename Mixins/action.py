@@ -1,5 +1,3 @@
-from world import *
-
 ### self - Item, target - Creation
 def apply(item, owner, action, supply=[]):
   if action == 'GENERAL':
@@ -36,3 +34,6 @@ def throw(item, owner):
 
 def equip(item, owner):
   pass
+
+
+from modules import *

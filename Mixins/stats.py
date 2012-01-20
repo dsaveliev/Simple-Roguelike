@@ -1,4 +1,4 @@
-from world import *
+from stat import Stat
 
 class Stats(object):
   """docstring for Stats"""
@@ -13,3 +13,6 @@ class Stats(object):
       return stat.name + ':' + "{0:3}".format(stat.value) + '/' + str(stat.base_value)
     else:
       return stat.name + ':' + "{0:3}".format(stat.value)
+
+
+from modules import *

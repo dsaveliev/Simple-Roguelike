@@ -1,5 +1,3 @@
-from world import *
-
 class Stat(object):
   """docstring for Stat"""
   def __init__(self, type, value):
@@ -11,3 +9,4 @@ class Stat(object):
     self.base_value = value
     self.value = value
 
+from modules import *

@@ -1,4 +1,4 @@
-from world import *
+from modules import *
 
 class Creature(Object, Stats, Fight, Ai):
   list = []
