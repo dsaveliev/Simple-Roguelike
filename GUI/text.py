@@ -87,6 +87,10 @@ def event_lightning_bolt(panel, target, value):
   if value != '' and target != '':
     panel.message('Lightning bolt strikes ' + target + ' for ' + value + ' HP', libtcod.dark_yellow)
 
+def event_fireball(panel, target, value):
+  if value != '' and target != '':
+    panel.message('Fireball strikes ' + target + ' for ' + value + ' HP', libtcod.flame)
+
 def event_confusion(panel, target, value):
   if value != '' and target != '':
     panel.message('The eyes of the ' + target + ' look vacant, as he starts to stumble around!', libtcod.light_cyan)

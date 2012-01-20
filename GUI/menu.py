@@ -36,7 +36,7 @@ class Menu(object):
 
     key = libtcod.Key()
     mouse = libtcod.Mouse()
-    libtcod.sys_wait_for_event(libtcod.EVENT_KEY_PRESS, key, mouse, None)
+    libtcod.sys_wait_for_event(libtcod.EVENT_KEY_PRESS | libtcod.EVENT_MOUSE, key, mouse, None)
 
     result = key.c - start_index
     if result in range(0,len(options)): return result

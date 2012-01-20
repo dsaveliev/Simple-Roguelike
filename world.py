@@ -21,6 +21,7 @@ class World(object):
       self.map = Map()
       ### Objects
       self.player = Player()
+      self.aim = Aim()
       ### World generation
       self.generate()
 
@@ -29,7 +30,7 @@ class World(object):
     if libtcod.map_is_in_fov(self.map.fov_map, x, y):
       objects = Creature.get_by_position(x, y)
       objects.extend(Item.get_by_position(x, y))
-      if not include_player:
+      if not include_player and self.player in objects:
         objects.remove(self.player)
       for obj in objects:
         names.append(obj.name)
@@ -73,6 +74,7 @@ class World(object):
     self.map.draw()
     Item.draw_all()
     Creature.draw_all()
+    Object.draw_all()
     self.panel.draw()
 
   ### Make turn ###############################################################

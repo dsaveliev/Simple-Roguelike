@@ -28,6 +28,7 @@ from Objects.object   import Object
 from Objects.tile     import Tile
 from Objects.item     import Item
 from Objects.creature import Creature
+from Objects.aim      import Aim
 from Objects.player   import Player
 
 from map              import Map
