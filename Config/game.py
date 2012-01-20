@@ -84,7 +84,8 @@ GAME_STATES = [
   'PLAYING',
   'EXIT',
   'DEAD',
-  'MENU'
+  'MENU',
+  'AIM'
 ]
 ### Stats
 STATS = {

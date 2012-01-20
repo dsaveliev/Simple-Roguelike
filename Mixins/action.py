@@ -19,6 +19,7 @@ def apply(item, owner, action, supply=[]):
 
   if item.durability == 'DISPOSABLE':
     owner.inventory.remove(item)
+    del item
 
 def quaff(item, owner):
   Effect.apply_all(item, owner)

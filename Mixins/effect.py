@@ -23,6 +23,9 @@ def apply(effect, params, owner):
     lightning_bolt(params, owner)
   elif effect == 'CONFUSION':
     confusion(params, owner)
+  elif effect == 'FIREBALL':
+    owner.aim(fireball, params)
+    
 
 def heal(params, owner):
   owner.stats['HP'].value += params[0]
@@ -52,5 +55,9 @@ def confusion(params, owner):
     Text.event_confusion(owner.world.panel, target.name, str(params[0]))
     target.confuse(params[0])
   
+def fireball(params, target):
+  if target:
+    Text.event_fireball(target.world.panel, target.name, str(params[0]))
+    target.take_damage(params[0])
     
 from modules import *

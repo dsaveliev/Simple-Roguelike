@@ -56,6 +56,7 @@ class Player(Creature):
     self.world.game_state = 'DEAD'
     self.drop_all()
     Text.event_death(self.world.panel, self.name)
+    del self
 
   def drop(self, item=None):
     if not item:
@@ -65,6 +66,9 @@ class Player(Creature):
       item.x, item.y = self.x, self.y
       Item.list.append(item)
       Text.event_drop(self.world.panel, self.name, item.name)
+
+  def aim(self, effect, params):
+    self.world.aim.activate(effect, params)
   #############################################################################
 
   def get_item_from_inventory(self, header, action = 'GENERAL'):

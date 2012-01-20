@@ -17,7 +17,8 @@ EFFECTS = [
   'LEARN', # ...
   'LIGHTNING BOLT', # range, hit points
   'LIGHTNING SPHERE', # range, hit points
-  'CONFUSION' # turns, hit points
+  'CONFUSION', # turns, hit points
+  'FIREBALL' # range, hit points
 ]
 
 DURABILITY = [
@@ -125,7 +126,27 @@ ITEMS = {
       'READ'
     ],
     'DURABILITY':'DISPOSABLE',
-    'PREVALENCE':40
+    'PREVALENCE':30
+  },
+  
+  'SCROLL OF FIREBALL':{
+    'OBJECT':{
+      'NAME':'Scroll of fireball',
+      'CHAR':'#',
+      'COLOR':libtcod.flame,
+      'TRANSPARENT':True,
+      'PASSABLE':True,
+      'WEIGHT':1
+    },
+    'EFFECTS USE':'ALL',
+    'EFFECTS':{
+      'FIREBALL':[15, 5] # hit points, range
+    },
+    'ACTIONS':[
+      'READ'
+    ],
+    'DURABILITY':'DISPOSABLE',
+    'PREVALENCE':250
   }
 
 }

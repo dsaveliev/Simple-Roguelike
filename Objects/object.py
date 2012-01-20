@@ -22,6 +22,11 @@ class Object(object):
   def clear(self):
     libtcod.console_put_char(con, self.x, self.y, ' ')
 
+  def distance_to(self, start, goal):
+    dx = goal.x - start.x
+    dy = goal.y - start.y
+    return math.sqrt(dx ** 2 + dy ** 2)
+
   def set_position(self, position):
     self.x = position[0]
     self.y = position[1]

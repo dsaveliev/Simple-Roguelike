@@ -21,11 +21,6 @@ class Ai(object):
       obstacle = self.move(v[0][0], v[0][1])
       if not obstacle: break
 
-  def distance_to(self, start, goal):
-    dx = goal.x - start.x
-    dy = goal.y - start.y
-    return math.sqrt(dx ** 2 + dy ** 2)
-
   def confuse(self, time):
     self.deviation_time = time
     self.behavior = self.confused_behavior

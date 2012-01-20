@@ -1,5 +1,16 @@
 from modules import *
 
+AIM = {
+  'OBJECT':{
+    'NAME':'Aim',
+    'CHAR':'X',
+    'COLOR':libtcod.white,
+    'TRANSPARENT':False,
+    'PASSABLE':False,
+    'WEIGHT':0
+  }
+}
+
 ### Creatures
 CREATURES = {
   'PLAYER':{

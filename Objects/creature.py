@@ -45,6 +45,7 @@ class Creature(Object, Stats, Fight, Ai):
     Creature.list.remove(self)
     self.drop_all()
     Text.event_death(self.world.panel, self.name)
+    del self
   #############################################################################
 
   def draw(self):
