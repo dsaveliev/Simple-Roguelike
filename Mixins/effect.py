@@ -12,52 +12,40 @@ def apply_all(item, owner):
 
 def apply(effect, params, owner):
   if effect == 'HEAL':
-    Text.event_heal(owner.world.panel, owner.name, str(params[0]))
-    heal(params, owner)
+    owner.action_on_himself(heal, params)
   elif effect == 'POISON':
-    Text.event_poison(owner.world.panel, owner.name, str(params[0]))
-    poison(params, owner)
+    owner.action_on_himself(poison, params)
   elif effect == 'LIGHTNING SPHERE':
-    lightning_sphere(params, owner)
+    owner.action_on_area(lightning_bolt, params)
   elif effect == 'LIGHTNING BOLT':
-    lightning_bolt(params, owner)
+    owner.action_on_nearest_target(lightning_bolt, params)
   elif effect == 'CONFUSION':
-    confusion(params, owner)
+    owner.action_on_target(confusion, params)
   elif effect == 'FIREBALL':
-    owner.aim(fireball, params)
-    
+    owner.action_on_target(fireball, params)
 
-def heal(params, owner):
-  owner.stats['HP'].value += params[0]
-  if owner.stats['HP'].value > owner.stats['HP'].base_value:
-    owner.stats['HP'].value = owner.stats['HP'].base_value
+def heal(params, target):
+  Text.event_heal(target.world.panel, target.name, str(params[0]))
+  target.stats['HP'].value += params[0]
+  if target.stats['HP'].value > target.stats['HP'].base_value:
+    target.stats['HP'].value = target.stats['HP'].base_value
 
-def poison(params, owner):
-  owner.stats['HP'].value -= params[0]
-  if owner.stats['HP'].value <= 0:
-    owner.death()
+def poison(params, target):
+  Text.event_poison(target.world.panel, target.name, str(params[0]))
+  target.stats['HP'].value -= params[0]
+  if target.stats['HP'].value <= 0:
+    target.death()
 
-def lightning_sphere(params, owner):
-  targets = owner.get_surrounding_creatures(params[1])
-  for target in targets:
-    Text.event_lightning_sphere(owner.world.panel, target.name, str(params[0]))
-    target.take_damage(params[0])
+def lightning_bolt(params, target):
+  Text.event_lightning_bolt(target.world.panel, target.name, str(params[0]))
+  target.take_damage(params[0])
 
-def lightning_bolt(params, owner):
-  target = owner.get_nearest_creature(params[1])
-  if target:
-    Text.event_lightning_bolt(owner.world.panel, target.name, str(params[0]))
-    target.take_damage(params[0])
-
-def confusion(params, owner):
-  target = owner.get_nearest_creature(params[1])
-  if target:
-    Text.event_confusion(owner.world.panel, target.name, str(params[0]))
-    target.confuse(params[0])
+def confusion(params, target):
+  Text.event_confusion(target.world.panel, target.name, str(params[0]))
+  target.confuse(params[0])
   
 def fireball(params, target):
-  if target:
-    Text.event_fireball(target.world.panel, target.name, str(params[0]))
-    target.take_damage(params[0])
+  Text.event_fireball(target.world.panel, target.name, str(params[0]))
+  target.take_damage(params[0])
     
 from modules import *

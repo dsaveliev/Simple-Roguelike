@@ -67,8 +67,20 @@ class Player(Creature):
       Item.list.append(item)
       Text.event_drop(self.world.panel, self.name, item.name)
 
-  def aim(self, effect, params):
+  def action_on_target(self, effect, params):
     self.world.aim.activate(effect, params)
+
+  def action_on_area(self, effect, params):
+    targets = self.get_surrounding_creatures(params[1])
+    for target in targets:
+      effect(params, target)
+  
+  def action_on_nearest_target(self, effect, params):
+    target = self.get_nearest_creature(params[1])
+    effect(params, target)
+  
+  def action_on_himself(self, effect, params):
+    effect(params, self)
   #############################################################################
 
   def get_item_from_inventory(self, header, action = 'GENERAL'):
