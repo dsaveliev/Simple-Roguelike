@@ -4,6 +4,7 @@ from modules import *
 LIMIT_FPS     = 20
 FONT          = './Fonts/arial12x12.png'
 TITLE         = 'Tombs of the Ancient Kings'
+SPLASH_IMAGE  = './Images/menu_background.png'
 
 ### Set terminal size
 SCREEN_WIDTH  = 80

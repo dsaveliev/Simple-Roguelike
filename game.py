@@ -29,6 +29,9 @@ class Game(object):
     self.__generate_objects()
     Text.event_welcome(self.panel, self.player.name)
 
+  def continue_game(self):
+    pass
+
   def start_game(self):
     while not libtcod.console_is_window_closed():
       libtcod.console_clear(con)
@@ -37,6 +40,22 @@ class Game(object):
       libtcod.console_flush()
       self.__turn()
       if self.state == 'EXIT':
+        break
+
+  def main_menu(self):
+    image = libtcod.image_load(SPLASH_IMAGE)
+    while not libtcod.console_is_window_closed():
+      libtcod.image_blit_2x(image, 0, 0, 0)
+      libtcod.console_flush()
+      choice = self.menu.show(Text.main_menu(), 
+          Text.main_menu_options(),
+          (5, None))
+      if choice == 0: 
+        self.new_game()
+        self.start_game()
+      elif choice == 1:
+        pass
+      elif choice == 2:
         break
 
   ### Generate new game ######################################################

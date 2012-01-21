@@ -1,5 +1,6 @@
 from game import * 
 
 game = Game()
-game.new_game()
-game.start_game()
+game.main_menu()
+#game.new_game()
+#game.start_game()

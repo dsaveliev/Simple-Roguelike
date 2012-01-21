@@ -4,6 +4,7 @@ from modules import *
 def corpse_name(name):
   return 'Corpse of ' + name
 
+### Menu headers ##############################################################
 def inventory_use():
   return 'Use item'
 
@@ -16,7 +17,14 @@ def inventory_pick_up():
 def inventory_empty():
   return 'Inventory empty'
 
-### EVENTS
+def main_menu():
+  return 'Welcome, brave hero!'
+
+def main_menu_options():
+  return ['Play a new game', 'Continue last game', 'Quit']
+###############################################################################
+
+### EVENTS ####################################################################
 def event_death(panel, name):
   if name != '':
     panel.message(name + ' is dead!', libtcod.dark_red)
@@ -50,6 +58,7 @@ def event_nothing_to_pick_up(panel):
 def event_inventory_full(panel, name):
   if name != '':
     panel.message('Your inventory is full, cannot pick up ' + name + '.', libtcod.dark_orange)
+###############################################################################
 
 ### ACTIONS ###################################################################
 def event_quaff(panel, owner, name):
@@ -78,10 +87,6 @@ def event_heal(panel, owner, value):
 def event_poison(panel, owner, value):
   if value != '' and owner != '':
     panel.message(owner + ' is poisoned for ' + value + ' HP', libtcod.yellow)
-
-def event_lightning_sphere(panel, target, value):
-  if value != '' and target != '':
-    panel.message('Lightning sphere strikes ' + target + ' for ' + value + ' HP', libtcod.light_yellow)
 
 def event_lightning_bolt(panel, target, value):
   if value != '' and target != '':
