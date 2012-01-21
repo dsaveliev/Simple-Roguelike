@@ -29,15 +29,15 @@ class Ai(object):
     self.deviation_time -= 1
     if self.deviation_time <= 0: 
       self.behavior = self.base_behavior
-      Text.event_base_behavior(self.world.panel, self.name)
+      Text.event_base_behavior(self.game.panel, self.name)
   #############################################################################
 
   def base_behavior(self):
-    if self.distance_to(self, self.world.player) <= self.torch_radius:
-      if self.distance_to(self, self.world.player) >= 2:
-        self.move_towards(self.world.player.x, self.world.player.y)
+    if self.distance_to(self, self.game.player) <= self.torch_radius:
+      if self.distance_to(self, self.game.player) >= 2:
+        self.move_towards(self.game.player.x, self.game.player.y)
       else:
-        self.attack(self.world.player)
+        self.attack(self.game.player)
 
   def confused_behavior(self):
     self.check_deviation_time()

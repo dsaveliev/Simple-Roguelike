@@ -25,27 +25,27 @@ def apply(effect, params, owner):
     owner.action_on_target(fireball, params)
 
 def heal(params, target):
-  Text.event_heal(target.world.panel, target.name, str(params[0]))
+  Text.event_heal(target.game.panel, target.name, str(params[0]))
   target.stats['HP'].value += params[0]
   if target.stats['HP'].value > target.stats['HP'].base_value:
     target.stats['HP'].value = target.stats['HP'].base_value
 
 def poison(params, target):
-  Text.event_poison(target.world.panel, target.name, str(params[0]))
+  Text.event_poison(target.game.panel, target.name, str(params[0]))
   target.stats['HP'].value -= params[0]
   if target.stats['HP'].value <= 0:
     target.death()
 
 def lightning_bolt(params, target):
-  Text.event_lightning_bolt(target.world.panel, target.name, str(params[0]))
+  Text.event_lightning_bolt(target.game.panel, target.name, str(params[0]))
   target.take_damage(params[0])
 
 def confusion(params, target):
-  Text.event_confusion(target.world.panel, target.name, str(params[0]))
+  Text.event_confusion(target.game.panel, target.name, str(params[0]))
   target.confuse(params[0])
   
 def fireball(params, target):
-  Text.event_fireball(target.world.panel, target.name, str(params[0]))
+  Text.event_fireball(target.game.panel, target.name, str(params[0]))
   target.take_damage(params[0])
     
 from modules import *

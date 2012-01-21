@@ -4,7 +4,7 @@ class Panel(object):
   """docstring for Panel"""
   def __init__(self):
     self.panel = libtcod.console_new(PANEL['WIDTH'], PANEL['HEIGHT'])
-    self.world = World()
+    self.game = Game()
     self.messages = []
     self.info_string = ''
     libtcod.console_set_background_flag(self.panel, libtcod.BKGND_SET)
@@ -49,12 +49,12 @@ class Panel(object):
     libtcod.console_set_default_background(self.panel, COLOR_BACKGROUND)
     libtcod.console_clear(self.panel)
 
-    self.render_bar(1, 1, self.world.player.stat_show('HP', True))
-    self.render_bar(1, 2, self.world.player.stat_show('MP', True))
-    self.render_bar(1, 3, self.world.player.stat_show('XP', True))
-    self.render_bar(1, 4, self.world.player.stat_show('SP', True))
-    self.render_bar(1, 5, self.world.player.stat_show('AP'))
-    self.render_bar(1, 6, self.world.player.stat_show('DP'))
+    self.render_bar(1, 1, self.game.player.stat_show('HP', True))
+    self.render_bar(1, 2, self.game.player.stat_show('MP', True))
+    self.render_bar(1, 3, self.game.player.stat_show('XP', True))
+    self.render_bar(1, 4, self.game.player.stat_show('SP', True))
+    self.render_bar(1, 5, self.game.player.stat_show('AP'))
+    self.render_bar(1, 6, self.game.player.stat_show('DP'))
     self.render_messages()
     self.render_info()
     self.render_separator()

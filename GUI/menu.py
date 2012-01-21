@@ -3,7 +3,7 @@ from modules import *
 class Menu(object):
   """docstring for Menu"""
   def __init__(self):
-    self.world = World()
+    self.game = Game()
 
   def show(self, header, options):
     if len(options) > 26:
