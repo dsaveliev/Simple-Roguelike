@@ -66,7 +66,7 @@ ITEMS = {
       'THROW'
     ],
     'DURABILITY':'DISPOSABLE',
-    'PREVALENCE':60
+    'PREVALENCE':1000
   },
 
   'SCROLL OF LIGHTNING SPHERE':{
@@ -86,7 +86,7 @@ ITEMS = {
       'READ'
     ],
     'DURABILITY':'DISPOSABLE',
-    'PREVALENCE':10
+    'PREVALENCE':700
   },
 
   'SCROLL OF LIGHTNING BOLT':{
@@ -106,7 +106,7 @@ ITEMS = {
       'READ'
     ],
     'DURABILITY':'DISPOSABLE',
-    'PREVALENCE':30
+    'PREVALENCE':800
   },
 
   'SCROLL OF CONFUSION':{
@@ -126,7 +126,7 @@ ITEMS = {
       'READ'
     ],
     'DURABILITY':'DISPOSABLE',
-    'PREVALENCE':30
+    'PREVALENCE':750
   },
   
   'SCROLL OF FIREBALL':{
@@ -146,7 +146,7 @@ ITEMS = {
       'READ'
     ],
     'DURABILITY':'DISPOSABLE',
-    'PREVALENCE':250
+    'PREVALENCE':700
   }
 
 }

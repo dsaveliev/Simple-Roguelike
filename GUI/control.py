@@ -60,7 +60,7 @@ class Control(object):
     return True
 
   def handle_aim_keys(self):
-    if self.key.c == KEY_USE:
+    if self.key.c == KEY_FIRE:
       self.agent.aim()
     else:
       return None
