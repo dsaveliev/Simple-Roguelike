@@ -10,7 +10,7 @@ from Config.items     import *
 from Config.creatures import *
 
 from world            import World
-from initialize import *
+from initialize       import *
 
 import GUI.text           as Text
 from GUI.control      import Control
