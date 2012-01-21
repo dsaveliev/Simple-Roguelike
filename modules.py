@@ -9,7 +9,7 @@ from Config.tiles     import *
 from Config.items     import *
 from Config.creatures import *
 
-from world            import World
+from game            import Game
 from initialize       import *
 
 import GUI.text           as Text

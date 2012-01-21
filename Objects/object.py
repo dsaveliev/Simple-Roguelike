@@ -5,7 +5,7 @@ class Object(object):
 
   """ General model for game instance. """
   def __init__(self, position, params):
-    self.world = World()
+    self.game = Game()
     self.x = position[0]
     self.y = position[1]
     self.name = params['NAME']

@@ -9,7 +9,7 @@ class Player(Creature):
 
   ### ACTIONS #################################################################
   def move_or_attack(self, dx, dy):
-    if self.world.game_state == 'PLAYING':
+    if self.game.state == 'PLAYING':
       object = self.move(dx, dy)
       if not object:
         self.is_fov_recompute = True
@@ -20,25 +20,25 @@ class Player(Creature):
   def pick_up(self):
     items = Item.get_by_position(self.x, self.y)
     if len(items) == 0:
-      if self == self.world.player: Text.event_nothing_to_pick_up(self.world.panel)
+      if self == self.game.player: Text.event_nothing_to_pick_up(self.game.panel)
       return None
 
     index = 0
     if len(items) > 1:
-      index = self.world.menu.show(Text.inventory_pick_up(), 
+      index = self.game.menu.show(Text.inventory_pick_up(), 
         [item.name for item in items])
     if index != None:
       item = items[index]
       if len(self.inventory) >= INVETORY_LIMIT:
-        if self == self.world.player: Text.event_inventory_full(self.world.player, item.name)
+        if self == self.game.player: Text.event_inventory_full(self.game.player, item.name)
         return
       elif self.inventory_weight() + item.weight <= self.stats['SP'].base_value:
         Item.list.remove(item)
         self.inventory.append(item)
         self.stats['SP'].value = self.inventory_weight()
-        if self == self.world.player: Text.event_pick_up_item(self.world.panel, item.name)
+        if self == self.game.player: Text.event_pick_up_item(self.game.panel, item.name)
       else:
-        if self == self.world.player: Text.event_overload(self.world.panel)
+        if self == self.game.player: Text.event_overload(self.game.panel)
         return None
 
   def use(self, action = 'GENERAL'):
@@ -53,9 +53,9 @@ class Player(Creature):
     #Why? I don't know, lol
     your_corpse.weight = self.weight
     Creature.list.remove(self)
-    self.world.game_state = 'DEAD'
+    self.game.state = 'DEAD'
     self.drop_all()
-    Text.event_death(self.world.panel, self.name)
+    Text.event_death(self.game.panel, self.name)
     del self
 
   def drop(self, item=None):
@@ -65,10 +65,10 @@ class Player(Creature):
       self.inventory.remove(item)
       item.x, item.y = self.x, self.y
       Item.list.append(item)
-      Text.event_drop(self.world.panel, self.name, item.name)
+      Text.event_drop(self.game.panel, self.name, item.name)
 
   def action_on_target(self, effect, params):
-    self.world.aim.activate(effect, params)
+    self.game.aim.activate(effect, params)
   #############################################################################
 
   def get_item_from_inventory(self, header, action = 'GENERAL'):
@@ -77,7 +77,7 @@ class Player(Creature):
     options = []
 
     if len(self.inventory) == 0:
-      self.world.menu.show(header, [Text.inventory_empty()])
+      self.game.menu.show(header, [Text.inventory_empty()])
       return None
     else:
       if action != 'GENERAL':
@@ -92,7 +92,7 @@ class Player(Creature):
           options.append(item + ' x' + str(inventory_hash[item]))
         else: options.append(item)
 
-      index = self.world.menu.show(header, options)
+      index = self.game.menu.show(header, options)
       if index != None:
         name = inventory_hash.keys()[index]
         for item in self.inventory:
@@ -100,7 +100,7 @@ class Player(Creature):
       else: return None
 
   def show_objects_under_player(self):
-    names = self.world.get_names_at_position(self.x, self.y, False)
-    Text.event_observation(self.world.panel, names)
+    names = self.game.get_names_at_position(self.x, self.y, False)
+    Text.event_observation(self.game.panel, names)
 
 

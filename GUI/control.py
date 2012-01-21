@@ -2,7 +2,7 @@ from modules import *
 
 class Control(object):
   def __init__(self):
-    self.world = World()
+    self.game = Game()
     self.key = libtcod.Key()
     self.mouse = libtcod.Mouse()
     self.agent = None
@@ -10,10 +10,10 @@ class Control(object):
   def handle_input(self):
     libtcod.sys_check_for_event(libtcod.EVENT_KEY_PRESS | libtcod.EVENT_MOUSE, self.key, self.mouse)
     self.handle_mouse()
-    if self.world.game_state == 'AIM':
-      self.agent = self.world.aim
-    elif self.world.game_state == 'PLAYING':
-      self.agent = self.world.player
+    if self.game.state == 'AIM':
+      self.agent = self.game.aim
+    elif self.game.state == 'PLAYING':
+      self.agent = self.game.player
     return self.handle_keyboard()
 
   ### Mouse ###################################################################
@@ -26,7 +26,7 @@ class Control(object):
 
   def show_objects_under_mouse(self):
     (x, y) = self.get_mouse_position()
-    self.world.render_names_at_position(x, y)
+    self.game.render_names_at_position(x, y)
   #############################################################################
 
   ### Keyboard ################################################################
@@ -34,7 +34,7 @@ class Control(object):
     if self.key.vk == libtcod.KEY_ENTER and self.key.lalt:
       libtcod.console_set_fullscreen(not libtcod.console_is_fullscreen())
     elif self.key.vk == libtcod.KEY_ESCAPE:
-      self.world.game_state = 'EXIT'
+      self.game.state = 'EXIT'
     elif self.key.vk == libtcod.KEY_PRINTSCREEN:
       libtcod.sys_save_screenshot('screenshot.png')
       
@@ -79,9 +79,9 @@ class Control(object):
 
   def handle_keyboard(self):
     state = self.handle_move_keys()
-    if self.world.game_state == 'AIM':
+    if self.game.state == 'AIM':
       state = state or self.handle_aim_keys()
-    elif self.world.game_state == 'PLAYING':
+    elif self.game.state == 'PLAYING':
       state = state or self.handle_action_keys()
 
     if state:

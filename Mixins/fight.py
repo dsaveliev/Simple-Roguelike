@@ -15,16 +15,16 @@ class Fight(object):
     if probability < BLOODY_BATTLES:
       x = libtcod.random_get_int(0, -1, 1) + self.x
       y = libtcod.random_get_int(0, -1, 1) + self.y
-      tile = self.world.map.get_tile(x, y)
+      tile = self.game.map.get_tile(x, y)
       tile.set_in_fov_color(COLOR_BLOOD)
 
   def attack(self, target):
     damage = self.stats['AP'].value - target.stats['DP'].value
     if damage > 0:
-      Text.event_successful_attack(self.world.panel, self.name, target.name, str(damage))
+      Text.event_successful_attack(self.game.panel, self.name, target.name, str(damage))
       target.take_damage(damage)
     else:
-      Text.event_unsuccessful_attack(self.world.panel, self.name, target.name)
+      Text.event_unsuccessful_attack(self.game.panel, self.name, target.name)
 
 
 from modules import *

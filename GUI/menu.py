@@ -3,9 +3,9 @@ from modules import *
 class Menu(object):
   """docstring for Menu"""
   def __init__(self):
-    self.world = World()
+    self.game = Game()
 
-  def show(self, header, options):
+  def show(self, header, options, position = (None, None)):
     if len(options) > 26:
       raise ValueError('Cannot have a menu with more than 26 options.')
 
@@ -21,16 +21,22 @@ class Menu(object):
     width += index_width + margin['left'] + margin['right']
     window = libtcod.console_new(width, height)
 
+    libtcod.console_set_default_background(window, libtcod.light_sepia)
+    libtcod.console_set_default_foreground(window, libtcod.darker_sepia)
     libtcod.console_print_frame(window, 0, 0, width, height, True, 0, header)
-    libtcod.console_set_default_foreground(window, libtcod.amber)
+    libtcod.console_set_default_foreground(window, libtcod.lighter_sepia)
     letter_index = start_index
     for i in range(len(options)):
       text = '[' + chr(letter_index) + '] ' + options[i]
       libtcod.console_print(window, 1, i + margin['top'], text)
       letter_index += 1
+    
+    x, y = position[0], position[1]
+    if not x:
+      x = SCREEN_WIDTH / 2 - width / 2
+    if not y:
+      y = SCREEN_HEIGHT / 2 - height / 2
 
-    x = SCREEN_WIDTH / 2 - width / 2
-    y = SCREEN_HEIGHT / 2 - height / 2
     libtcod.console_blit(window, 0, 0, width, height, 0, x, y, 1.0, 0.7)
     libtcod.console_flush()
 

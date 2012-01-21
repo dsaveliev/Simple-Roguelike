@@ -19,7 +19,7 @@ class Map(object):
         self.y1 <= other.y2 and self.y2 >= other.y1)
 
   def __init__(self, map = [[]]):
-    self.world = World()
+    self.game = Game()
     self.map = map
     self.start = [0, 0]
     self.fov_map = libtcod.map_new(MAP['WIDTH'], MAP['HEIGHT'])
@@ -33,12 +33,12 @@ class Map(object):
     self.prepare_fov()
 
   def recompute_fov(self):
-    if self.world.player.is_fov_recompute:
-      self.world.player.is_fov_recompute = False
+    if self.game.player.is_fov_recompute:
+      self.game.player.is_fov_recompute = False
       libtcod.map_compute_fov(self.fov_map, 
-          self.world.player.x, 
-          self.world.player.y, 
-          self.world.player.torch_radius, 
+          self.game.player.x, 
+          self.game.player.y, 
+          self.game.player.torch_radius, 
           FOV_LIGHT_WALLS, 
           FOV_ALGO)
       for y in range(MAP['HEIGHT']):

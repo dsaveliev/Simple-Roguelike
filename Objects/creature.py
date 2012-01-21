@@ -20,7 +20,7 @@ class Creature(Object, Stats, Fight, Ai):
 
   ### ACTIONS #################################################################
   def move(self, dx, dy):
-    obstacle = self.world.tile_blocked(self.x + dx, self.y + dy)
+    obstacle = self.game.tile_blocked(self.x + dx, self.y + dy)
     if not obstacle:
       self.x += dx
       self.y += dy
@@ -32,7 +32,7 @@ class Creature(Object, Stats, Fight, Ai):
       self.inventory.remove(item)
       item.x, item.y = self.x, self.y
       Item.list.append(item)
-      Text.event_drop(self.world.panel, self.name, item.name)
+      Text.event_drop(self.game.panel, self.name, item.name)
 
   def drop_all(self):
     while len(self.inventory) > 0:
@@ -44,7 +44,7 @@ class Creature(Object, Stats, Fight, Ai):
     corpse.weight = self.weight
     Creature.list.remove(self)
     self.drop_all()
-    Text.event_death(self.world.panel, self.name)
+    Text.event_death(self.game.panel, self.name)
     del self
 
   def action_on_target(self, effect, params):
@@ -64,7 +64,7 @@ class Creature(Object, Stats, Fight, Ai):
   #############################################################################
 
   def draw(self):
-    visible = libtcod.map_is_in_fov(self.world.map.fov_map, self.x, self.y)
+    visible = libtcod.map_is_in_fov(self.game.map.fov_map, self.x, self.y)
     if visible:
       super(Creature, self).draw()
 

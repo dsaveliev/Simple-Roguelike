@@ -17,7 +17,7 @@ class Item(Object):
     self.durability = params['DURABILITY']
 
   def draw(self):
-    visible = libtcod.map_is_in_fov(self.world.map.fov_map, self.x, self.y)
+    visible = libtcod.map_is_in_fov(self.game.map.fov_map, self.x, self.y)
     if visible:
       super(Item, self).draw()
 
