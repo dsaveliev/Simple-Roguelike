@@ -9,7 +9,7 @@ class Player(Creature):
 
   ### ACTIONS #################################################################
   def move_or_attack(self, dx, dy):
-    if self.game.game_state == 'PLAYING':
+    if self.game.state == 'PLAYING':
       object = self.move(dx, dy)
       if not object:
         self.is_fov_recompute = True
@@ -53,7 +53,7 @@ class Player(Creature):
     #Why? I don't know, lol
     your_corpse.weight = self.weight
     Creature.list.remove(self)
-    self.game.game_state = 'DEAD'
+    self.game.state = 'DEAD'
     self.drop_all()
     Text.event_death(self.game.panel, self.name)
     del self

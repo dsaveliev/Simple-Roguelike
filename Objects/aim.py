@@ -10,7 +10,7 @@ class Aim(Object):
     self.params = None
 
   def activate(self, effect, params):
-    self.game.game_state = 'AIM'
+    self.game.state = 'AIM'
     owner = self.game.player
     self.set_position((owner.x, owner.y))
     Object.list.append(self)
@@ -27,7 +27,7 @@ class Aim(Object):
       Text.event_observation(self.game.panel, names)
 
   def aim(self):
-    self.game.game_state = 'PLAYING'
+    self.game.state = 'PLAYING'
     Object.list.remove(self)
     targets = Creature.get_by_position(self.x, self.y)
     for target in targets:

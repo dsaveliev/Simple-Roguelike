@@ -12,7 +12,7 @@ class Game(object):
     if not self._initialized:
       ### States
       self._initialized = True
-      self.game_state = 'PLAYING'
+      self.state = 'PLAYING'
       ### Helpers
       self.panel = Panel()
       self.menu = Menu()
@@ -36,7 +36,7 @@ class Game(object):
       libtcod.console_blit(con, 0, 0, MAP['WIDTH'], MAP['HEIGHT'], 0, 0, MAP['Y'])
       libtcod.console_flush()
       self.__turn()
-      if self.game_state == 'EXIT':
+      if self.state == 'EXIT':
         break
 
   ### Generate new game ######################################################
@@ -63,7 +63,7 @@ class Game(object):
     Item.clear_all()
 
   def __turn_creatures(self):
-    if self.game_state == 'PLAYING' and self.player.state != 'DIDNT_TAKE_TURN':
+    if self.state == 'PLAYING' and self.player.state != 'DIDNT_TAKE_TURN':
       for creature in Creature.list:
         if creature != self.player:
           creature.take_turn()

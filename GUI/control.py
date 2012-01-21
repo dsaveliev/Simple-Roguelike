@@ -10,9 +10,9 @@ class Control(object):
   def handle_input(self):
     libtcod.sys_check_for_event(libtcod.EVENT_KEY_PRESS | libtcod.EVENT_MOUSE, self.key, self.mouse)
     self.handle_mouse()
-    if self.game.game_state == 'AIM':
+    if self.game.state == 'AIM':
       self.agent = self.game.aim
-    elif self.game.game_state == 'PLAYING':
+    elif self.game.state == 'PLAYING':
       self.agent = self.game.player
     return self.handle_keyboard()
 
@@ -34,7 +34,7 @@ class Control(object):
     if self.key.vk == libtcod.KEY_ENTER and self.key.lalt:
       libtcod.console_set_fullscreen(not libtcod.console_is_fullscreen())
     elif self.key.vk == libtcod.KEY_ESCAPE:
-      self.game.game_state = 'EXIT'
+      self.game.state = 'EXIT'
     elif self.key.vk == libtcod.KEY_PRINTSCREEN:
       libtcod.sys_save_screenshot('screenshot.png')
       
@@ -79,9 +79,9 @@ class Control(object):
 
   def handle_keyboard(self):
     state = self.handle_move_keys()
-    if self.game.game_state == 'AIM':
+    if self.game.state == 'AIM':
       state = state or self.handle_aim_keys()
-    elif self.game.game_state == 'PLAYING':
+    elif self.game.state == 'PLAYING':
       state = state or self.handle_action_keys()
 
     if state:
