@@ -55,13 +55,14 @@ KEY_PICK_UP     = ord('g')
 KEY_INVENTORY   = ord('i')
 KEY_USE         = ord('a')
 KEY_DROP        = ord('d')
+KEY_FIRE        = ord('f')
 
 ### Rooms params
 ROOM_MAX_SIZE = 10
 ROOM_MIN_SIZE = 6
 MAX_ROOMS     = 30
 MAX_ROOM_CREATURES = 3
-MAX_ROOM_ITEMS = 1
+MAX_ROOM_ITEMS = 3
 MAX_CREATURE_ITEMS = 1
 INVETORY_LIMIT = 26
 BLOODY_BATTLES = 50 # from 0 to 100%
