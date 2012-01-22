@@ -19,10 +19,11 @@ class Player(Creature):
 
   def pick_up(self):
     items = Item.get_by_position(self.x, self.y)
-    index = None
     if len(items) == 0:
       Text.event_nothing_to_pick_up(self.game.panel)
-    elif len(items) > 1:
+
+    index = 0
+    if len(items) > 1:
       index = self.game.menu.show(Text.inventory_pick_up(), 
         [item.name for item in items])
     if index != None:
@@ -99,7 +100,7 @@ class Player(Creature):
       else: return None
 
   def show_objects_under_player(self):
-    names = self.map.get_names_at_position(self.x, self.y, self)
+    names = self.game.map.get_names_at_position(self.x, self.y, self)
     Text.event_observation(names)
 
 

@@ -52,6 +52,7 @@ class Map(object):
             tile.explored = True
 
   def prepare_fov(self):
+    self.fov_map = libtcod.map_new(MAP['WIDTH'], MAP['HEIGHT'])
     for raw in self.map:
       for tile in raw:
         libtcod.map_set_properties(self.fov_map, tile.x, tile.y, tile.transparent, tile.passable)

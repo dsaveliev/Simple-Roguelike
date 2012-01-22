@@ -1,46 +1,67 @@
+import pdb
 class Game(object):
   def __init__(self):
-    self.menu = Menu(self)
-    self.control = Control(self)
-    self.aim = Aim()
+    self.__initialize()
 
-  def __save(self):
+  def __initialize(self):
+    self.menu     = Menu(self)
+    self.control  = Control(self)
+    self.panel    = Panel(self)
+    self.aim      = Aim(self)
+    self.map      = Map(self)
+    Creature.list = []
+    Item.list     = []
+    Object.list   = []
+    Text.panel    = self.panel
+    self.player   = None
+
+  def __update(self):
+    self.menu.game = self
+    self.control.game = self
+    self.panel.game = self
+    self.panel.panel = libtcod.console_new(PANEL['WIDTH'], PANEL['HEIGHT'])
+    self.map.game = self
+    self.aim.game = self
+    for creature in Creature.list:
+      creature.game = self
+    Text.panel = self.panel
+    self.map.prepare_fov()
+
+  def __save_game(self):
+    if self.player in Creature.list:
+      Creature.list.remove(self.player)
+    elif self.state == 'DEAD':
+      pass
     file = shelve.open(SAVE_FILE, 'n')
-    #file['creatures'] = Creature.list
-    #file['items'] = Item.list
-    #file['objects'] = Object.list
-    #file['map'] = self.map
-    #file['panel'] = self.panel
+    #file['game'] = self
+    file['creatures'] = Creature.list
+    file['items'] = Item.list
+    file['map'] = self.map
+    file['panel'] = self.panel
     file['player'] = self.player
-    #file = open(SAVE_FILE, 'w')
-    #marshal.dump(r, file)
     file.close()
 
-  def __load(self):
-    pass
+  def __load_game(self):
+    file = shelve.open(SAVE_FILE, 'r')
+    #self                = file['game']
+    Creature.list       = file['creatures']
+    Item.list           = file['items']    
+    self.map            = file['map']      
+    self.panel          = file['panel']    
+    self.player         = file['player']   
+    file.close()
+    if self.player:
+      Creature.list.append(self.player)
+    self.__update()
 
-  def new_game(self):
-    ### Clean up Objects lists
-    Creature.list = []
-    Item.list = []
-    Object.list = []
-    ### Map
-    self.map = Map(self)
+  def __new_game(self):
+    self.__initialize()
     self.map.generate()
-    self.panel = Panel(self)
-    Text.panel = self.panel
-    ### Objects
     self.player = Player(self, (self.map.start[0], self.map.start[1]))
-
-    #self.player.set_position((self.map.start[0], self.map.start[1]))
     self.__generate_objects()
-
     Text.event_welcome(self.player.name)
 
-  def continue_game(self):
-    pass
-
-  def start_game(self):
+  def __start_game(self):
     self.state = 'PLAYING'
     while not libtcod.console_is_window_closed():
       libtcod.console_clear(con)
@@ -49,7 +70,7 @@ class Game(object):
       libtcod.console_flush()
       self.__turn()
       if self.state == 'EXIT':
-        self.__save()
+        self.__save_game()
         break
 
   def main_menu(self):
@@ -60,10 +81,12 @@ class Game(object):
         Text.main_menu_options(), (5, None))
       if choice == 0: 
         libtcod.console_clear(con)
-        self.new_game()
-        self.start_game()
+        self.__new_game()
+        self.__start_game()
       elif choice == 1:
-        pass
+        libtcod.console_clear(con)
+        self.__load_game()
+        self.__start_game()
       elif choice == 2:
         pass
       elif choice == 3:

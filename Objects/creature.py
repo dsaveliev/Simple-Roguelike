@@ -16,13 +16,12 @@ class Creature(Object, Stats, Fight, Ai):
     self.inventory = []
     self.stats['SP'].value = 0
     self.game = game
-    self.map = self.game.map
 
     Creature.list.append(self)
 
   ### ACTIONS #################################################################
   def move(self, dx, dy):
-    obstacle = self.map.tile_blocked(self.x + dx, self.y + dy)
+    obstacle = self.game.map.tile_blocked(self.x + dx, self.y + dy)
     if not obstacle:
       self.x += dx
       self.y += dy
