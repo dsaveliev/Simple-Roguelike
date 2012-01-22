@@ -2,9 +2,9 @@ from modules import *
 
 class Panel(object):
   """docstring for Panel"""
-  def __init__(self):
+  def __init__(self, game):
     self.panel = libtcod.console_new(PANEL['WIDTH'], PANEL['HEIGHT'])
-    self.game = Game()
+    self.game = game
     self.messages = []
     self.info_string = ''
     libtcod.console_set_background_flag(self.panel, libtcod.BKGND_SET)

@@ -1,19 +1,20 @@
 from modules import *
 
 class Control(object):
-  def __init__(self):
-    self.game = Game()
+  def __init__(self, game):
+    self.game = game
     self.key = libtcod.Key()
     self.mouse = libtcod.Mouse()
     self.agent = None
 
   def handle_input(self):
-    libtcod.sys_check_for_event(libtcod.EVENT_KEY_PRESS | libtcod.EVENT_MOUSE, self.key, self.mouse)
-    self.handle_mouse()
+    libtcod.sys_check_for_event(libtcod.EVENT_KEY_PRESS | libtcod.EVENT_MOUSE, 
+      self.key, self.mouse)
     if self.game.state == 'AIM':
       self.agent = self.game.aim
     elif self.game.state == 'PLAYING':
       self.agent = self.game.player
+    self.handle_mouse()
     return self.handle_keyboard()
 
   ### Mouse ###################################################################
@@ -36,7 +37,7 @@ class Control(object):
     elif self.key.vk == libtcod.KEY_ESCAPE:
       self.game.state = 'EXIT'
     elif self.key.vk == libtcod.KEY_PRINTSCREEN:
-      libtcod.sys_save_screenshot('screenshot.png')
+      libtcod.sys_save_screenshot('./Images/screenshot.png')
       
   def handle_move_keys(self):
     if self.key.c == KEY_UP:

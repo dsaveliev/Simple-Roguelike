@@ -2,8 +2,8 @@ from modules import *
 
 class Player(Creature):
   """ Description of player """
-  def __init__(self, position = (0, 0)):
-    super(Player, self).__init__(position, 'PLAYER')
+  def __init__(self, game, position = (0, 0)):
+    super(Player, self).__init__(game, position, 'PLAYER')
     self.state = 'DIDNT_TAKE_TURN'
     self.is_fov_recompute = True
 
@@ -19,12 +19,10 @@ class Player(Creature):
 
   def pick_up(self):
     items = Item.get_by_position(self.x, self.y)
+    index = None
     if len(items) == 0:
-      if self == self.game.player: Text.event_nothing_to_pick_up(self.game.panel)
-      return None
-
-    index = 0
-    if len(items) > 1:
+      Text.event_nothing_to_pick_up(self.game.panel)
+    elif len(items) > 1:
       index = self.game.menu.show(Text.inventory_pick_up(), 
         [item.name for item in items])
     if index != None:
@@ -36,7 +34,7 @@ class Player(Creature):
         Item.list.remove(item)
         self.inventory.append(item)
         self.stats['SP'].value = self.inventory_weight()
-        if self == self.game.player: Text.event_pick_up_item(self.game.panel, item.name)
+        if self == self.game.player: Text.event_pick_up_item(item.name)
       else:
         if self == self.game.player: Text.event_overload(self.game.panel)
         return None
@@ -55,7 +53,7 @@ class Player(Creature):
     Creature.list.remove(self)
     self.game.state = 'DEAD'
     self.drop_all()
-    Text.event_death(self.game.panel, self.name)
+    Text.event_death(self.name)
     del self
 
   def drop(self, item=None):
@@ -65,10 +63,10 @@ class Player(Creature):
       self.inventory.remove(item)
       item.x, item.y = self.x, self.y
       Item.list.append(item)
-      Text.event_drop(self.game.panel, self.name, item.name)
+      Text.event_drop(self.name, item.name)
 
   def action_on_target(self, effect, params):
-    self.game.aim.activate(effect, params)
+    self.game.aim.activate(self, effect, params)
   #############################################################################
 
   def get_item_from_inventory(self, header, action = 'GENERAL'):
@@ -85,22 +83,23 @@ class Player(Creature):
       for item in filtered:
         if item.name in inventory_hash.keys():
           inventory_hash[item.name] += 1
-        else: inventory_hash[item.name] = 1
+        else:
+          inventory_hash[item.name] = 1
 
       for item in inventory_hash:
         if inventory_hash[item] > 1:
           options.append(item + ' x' + str(inventory_hash[item]))
         else: options.append(item)
 
-      index = self.game.menu.show(header, options)
+      index = self.game.menu.show(header, sorted(options))
       if index != None:
-        name = inventory_hash.keys()[index]
+        name = sorted(inventory_hash.keys())[index]
         for item in self.inventory:
           if item.name == name: return item
       else: return None
 
   def show_objects_under_player(self):
-    names = self.game.get_names_at_position(self.x, self.y, False)
-    Text.event_observation(self.game.panel, names)
+    names = self.map.get_names_at_position(self.x, self.y, self)
+    Text.event_observation(names)
 
 

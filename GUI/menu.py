@@ -2,8 +2,8 @@ from modules import *
 
 class Menu(object):
   """docstring for Menu"""
-  def __init__(self):
-    self.game = Game()
+  def __init__(self, game):
+    self.game = game
 
   def show(self, header, options, position = (None, None)):
     if len(options) > 26:

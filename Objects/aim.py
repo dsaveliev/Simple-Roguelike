@@ -9,10 +9,10 @@ class Aim(Object):
     self.effect = None
     self.params = None
 
-  def activate(self, effect, params):
-    self.game.state = 'AIM'
-    owner = self.game.player
-    self.set_position((owner.x, owner.y))
+  def activate(self, owner, effect, params):
+    self.owner = owner
+    self.owner.game.state = 'AIM'
+    self.set_position((self.owner.x, self.owner.y))
     Object.list.append(self)
     self.effect = effect
     self.params = params
@@ -23,13 +23,13 @@ class Aim(Object):
     if x >= 0 and y >= 0 and x < MAP['WIDTH'] and y < MAP['HEIGHT']:
       self.x = x
       self.y = y
-      names = self.game.get_names_at_position(self.x, self.y)
-      Text.event_observation(self.game.panel, names)
+      names = self.owner.map.get_names_at_position(self.x, self.y)
+      Text.event_observation(names)
 
   def aim(self):
-    self.game.state = 'PLAYING'
+    self.owner.game.state = 'PLAYING'
     Object.list.remove(self)
     targets = Creature.get_by_position(self.x, self.y)
     for target in targets:
-      if libtcod.map_is_in_fov(self.game.map.fov_map, target.x, target.y):
+      if libtcod.map_is_in_fov(self.owner.map.fov_map, target.x, target.y):
         self.effect(self.params, target)

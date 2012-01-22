@@ -1,7 +1,7 @@
 class Ai(object):
   """docstring for Ai"""
   def __init__(self):
-    self.behavior = self.base_behavior
+    self.type = 'BASE'
     self.deviation_time = 0
 
   ### HELPERS #################################################################
@@ -23,13 +23,13 @@ class Ai(object):
 
   def confuse(self, time):
     self.deviation_time = time
-    self.behavior = self.confused_behavior
+    self.type = 'CONFUSED'
 
   def check_deviation_time(self):
     self.deviation_time -= 1
     if self.deviation_time <= 0: 
-      self.behavior = self.base_behavior
-      Text.event_base_behavior(self.game.panel, self.name)
+      self.type = 'BASE'
+      Text.event_base_behavior(self.name)
   #############################################################################
 
   def base_behavior(self):
@@ -44,6 +44,9 @@ class Ai(object):
     self.move(libtcod.random_get_int(0, -1, 1), libtcod.random_get_int(0, -1, 1))
 
   def take_turn(self):
-    self.behavior()
+    if self.type == 'BASE':
+      self.base_behavior()
+    elif self.type == 'CONFUSED':
+      self.confused_behavior()
 
 from modules import *
