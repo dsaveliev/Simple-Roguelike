@@ -21,6 +21,7 @@ class Player(Creature):
     items = Item.get_by_position(self.x, self.y)
     if len(items) == 0:
       Text.event_nothing_to_pick_up(self.game.panel)
+      return None
 
     index = 0
     if len(items) > 1:
