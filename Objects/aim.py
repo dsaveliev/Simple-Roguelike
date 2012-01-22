@@ -2,17 +2,18 @@ from modules import *
 
 class Aim(Object):
   """ Description of Aim """
-  def __init__(self):
+  def __init__(self, game):
     params = AIM
     super(Aim, self).__init__((0, 0), params['OBJECT'])
     self.owner = None
     self.effect = None
     self.params = None
+    self.game = game
 
-  def activate(self, effect, params):
+  def activate(self, owner, effect, params):
+    self.owner = owner
     self.game.state = 'AIM'
-    owner = self.game.player
-    self.set_position((owner.x, owner.y))
+    self.set_position((self.owner.x, self.owner.y))
     Object.list.append(self)
     self.effect = effect
     self.params = params
@@ -23,11 +24,11 @@ class Aim(Object):
     if x >= 0 and y >= 0 and x < MAP['WIDTH'] and y < MAP['HEIGHT']:
       self.x = x
       self.y = y
-      names = self.game.get_names_at_position(self.x, self.y)
-      Text.event_observation(self.game.panel, names)
+      names = self.game.map.get_names_at_position(self.x, self.y)
+      Text.event_observation(names)
 
   def aim(self):
-    self.game.state = 'PLAYING'
+    self.owner.game.state = 'PLAYING'
     Object.list.remove(self)
     targets = Creature.get_by_position(self.x, self.y)
     for target in targets:

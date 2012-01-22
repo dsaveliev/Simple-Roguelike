@@ -5,6 +5,8 @@ LIMIT_FPS     = 20
 FONT          = './Fonts/arial12x12.png'
 TITLE         = 'Tombs of the Ancient Kings'
 SPLASH_IMAGE  = './Images/menu_background.png'
+CREDITS       = 'd.e.saveliev@gmail.com'
+SAVE_FILE     = './Saves/savefile.txt'
 
 ### Set terminal size
 SCREEN_WIDTH  = 80

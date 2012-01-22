@@ -5,7 +5,6 @@ class Object(object):
 
   """ General model for game instance. """
   def __init__(self, position, params):
-    self.game = Game()
     self.x = position[0]
     self.y = position[1]
     self.name = params['NAME']
@@ -37,9 +36,14 @@ class Object(object):
       object.clear()
 
   @classmethod
-  def draw_all(cls):
-    for object in cls.list:
-      object.draw()
+  def draw_all(cls, fov_map=None):
+    if fov_map:
+      for object in cls.list:
+        if libtcod.map_is_in_fov(fov_map, object.x, object.y):
+          object.draw()
+    else:
+      for object in cls.list:
+        object.draw()
 
   @classmethod
   def get_by_position(cls, x, y):

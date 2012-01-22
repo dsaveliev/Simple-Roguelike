@@ -2,6 +2,7 @@ import os, sys
 import operator
 import math
 import textwrap
+import shelve
 import libtcodpy as libtcod
 
 from Config.game      import *

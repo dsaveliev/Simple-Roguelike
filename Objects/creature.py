@@ -3,7 +3,7 @@ from modules import *
 class Creature(Object, Stats, Fight, Ai):
   list = []
   """ Description of creature """
-  def __init__(self, position, type):
+  def __init__(self, game, position, type):
     params = CREATURES[type]
 
     Object.__init__(self, position, params['OBJECT'])
@@ -15,12 +15,13 @@ class Creature(Object, Stats, Fight, Ai):
     self.prevalence = params['PREVALENCE']
     self.inventory = []
     self.stats['SP'].value = 0
+    self.game = game
 
     Creature.list.append(self)
 
   ### ACTIONS #################################################################
   def move(self, dx, dy):
-    obstacle = self.game.tile_blocked(self.x + dx, self.y + dy)
+    obstacle = self.game.map.tile_blocked(self.x + dx, self.y + dy)
     if not obstacle:
       self.x += dx
       self.y += dy
@@ -32,7 +33,7 @@ class Creature(Object, Stats, Fight, Ai):
       self.inventory.remove(item)
       item.x, item.y = self.x, self.y
       Item.list.append(item)
-      Text.event_drop(self.game.panel, self.name, item.name)
+      Text.event_drop(self.name, item.name)
 
   def drop_all(self):
     while len(self.inventory) > 0:
@@ -44,7 +45,7 @@ class Creature(Object, Stats, Fight, Ai):
     corpse.weight = self.weight
     Creature.list.remove(self)
     self.drop_all()
-    Text.event_death(self.game.panel, self.name)
+    Text.event_death(self.name)
     del self
 
   def action_on_target(self, effect, params):
@@ -57,16 +58,12 @@ class Creature(Object, Stats, Fight, Ai):
   
   def action_on_nearest_target(self, effect, params):
     target = self.get_nearest_creature(params[1])
-    effect(params, target)
+    if target:
+      effect(params, target)
   
   def action_on_himself(self, effect, params):
     effect(params, self)
   #############################################################################
-
-  def draw(self):
-    visible = libtcod.map_is_in_fov(self.game.map.fov_map, self.x, self.y)
-    if visible:
-      super(Creature, self).draw()
 
   def inventory_weight(self):
     total_weight = 0

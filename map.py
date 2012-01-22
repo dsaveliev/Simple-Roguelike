@@ -1,25 +1,25 @@
 from modules import *
 
+class Rect(object):
+  def __init__(self, x, y, w, h):
+    self.x1 = x
+    self.y1 = y
+    self.x2 = x + w
+    self.y2 = y + h
+  
+  def center(self):
+    center_x = (self.x1 + self.x2) / 2
+    center_y = (self.y1 + self.y2) / 2
+    return (center_x, center_y)
+
+  def intersect(self, other):
+    return (self.x1 <= other.x2 and self.x2 >= other.x1 and
+      self.y1 <= other.y2 and self.y2 >= other.y1)
+
 class Map(object):
   """ Description for map """
-  class Rect(object):
-    def __init__(self, x, y, w, h):
-      self.x1 = x
-      self.y1 = y
-      self.x2 = x + w
-      self.y2 = y + h
-    
-    def center(self):
-      center_x = (self.x1 + self.x2) / 2
-      center_y = (self.y1 + self.y2) / 2
-      return (center_x, center_y)
-  
-    def intersect(self, other):
-      return (self.x1 <= other.x2 and self.x2 >= other.x1 and
-        self.y1 <= other.y2 and self.y2 >= other.y1)
-
-  def __init__(self, map = [[]]):
-    self.game = Game()
+  def __init__(self, game, map = [[]]):
+    self.game = game
     self.map = map
     self.start = [0, 0]
     self.fov_map = libtcod.map_new(MAP['WIDTH'], MAP['HEIGHT'])
@@ -52,6 +52,7 @@ class Map(object):
             tile.explored = True
 
   def prepare_fov(self):
+    self.fov_map = libtcod.map_new(MAP['WIDTH'], MAP['HEIGHT'])
     for raw in self.map:
       for tile in raw:
         libtcod.map_set_properties(self.fov_map, tile.x, tile.y, tile.transparent, tile.passable)
@@ -64,6 +65,25 @@ class Map(object):
 
   def get_tile(self, x, y):
     return self.map[x][y]
+
+  def tile_blocked(self, x, y):
+    if not self.get_tile(x, y).passable:
+      return True
+    objects = Creature.get_by_position(x, y)
+    for object in objects:
+      if object and not object.passable:
+        return object
+
+  def get_names_at_position(self, x, y, player = None):
+    names = []
+    if libtcod.map_is_in_fov(self.fov_map, x, y):
+      objects = Creature.get_by_position(x, y)
+      objects.extend(Item.get_by_position(x, y))
+      if player and player in objects:
+        objects.remove(player)
+      for obj in objects:
+        names.append(obj.name)
+    return ', '.join(names)
 
   def create_room(self, room):
     for x in range(room.x1 + 1, room.x2):
@@ -85,7 +105,7 @@ class Map(object):
       h = libtcod.random_get_int(0, ROOM_MIN_SIZE, ROOM_MAX_SIZE)
       x = libtcod.random_get_int(0, 0, MAP['WIDTH'] - w - 1)
       y = libtcod.random_get_int(0, 0, MAP['HEIGHT'] - h - 1)
-      new_room = Map.Rect(x, y, w, h)
+      new_room = Rect(x, y, w, h)
       failed = False
       for other_room in self.rooms:
         if new_room.intersect(other_room):

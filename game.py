@@ -1,38 +1,62 @@
+import pdb
 class Game(object):
-  _instance = None
-  _initialized = None
-
-  def __new__(cls, *args, **kwargs):
-    if not cls._instance:
-      cls._instance = super(Game, cls).__new__(
-        cls, *args, **kwargs)
-    return cls._instance
-
   def __init__(self):
-    if not self._initialized:
-      ### States
-      self._initialized = True
-      self.state = 'PLAYING'
-      ### Helpers
-      self.panel = Panel()
-      self.menu = Menu()
-      self.control = Control()
-      ### Map
-      self.map = Map()
-      ### Objects
-      self.player = Player()
-      self.aim = Aim()
+    self.__initialize()
 
-  def new_game(self):
+  def __initialize(self):
+    self.menu     = Menu(self)
+    self.control  = Control(self)
+    self.panel    = Panel(self)
+    self.aim      = Aim(self)
+    self.map      = Map(self)
+    Creature.list = []
+    Item.list     = []
+    Object.list   = []
+
+  def __update(self):
+    self.menu.game = self
+    self.control.game = self
+    self.map.game = self
+    self.aim.game = self
+    for creature in Creature.list:
+      creature.game = self
+    self.player.is_fov_recompute = True
+    self.map.prepare_fov()
+
+  def __save_game(self):
+    if self.player in Creature.list:
+      Creature.list.remove(self.player)
+    elif self.state == 'DEAD':
+      pass
+    file = shelve.open(SAVE_FILE, 'n')
+    file['creatures'] = Creature.list
+    file['items'] = Item.list
+    file['map'] = self.map
+    file['messages'] = self.panel.messages
+    file['player'] = self.player
+    file.close()
+
+  def __load_game(self):
+    file = shelve.open(SAVE_FILE, 'r')
+    Creature.list       = file['creatures']
+    Item.list           = file['items']    
+    self.map            = file['map']      
+    self.panel.messages = file['messages']    
+    self.player         = file['player']   
+    file.close()
+    if self.player:
+      Creature.list.append(self.player)
+    self.__update()
+
+  def __new_game(self):
+    self.__initialize()
     self.map.generate()
-    self.player.set_position((self.map.start[0], self.map.start[1]))
+    self.player = Player(self, (self.map.start[0], self.map.start[1]))
     self.__generate_objects()
-    Text.event_welcome(self.panel, self.player.name)
+    Text.event_welcome(self.player.name)
 
-  def continue_game(self):
-    pass
-
-  def start_game(self):
+  def __start_game(self):
+    self.state = 'PLAYING'
     while not libtcod.console_is_window_closed():
       libtcod.console_clear(con)
       self.__draw()
@@ -40,22 +64,26 @@ class Game(object):
       libtcod.console_flush()
       self.__turn()
       if self.state == 'EXIT':
+        self.__save_game()
         break
 
   def main_menu(self):
     image = libtcod.image_load(SPLASH_IMAGE)
     while not libtcod.console_is_window_closed():
       libtcod.image_blit_2x(image, 0, 0, 0)
-      libtcod.console_flush()
       choice = self.menu.show(Text.main_menu(), 
-          Text.main_menu_options(),
-          (5, None))
+        Text.main_menu_options(), (5, None))
       if choice == 0: 
-        self.new_game()
-        self.start_game()
+        libtcod.console_clear(con)
+        self.__new_game()
+        self.__start_game()
       elif choice == 1:
-        pass
+        libtcod.console_clear(con)
+        self.__load_game()
+        self.__start_game()
       elif choice == 2:
+        pass
+      elif choice == 3:
         break
 
   ### Generate new game ######################################################
@@ -65,7 +93,7 @@ class Game(object):
       for i in range(num_monsters):
         x = libtcod.random_get_int(0, room.x1 + 1, room.x2 - 1)
         y = libtcod.random_get_int(0, room.y1 + 1, room.y2 - 1)
-        monster = Creature((x,y), Creature.get_random_type('CHAOTIC'))
+        monster = Creature(self, (x,y), Creature.get_random_type('CHAOTIC'))
         num_monsters_items = libtcod.random_get_int(0, 0, MAX_CREATURE_ITEMS)
         for j in range(num_monsters_items):
           monster.inventory.append(Item(None, Item.get_random_type()))
@@ -96,35 +124,16 @@ class Game(object):
   ### Draw game ##############################################################
   def __draw(self):
     self.map.draw()
-    Item.draw_all()
-    Creature.draw_all()
+    Item.draw_all(self.map.fov_map)
+    Creature.draw_all(self.map.fov_map)
     Object.draw_all()
     self.panel.draw()
   #############################################################################
 
   ### Utilities ###############################################################
-  def get_names_at_position(self, x, y, include_player = True):
-    names = []
-    if libtcod.map_is_in_fov(self.map.fov_map, x, y):
-      objects = Creature.get_by_position(x, y)
-      objects.extend(Item.get_by_position(x, y))
-      if not include_player and self.player in objects:
-        objects.remove(self.player)
-      for obj in objects:
-        names.append(obj.name)
-    return ', '.join(names)
-
   def render_names_at_position(self, x, y):
-    names = self.get_names_at_position(x, y)
+    names = self.map.get_names_at_position(x, y)
     self.panel.info(names)
-
-  def tile_blocked(self, x, y):
-    if not self.map.get_tile(x, y).passable:
-      return True
-    objects = Creature.get_by_position(x, y)
-    for object in objects:
-      if object and not object.passable:
-        return object
   #############################################################################
 
 from modules import *

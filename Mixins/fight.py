@@ -21,10 +21,10 @@ class Fight(object):
   def attack(self, target):
     damage = self.stats['AP'].value - target.stats['DP'].value
     if damage > 0:
-      Text.event_successful_attack(self.game.panel, self.name, target.name, str(damage))
+      Text.event_successful_attack(self.name, target.name, str(damage))
       target.take_damage(damage)
     else:
-      Text.event_unsuccessful_attack(self.game.panel, self.name, target.name)
+      Text.event_unsuccessful_attack(self.name, target.name)
 
 
 from modules import *

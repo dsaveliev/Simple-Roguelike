@@ -4,13 +4,13 @@ def apply(item, owner, action, supply=[]):
     action = item.actions[0]
 
   if action == 'QUAFF':
-    Text.event_quaff(item.game.panel, owner.name, item.name)
+    Text.event_quaff(owner.name, item.name)
     quaff(item, owner)
   elif action == 'EAT':
-    Text.event_eat(item.game.panel, owner.name, item.name)
+    Text.event_eat(owner.name, item.name)
     eat(item, owner)
   elif action == 'READ':
-    Text.event_read(item.game.panel, owner.name, item.name)
+    Text.event_read(owner.name, item.name)
     read(item, owner)
   elif action == 'THROW':
     throw(item, owner)

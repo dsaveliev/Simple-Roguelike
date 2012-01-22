@@ -16,11 +16,6 @@ class Item(Object):
     self.effects_use = params['EFFECTS USE']
     self.durability = params['DURABILITY']
 
-  def draw(self):
-    visible = libtcod.map_is_in_fov(self.game.map.fov_map, self.x, self.y)
-    if visible:
-      super(Item, self).draw()
-
   @staticmethod
   def get_random_type():
     item = ''
