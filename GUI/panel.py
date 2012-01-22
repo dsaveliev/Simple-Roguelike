@@ -8,6 +8,7 @@ class Panel(object):
     self.messages = []
     self.info_string = ''
     libtcod.console_set_background_flag(self.panel, libtcod.BKGND_SET)
+    Text.panel = self
 
   def message(self, msg, color = libtcod.lighter_grey):
     multiline_msg = textwrap.wrap(msg, MSG['WIDTH'])

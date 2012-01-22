@@ -12,19 +12,15 @@ class Game(object):
     Creature.list = []
     Item.list     = []
     Object.list   = []
-    Text.panel    = self.panel
-    self.player   = None
 
   def __update(self):
     self.menu.game = self
     self.control.game = self
-    self.panel.game = self
-    self.panel.panel = libtcod.console_new(PANEL['WIDTH'], PANEL['HEIGHT'])
     self.map.game = self
     self.aim.game = self
     for creature in Creature.list:
       creature.game = self
-    Text.panel = self.panel
+    self.player.is_fov_recompute = True
     self.map.prepare_fov()
 
   def __save_game(self):
@@ -33,21 +29,19 @@ class Game(object):
     elif self.state == 'DEAD':
       pass
     file = shelve.open(SAVE_FILE, 'n')
-    #file['game'] = self
     file['creatures'] = Creature.list
     file['items'] = Item.list
     file['map'] = self.map
-    file['panel'] = self.panel
+    file['messages'] = self.panel.messages
     file['player'] = self.player
     file.close()
 
   def __load_game(self):
     file = shelve.open(SAVE_FILE, 'r')
-    #self                = file['game']
     Creature.list       = file['creatures']
     Item.list           = file['items']    
     self.map            = file['map']      
-    self.panel          = file['panel']    
+    self.panel.messages = file['messages']    
     self.player         = file['player']   
     file.close()
     if self.player:
