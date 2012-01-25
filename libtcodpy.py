@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 #
 # libtcod 1.5.1 python wrapper
 # Copyright (c) 2008,2009,2010 Jice & Mingos

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 from modules import *
 
 class Creature(Object, Stats, Fight, Ai):

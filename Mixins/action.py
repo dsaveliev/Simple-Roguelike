@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 ### self - Item, target - Creation
 def apply(item, owner, action, supply=[]):
   if action == 'GENERAL':

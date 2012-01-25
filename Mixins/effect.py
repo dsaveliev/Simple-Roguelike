@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 ### self - Item, owner - Creation
 def apply_all(item, owner):
   if item.effects_use == 'ALL':

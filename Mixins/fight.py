@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 class Fight(object):
   """docstring for Fighter"""
   def __init__(self):

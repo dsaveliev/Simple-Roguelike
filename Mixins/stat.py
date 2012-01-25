@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 class Stat(object):
   """docstring for Stat"""
   def __init__(self, type, value):
