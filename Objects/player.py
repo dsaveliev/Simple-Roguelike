@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 from modules import *
 
 class Player(Creature):

@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
-
-
 from modules import *
 
 ### Stuff
 LIMIT_FPS     = 20
-FONT          = './Fonts/arial12x12.png'
+FONT          = './Fonts/consolas12x12_gs_tc.png'
 TITLE         = 'Tombs of the Ancient Kings'
 SPLASH_IMAGE  = './Images/menu_background.png'
 CREDITS       = 'd.e.saveliev@gmail.com'

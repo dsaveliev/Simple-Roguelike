@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 import pdb
 class Game(object):
   def __init__(self):
@@ -9,7 +6,7 @@ class Game(object):
 
   def __initialize(self):
     self.menu     = Menu(self)
-    self.help     = PlainText('./Texts/help.txt')
+    self.help     = PlainText('./Texts/help')
     self.control  = Control(self)
     self.panel    = Panel(self)
     self.aim      = Aim(self)
