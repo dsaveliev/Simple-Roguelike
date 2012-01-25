@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os, sys
 import operator
 import math
@@ -17,6 +18,7 @@ import GUI.text           as Text
 from GUI.control      import Control
 from GUI.panel        import Panel
 from GUI.menu         import Menu
+from GUI.plain_text   import PlainText
 
 from Mixins.ai        import Ai
 from Mixins.fight     import Fight

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import pdb
 class Game(object):
   def __init__(self):
@@ -6,6 +7,7 @@ class Game(object):
 
   def __initialize(self):
     self.menu     = Menu(self)
+    self.help     = PlainText('./Texts/help.txt')
     self.control  = Control(self)
     self.panel    = Panel(self)
     self.aim      = Aim(self)
@@ -13,6 +15,33 @@ class Game(object):
     Creature.list = []
     Item.list     = []
     Object.list   = []
+
+  def main_menu(self):
+    image = libtcod.image_load(SPLASH_IMAGE)
+    choice = None
+    while not libtcod.console_is_window_closed():
+      libtcod.image_blit_2x(image, 0, 0, 0)
+      libtcod.console_clear(con)
+      if choice == 0: 
+        self.__new_game()
+        self.__start_game()
+        choice = None
+      elif choice == 1:
+        self.__load_game()
+        self.__start_game()
+        choice = None
+      elif choice == 2:
+        self.__show_help()
+      elif choice == 3:
+        break
+      else:
+        choice = self.menu.show(Text.main_menu(), 
+          Text.main_menu_options(), (5, None))
+
+  ### Base game functions #####################################################
+  def __show_help(self):
+    while not libtcod.console_is_window_closed():
+      self.help.show((0,0, SCREEN_WIDTH, SCREEN_HEIGHT))
 
   def __update(self):
     self.menu.game = self
@@ -68,28 +97,9 @@ class Game(object):
       libtcod.console_flush()
       self.__turn()
       if self.state == 'EXIT':
-        #pdb.set_trace()
         self.__save_game()
         break
-
-  def main_menu(self):
-    image = libtcod.image_load(SPLASH_IMAGE)
-    while not libtcod.console_is_window_closed():
-      libtcod.image_blit_2x(image, 0, 0, 0)
-      choice = self.menu.show(Text.main_menu(), 
-        Text.main_menu_options(), (5, None))
-      if choice == 0: 
-        libtcod.console_clear(con)
-        self.__new_game()
-        self.__start_game()
-      elif choice == 1:
-        libtcod.console_clear(con)
-        self.__load_game()
-        self.__start_game()
-      elif choice == 2:
-        pass
-      elif choice == 3:
-        break
+  #############################################################################
 
   ### Generate new game ######################################################
   def __generate_objects(self):

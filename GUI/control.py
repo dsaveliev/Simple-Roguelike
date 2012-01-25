@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from modules import *
 
 class Control(object):
@@ -14,8 +15,6 @@ class Control(object):
       self.agent = self.game.aim
     elif self.game.state == 'PLAYING':
       self.agent = self.game.player
-    #else:
-    #  self.agent = self.game.player
     self.handle_mouse()
     return self.handle_keyboard()
 
