@@ -1,6 +1,6 @@
-Краткое руководство по rogue-like игре: "Tombs of the Ancient Kings"
+Описание rogue-like игры: "Tombs of the Ancient Kings"
 
->> Краткий обзор rogue-like игр: http://ru.wikipedia.org/wiki/Roguelike
+>> Что такое - [rogue-like игра](http://ru.wikipedia.org/wiki/Roguelike).
 
 >> Значение некоторых символов в игре:
   @ - Главный герой (Вы)
@@ -24,3 +24,5 @@
   g - Взять какую-либо вещь под игроком
   d - Выкинуть вещь из инвентаря
   Esc - Выход в меню
+
+  Изменить клавиши можно в файле ./Config/game.py
