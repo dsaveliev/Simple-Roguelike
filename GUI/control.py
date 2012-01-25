@@ -14,6 +14,8 @@ class Control(object):
       self.agent = self.game.aim
     elif self.game.state == 'PLAYING':
       self.agent = self.game.player
+    #else:
+    #  self.agent = self.game.player
     self.handle_mouse()
     return self.handle_keyboard()
 
@@ -79,16 +81,15 @@ class Control(object):
     return True
 
   def handle_keyboard(self):
-    state = self.handle_move_keys()
-    if self.game.state == 'AIM':
-      state = state or self.handle_aim_keys()
-    elif self.game.state == 'PLAYING':
-      state = state or self.handle_action_keys()
-
-    if state:
-      self.agent.state = 'TAKE_TURN'
+    if self.agent.state != 'DEAD':
+      state = self.handle_move_keys()
+      if self.game.state == 'AIM':
+        state = state or self.handle_aim_keys()
+      elif self.game.state == 'PLAYING':
+        state = state or self.handle_action_keys()
+      self.agent.take_turn = state
     else:
-      self.agent.state = 'DIDNT_TAKE_TURN'
+      self.agent.take_turn = None
 
     return self.handle_menu_keys()
 ###############################################################################

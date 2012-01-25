@@ -2,6 +2,7 @@ import pdb
 class Game(object):
   def __init__(self):
     self.__initialize()
+    self.state = 'PLAYING'
 
   def __initialize(self):
     self.menu     = Menu(self)
@@ -26,7 +27,7 @@ class Game(object):
   def __save_game(self):
     if self.player in Creature.list:
       Creature.list.remove(self.player)
-    elif self.state == 'DEAD':
+    elif self.player.state == 'DEAD':
       pass
     file = shelve.open(SAVE_FILE, 'n')
     file['creatures'] = Creature.list
@@ -34,6 +35,7 @@ class Game(object):
     file['map'] = self.map
     file['messages'] = self.panel.messages
     file['player'] = self.player
+    file['player.state'] = self.player.state
     file.close()
 
   def __load_game(self):
@@ -43,12 +45,15 @@ class Game(object):
     self.map            = file['map']      
     self.panel.messages = file['messages']    
     self.player         = file['player']   
+    self.player.state   = file['player.state']
+    self.state          = 'PLAYING'
     file.close()
-    if self.player:
+    if self.player and self.player.state != 'DEAD':
       Creature.list.append(self.player)
     self.__update()
 
   def __new_game(self):
+    self.state = 'PLAYING'
     self.__initialize()
     self.map.generate()
     self.player = Player(self, (self.map.start[0], self.map.start[1]))
@@ -56,7 +61,6 @@ class Game(object):
     Text.event_welcome(self.player.name)
 
   def __start_game(self):
-    self.state = 'PLAYING'
     while not libtcod.console_is_window_closed():
       libtcod.console_clear(con)
       self.__draw()
@@ -64,6 +68,7 @@ class Game(object):
       libtcod.console_flush()
       self.__turn()
       if self.state == 'EXIT':
+        #pdb.set_trace()
         self.__save_game()
         break
 
@@ -110,7 +115,7 @@ class Game(object):
     Item.clear_all()
 
   def __turn_creatures(self):
-    if self.state == 'PLAYING' and self.player.state != 'DIDNT_TAKE_TURN':
+    if self.state == 'PLAYING' and self.player.take_turn:
       for creature in Creature.list:
         if creature != self.player:
           creature.take_turn()
