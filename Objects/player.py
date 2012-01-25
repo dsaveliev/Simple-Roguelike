@@ -4,7 +4,8 @@ class Player(Creature):
   """ Description of player """
   def __init__(self, game, position = (0, 0)):
     super(Player, self).__init__(game, position, 'PLAYER')
-    self.state = 'DIDNT_TAKE_TURN'
+    self.state = 'ALIVE'
+    self.take_turn = None
     self.is_fov_recompute = True
 
   ### ACTIONS #################################################################
@@ -53,10 +54,10 @@ class Player(Creature):
     #Why? I don't know, lol
     your_corpse.weight = self.weight
     Creature.list.remove(self)
-    self.game.state = 'DEAD'
+    self.state = 'DEAD'
     self.drop_all()
     Text.event_death(self.name)
-    del self
+    #del self
 
   def drop(self, item=None):
     if not item:

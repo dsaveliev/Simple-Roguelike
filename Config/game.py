@@ -87,10 +87,14 @@ COLOR_BLOOD         = libtcod.dark_red
 GAME_STATES = [
   'PLAYING',
   'EXIT',
-  'DEAD',
-  'MENU',
   'AIM'
 ]
+
+PLAYER_STATES = [
+  'ALIVE',
+  'DEAD'
+]
+
 ### Stats
 STATS = {
   'HP':{
