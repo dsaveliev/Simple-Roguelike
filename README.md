@@ -1,6 +1,13 @@
-# Описание rogue-like игры: "Tombs of the Ancient Kings" #
+# Rogue-like игра "Tombs of the Ancient Kings" #
+## Игра создана при помощи: ##
+- [Python 2.7.2](http://python.org/)
+- [libtcod](https://bitbucket.org/jice/libtcod)
+- [Данного руководства](http://roguebasin.roguelikedevelopment.org/index.php/Complete_Roguelike_Tutorial,_using_python%2Blibtcod)
 
-* [Статья](http://ru.wikipedia.org/wiki/Roguelike) на википедии, с описанием rogue-like игр.
+## Откуда есть пошла рогалик-игра (Материалы по рогаликам) ##
++ [Статья](http://ru.wikipedia.org/wiki/Roguelike) на википедии.
++ [Roguebasin](http://roguebasin.roguelikedevelopment.org/index.php/Main_Page)
++ [Отечественный форум рогаликолюбов](http://rlgclub.ru/wiki/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8)
 
 ## Значение некоторых символов в игре: ##
 <pre>
@@ -25,5 +32,6 @@ i - Открыть инвентарь
 g - Взять какую-либо вещь под игроком
 d - Выкинуть вещь из инвентаря
 Esc - Выход в меню
-</pre>
 Изменить клавиши можно в файле ./Config/game.py
+</pre>
+
