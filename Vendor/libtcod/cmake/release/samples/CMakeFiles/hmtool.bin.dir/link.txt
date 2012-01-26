@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -Wl,-rpath,.   CMakeFiles/hmtool.bin.dir/hmtool/operation.cpp.o CMakeFiles/hmtool.bin.dir/hmtool/hmtool.cpp.o  -o hmtool.bin -rdynamic ../src/libtcod.so ../src/libtcod-gui.so ../src/libtcodxx.so ../src/libtcod.so -lpng -lSDL -lz -lGLU -lGL -lSM -lICE -lX11 -lXext -lm -Wl,-rpath,/home/dmitry/Work/Projects/Python/libtcod/cmake/release/src: 

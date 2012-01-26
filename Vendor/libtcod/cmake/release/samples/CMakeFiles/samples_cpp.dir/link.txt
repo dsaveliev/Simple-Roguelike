@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -Wl,-rpath,.   CMakeFiles/samples_cpp.dir/samples_cpp.cpp.o  -o samples_cpp -rdynamic ../src/libtcod.so ../src/libtcodxx.so ../src/libtcod.so -lpng -lSDL -lz -lGLU -lGL -lSM -lICE -lX11 -lXext -lm -Wl,-rpath,/home/dmitry/Work/Projects/Python/libtcod/cmake/release/src: 
