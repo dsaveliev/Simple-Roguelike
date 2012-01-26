@@ -1,1 +1,18 @@
+Control
 
+y   k   u
+  \ | /
+  
+h - @ - l Moving keys (Vi style)
+  
+  / | \
+b   j   n
+
+i - Open inventory
+g - Pick up item
+d - Drop item
+Esc - Exit to menu
+
+You always can change settings in ./Config/game.py
+
+Press Esc to exit.
