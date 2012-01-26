@@ -41,7 +41,7 @@ class Game(object):
   ### Base game functions #####################################################
   def __show_help(self):
     while not libtcod.console_is_window_closed():
-      if self.help.show((0,0, SCREEN_WIDTH, SCREEN_HEIGHT)):
+     if self.help.show((0,0, SCREEN_WIDTH, SCREEN_HEIGHT)):
         break
 
   def __update(self):

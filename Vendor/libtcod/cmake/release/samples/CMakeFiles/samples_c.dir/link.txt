@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -DNDEBUG  -Wl,-rpath,.   CMakeFiles/samples_c.dir/samples_c.c.o  -o samples_c -rdynamic ../src/libtcod.so -lpng -lSDL -lz -lGLU -lGL -lSM -lICE -lX11 -lXext -lm -Wl,-rpath,/home/dmitry/Work/Projects/Python/libtcod/cmake/release/src: 

@@ -1,0 +1,6 @@
+/home/dmitry/Work/Projects/Python/libtcod/cmake/release/samples/CMakeFiles/hmtool.bin.dir
+/home/dmitry/Work/Projects/Python/libtcod/cmake/release/samples/CMakeFiles/samples_c.dir
+/home/dmitry/Work/Projects/Python/libtcod/cmake/release/samples/CMakeFiles/samples_cpp.dir
+/home/dmitry/Work/Projects/Python/libtcod/cmake/release/src/CMakeFiles/tcod.dir
+/home/dmitry/Work/Projects/Python/libtcod/cmake/release/src/CMakeFiles/tcod-gui.dir
+/home/dmitry/Work/Projects/Python/libtcod/cmake/release/src/CMakeFiles/tcodxx.dir
