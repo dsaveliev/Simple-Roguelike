@@ -11,7 +11,6 @@ from Config.tiles     import *
 from Config.items     import *
 from Config.creatures import *
 
-from game             import Game
 from initialize       import *
 
 import GUI.text           as Text
@@ -34,4 +33,5 @@ from Objects.creature import Creature
 from Objects.aim      import Aim
 from Objects.player   import Player
 
+from game             import Game
 from map              import Map

@@ -4,7 +4,7 @@
 #   The list of objects to document.  Objects can be named using
 #   dotted names, module filenames, or package directory names.
 #   Alases for this option include "objects" and "values".
-modules: Config, game, initialize, GUI, Mixins, Objects, map              
+modules: Config, game, initialize, GUI, Mixins, Objects, map, start         
 
 # output
 #   The type of output that should be generated.  Should be one
@@ -43,7 +43,7 @@ link: <a href="https://github.com/honeytree">Simple-Roguelike</a>
 #   The "top" page for the documentation.  Can be a URL, the name
 #   of a module or class, or one of the special names "trees.html",
 #   "indices.html", or "help.html"
-top: start
+# top: start
 
 # help
 #   An alternative help file.  The named file should contain the
