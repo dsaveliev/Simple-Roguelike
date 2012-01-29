@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Ai(object):
   """docstring for Ai"""
   def __init__(self):
