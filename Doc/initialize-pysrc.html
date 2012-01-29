@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>initialize</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;initialize
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="initialize-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="initialize-module.html">Module initialize</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">modules</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment">### Set terminal font</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">console_set_custom_font</tt><tt class="py-op">(</tt><tt id="link-0" class="py-name" targets="Variable Config.creatures.FONT=Config.creatures-module.html#FONT,Variable Config.game.FONT=Config.game-module.html#FONT,Variable Config.items.FONT=Config.items-module.html#FONT,Variable Config.tiles.FONT=Config.tiles-module.html#FONT,Variable GUI.control.FONT=GUI.control-module.html#FONT,Variable GUI.menu.FONT=GUI.menu-module.html#FONT,Variable GUI.panel.FONT=GUI.panel-module.html#FONT,Variable GUI.plain_text.FONT=GUI.plain_text-module.html#FONT,Variable GUI.text.FONT=GUI.text-module.html#FONT,Variable Mixins.action.FONT=Mixins.action-module.html#FONT,Variable Mixins.ai.FONT=Mixins.ai-module.html#FONT,Variable Mixins.effect.FONT=Mixins.effect-module.html#FONT,Variable Mixins.fight.FONT=Mixins.fight-module.html#FONT,Variable Mixins.fighter.FONT=Mixins.fighter-module.html#FONT,Variable Mixins.stat.FONT=Mixins.stat-module.html#FONT,Variable Mixins.stats.FONT=Mixins.stats-module.html#FONT,Variable Objects.aim.FONT=Objects.aim-module.html#FONT,Variable Objects.base_object.FONT=Objects.base_object-module.html#FONT,Variable Objects.creature.FONT=Objects.creature-module.html#FONT,Variable Objects.item.FONT=Objects.item-module.html#FONT,Variable Objects.object.FONT=Objects.object-module.html#FONT,Variable Objects.player.FONT=Objects.player-module.html#FONT,Variable Objects.test.FONT=Objects.test-module.html#FONT,Variable Objects.tile.FONT=Objects.tile-module.html#FONT,Variable game.FONT=game-module.html#FONT,Variable initialize.FONT=initialize-module.html#FONT"><a title="Config.creatures.FONT
+Config.game.FONT
+Config.items.FONT
+Config.tiles.FONT
+GUI.control.FONT
+GUI.menu.FONT
+GUI.panel.FONT
+GUI.plain_text.FONT
+GUI.text.FONT
+Mixins.action.FONT
+Mixins.ai.FONT
+Mixins.effect.FONT
+Mixins.fight.FONT
+Mixins.fighter.FONT
+Mixins.stat.FONT
+Mixins.stats.FONT
+Objects.aim.FONT
+Objects.base_object.FONT
+Objects.creature.FONT
+Objects.item.FONT
+Objects.object.FONT
+Objects.player.FONT
+Objects.test.FONT
+Objects.tile.FONT
+game.FONT
+initialize.FONT" class="py-name" href="#" onclick="return doclink('link-0', 'FONT', 'link-0');">FONT</a></tt><tt class="py-op">,</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">FONT_TYPE_GREYSCALE</tt> <tt class="py-op">|</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">FONT_LAYOUT_TCOD</tt><tt class="py-op">)</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">### Init terminal (width, height, title, fullscreen)</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">console_init_root</tt><tt class="py-op">(</tt><tt id="link-1" class="py-name" targets="Variable Config.creatures.SCREEN_WIDTH=Config.creatures-module.html#SCREEN_WIDTH,Variable Config.game.SCREEN_WIDTH=Config.game-module.html#SCREEN_WIDTH,Variable Config.items.SCREEN_WIDTH=Config.items-module.html#SCREEN_WIDTH,Variable Config.tiles.SCREEN_WIDTH=Config.tiles-module.html#SCREEN_WIDTH,Variable GUI.control.SCREEN_WIDTH=GUI.control-module.html#SCREEN_WIDTH,Variable GUI.menu.SCREEN_WIDTH=GUI.menu-module.html#SCREEN_WIDTH,Variable GUI.panel.SCREEN_WIDTH=GUI.panel-module.html#SCREEN_WIDTH,Variable GUI.plain_text.SCREEN_WIDTH=GUI.plain_text-module.html#SCREEN_WIDTH,Variable GUI.text.SCREEN_WIDTH=GUI.text-module.html#SCREEN_WIDTH,Variable Mixins.action.SCREEN_WIDTH=Mixins.action-module.html#SCREEN_WIDTH,Variable Mixins.ai.SCREEN_WIDTH=Mixins.ai-module.html#SCREEN_WIDTH,Variable Mixins.effect.SCREEN_WIDTH=Mixins.effect-module.html#SCREEN_WIDTH,Variable Mixins.fight.SCREEN_WIDTH=Mixins.fight-module.html#SCREEN_WIDTH,Variable Mixins.fighter.SCREEN_WIDTH=Mixins.fighter-module.html#SCREEN_WIDTH,Variable Mixins.stat.SCREEN_WIDTH=Mixins.stat-module.html#SCREEN_WIDTH,Variable Mixins.stats.SCREEN_WIDTH=Mixins.stats-module.html#SCREEN_WIDTH,Variable Objects.aim.SCREEN_WIDTH=Objects.aim-module.html#SCREEN_WIDTH,Variable Objects.base_object.SCREEN_WIDTH=Objects.base_object-module.html#SCREEN_WIDTH,Variable Objects.creature.SCREEN_WIDTH=Objects.creature-module.html#SCREEN_WIDTH,Variable Objects.item.SCREEN_WIDTH=Objects.item-module.html#SCREEN_WIDTH,Variable Objects.object.SCREEN_WIDTH=Objects.object-module.html#SCREEN_WIDTH,Variable Objects.player.SCREEN_WIDTH=Objects.player-module.html#SCREEN_WIDTH,Variable Objects.test.SCREEN_WIDTH=Objects.test-module.html#SCREEN_WIDTH,Variable Objects.tile.SCREEN_WIDTH=Objects.tile-module.html#SCREEN_WIDTH,Variable game.SCREEN_WIDTH=game-module.html#SCREEN_WIDTH,Variable initialize.SCREEN_WIDTH=initialize-module.html#SCREEN_WIDTH"><a title="Config.creatures.SCREEN_WIDTH
+Config.game.SCREEN_WIDTH
+Config.items.SCREEN_WIDTH
+Config.tiles.SCREEN_WIDTH
+GUI.control.SCREEN_WIDTH
+GUI.menu.SCREEN_WIDTH
+GUI.panel.SCREEN_WIDTH
+GUI.plain_text.SCREEN_WIDTH
+GUI.text.SCREEN_WIDTH
+Mixins.action.SCREEN_WIDTH
+Mixins.ai.SCREEN_WIDTH
+Mixins.effect.SCREEN_WIDTH
+Mixins.fight.SCREEN_WIDTH
+Mixins.fighter.SCREEN_WIDTH
+Mixins.stat.SCREEN_WIDTH
+Mixins.stats.SCREEN_WIDTH
+Objects.aim.SCREEN_WIDTH
+Objects.base_object.SCREEN_WIDTH
+Objects.creature.SCREEN_WIDTH
+Objects.item.SCREEN_WIDTH
+Objects.object.SCREEN_WIDTH
+Objects.player.SCREEN_WIDTH
+Objects.test.SCREEN_WIDTH
+Objects.tile.SCREEN_WIDTH
+game.SCREEN_WIDTH
+initialize.SCREEN_WIDTH" class="py-name" href="#" onclick="return doclink('link-1', 'SCREEN_WIDTH', 'link-1');">SCREEN_WIDTH</a></tt><tt class="py-op">,</tt> <tt id="link-2" class="py-name" targets="Variable Config.creatures.SCREEN_HEIGHT=Config.creatures-module.html#SCREEN_HEIGHT,Variable Config.game.SCREEN_HEIGHT=Config.game-module.html#SCREEN_HEIGHT,Variable Config.items.SCREEN_HEIGHT=Config.items-module.html#SCREEN_HEIGHT,Variable Config.tiles.SCREEN_HEIGHT=Config.tiles-module.html#SCREEN_HEIGHT,Variable GUI.control.SCREEN_HEIGHT=GUI.control-module.html#SCREEN_HEIGHT,Variable GUI.menu.SCREEN_HEIGHT=GUI.menu-module.html#SCREEN_HEIGHT,Variable GUI.panel.SCREEN_HEIGHT=GUI.panel-module.html#SCREEN_HEIGHT,Variable GUI.plain_text.SCREEN_HEIGHT=GUI.plain_text-module.html#SCREEN_HEIGHT,Variable GUI.text.SCREEN_HEIGHT=GUI.text-module.html#SCREEN_HEIGHT,Variable Mixins.action.SCREEN_HEIGHT=Mixins.action-module.html#SCREEN_HEIGHT,Variable Mixins.ai.SCREEN_HEIGHT=Mixins.ai-module.html#SCREEN_HEIGHT,Variable Mixins.effect.SCREEN_HEIGHT=Mixins.effect-module.html#SCREEN_HEIGHT,Variable Mixins.fight.SCREEN_HEIGHT=Mixins.fight-module.html#SCREEN_HEIGHT,Variable Mixins.fighter.SCREEN_HEIGHT=Mixins.fighter-module.html#SCREEN_HEIGHT,Variable Mixins.stat.SCREEN_HEIGHT=Mixins.stat-module.html#SCREEN_HEIGHT,Variable Mixins.stats.SCREEN_HEIGHT=Mixins.stats-module.html#SCREEN_HEIGHT,Variable Objects.aim.SCREEN_HEIGHT=Objects.aim-module.html#SCREEN_HEIGHT,Variable Objects.base_object.SCREEN_HEIGHT=Objects.base_object-module.html#SCREEN_HEIGHT,Variable Objects.creature.SCREEN_HEIGHT=Objects.creature-module.html#SCREEN_HEIGHT,Variable Objects.item.SCREEN_HEIGHT=Objects.item-module.html#SCREEN_HEIGHT,Variable Objects.object.SCREEN_HEIGHT=Objects.object-module.html#SCREEN_HEIGHT,Variable Objects.player.SCREEN_HEIGHT=Objects.player-module.html#SCREEN_HEIGHT,Variable Objects.test.SCREEN_HEIGHT=Objects.test-module.html#SCREEN_HEIGHT,Variable Objects.tile.SCREEN_HEIGHT=Objects.tile-module.html#SCREEN_HEIGHT,Variable game.SCREEN_HEIGHT=game-module.html#SCREEN_HEIGHT,Variable initialize.SCREEN_HEIGHT=initialize-module.html#SCREEN_HEIGHT"><a title="Config.creatures.SCREEN_HEIGHT
+Config.game.SCREEN_HEIGHT
+Config.items.SCREEN_HEIGHT
+Config.tiles.SCREEN_HEIGHT
+GUI.control.SCREEN_HEIGHT
+GUI.menu.SCREEN_HEIGHT
+GUI.panel.SCREEN_HEIGHT
+GUI.plain_text.SCREEN_HEIGHT
+GUI.text.SCREEN_HEIGHT
+Mixins.action.SCREEN_HEIGHT
+Mixins.ai.SCREEN_HEIGHT
+Mixins.effect.SCREEN_HEIGHT
+Mixins.fight.SCREEN_HEIGHT
+Mixins.fighter.SCREEN_HEIGHT
+Mixins.stat.SCREEN_HEIGHT
+Mixins.stats.SCREEN_HEIGHT
+Objects.aim.SCREEN_HEIGHT
+Objects.base_object.SCREEN_HEIGHT
+Objects.creature.SCREEN_HEIGHT
+Objects.item.SCREEN_HEIGHT
+Objects.object.SCREEN_HEIGHT
+Objects.player.SCREEN_HEIGHT
+Objects.test.SCREEN_HEIGHT
+Objects.tile.SCREEN_HEIGHT
+game.SCREEN_HEIGHT
+initialize.SCREEN_HEIGHT" class="py-name" href="#" onclick="return doclink('link-2', 'SCREEN_HEIGHT', 'link-2');">SCREEN_HEIGHT</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Variable Config.creatures.TITLE=Config.creatures-module.html#TITLE,Variable Config.game.TITLE=Config.game-module.html#TITLE,Variable Config.items.TITLE=Config.items-module.html#TITLE,Variable Config.tiles.TITLE=Config.tiles-module.html#TITLE,Variable GUI.control.TITLE=GUI.control-module.html#TITLE,Variable GUI.menu.TITLE=GUI.menu-module.html#TITLE,Variable GUI.panel.TITLE=GUI.panel-module.html#TITLE,Variable GUI.plain_text.TITLE=GUI.plain_text-module.html#TITLE,Variable GUI.text.TITLE=GUI.text-module.html#TITLE,Variable Mixins.action.TITLE=Mixins.action-module.html#TITLE,Variable Mixins.ai.TITLE=Mixins.ai-module.html#TITLE,Variable Mixins.effect.TITLE=Mixins.effect-module.html#TITLE,Variable Mixins.fight.TITLE=Mixins.fight-module.html#TITLE,Variable Mixins.fighter.TITLE=Mixins.fighter-module.html#TITLE,Variable Mixins.stat.TITLE=Mixins.stat-module.html#TITLE,Variable Mixins.stats.TITLE=Mixins.stats-module.html#TITLE,Variable Objects.aim.TITLE=Objects.aim-module.html#TITLE,Variable Objects.base_object.TITLE=Objects.base_object-module.html#TITLE,Variable Objects.creature.TITLE=Objects.creature-module.html#TITLE,Variable Objects.item.TITLE=Objects.item-module.html#TITLE,Variable Objects.object.TITLE=Objects.object-module.html#TITLE,Variable Objects.player.TITLE=Objects.player-module.html#TITLE,Variable Objects.test.TITLE=Objects.test-module.html#TITLE,Variable Objects.tile.TITLE=Objects.tile-module.html#TITLE,Variable game.TITLE=game-module.html#TITLE,Variable initialize.TITLE=initialize-module.html#TITLE"><a title="Config.creatures.TITLE
+Config.game.TITLE
+Config.items.TITLE
+Config.tiles.TITLE
+GUI.control.TITLE
+GUI.menu.TITLE
+GUI.panel.TITLE
+GUI.plain_text.TITLE
+GUI.text.TITLE
+Mixins.action.TITLE
+Mixins.ai.TITLE
+Mixins.effect.TITLE
+Mixins.fight.TITLE
+Mixins.fighter.TITLE
+Mixins.stat.TITLE
+Mixins.stats.TITLE
+Objects.aim.TITLE
+Objects.base_object.TITLE
+Objects.creature.TITLE
+Objects.item.TITLE
+Objects.object.TITLE
+Objects.player.TITLE
+Objects.test.TITLE
+Objects.tile.TITLE
+game.TITLE
+initialize.TITLE" class="py-name" href="#" onclick="return doclink('link-3', 'TITLE', 'link-3');">TITLE</a></tt><tt class="py-op">,</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">RENDERER_SDL</tt><tt class="py-op">)</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">### Limit FPS</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">sys_set_fps</tt><tt class="py-op">(</tt><tt id="link-4" class="py-name" targets="Variable Config.creatures.LIMIT_FPS=Config.creatures-module.html#LIMIT_FPS,Variable Config.game.LIMIT_FPS=Config.game-module.html#LIMIT_FPS,Variable Config.items.LIMIT_FPS=Config.items-module.html#LIMIT_FPS,Variable Config.tiles.LIMIT_FPS=Config.tiles-module.html#LIMIT_FPS,Variable GUI.control.LIMIT_FPS=GUI.control-module.html#LIMIT_FPS,Variable GUI.menu.LIMIT_FPS=GUI.menu-module.html#LIMIT_FPS,Variable GUI.panel.LIMIT_FPS=GUI.panel-module.html#LIMIT_FPS,Variable GUI.plain_text.LIMIT_FPS=GUI.plain_text-module.html#LIMIT_FPS,Variable GUI.text.LIMIT_FPS=GUI.text-module.html#LIMIT_FPS,Variable Mixins.action.LIMIT_FPS=Mixins.action-module.html#LIMIT_FPS,Variable Mixins.ai.LIMIT_FPS=Mixins.ai-module.html#LIMIT_FPS,Variable Mixins.effect.LIMIT_FPS=Mixins.effect-module.html#LIMIT_FPS,Variable Mixins.fight.LIMIT_FPS=Mixins.fight-module.html#LIMIT_FPS,Variable Mixins.fighter.LIMIT_FPS=Mixins.fighter-module.html#LIMIT_FPS,Variable Mixins.stat.LIMIT_FPS=Mixins.stat-module.html#LIMIT_FPS,Variable Mixins.stats.LIMIT_FPS=Mixins.stats-module.html#LIMIT_FPS,Variable Objects.aim.LIMIT_FPS=Objects.aim-module.html#LIMIT_FPS,Variable Objects.base_object.LIMIT_FPS=Objects.base_object-module.html#LIMIT_FPS,Variable Objects.creature.LIMIT_FPS=Objects.creature-module.html#LIMIT_FPS,Variable Objects.item.LIMIT_FPS=Objects.item-module.html#LIMIT_FPS,Variable Objects.object.LIMIT_FPS=Objects.object-module.html#LIMIT_FPS,Variable Objects.player.LIMIT_FPS=Objects.player-module.html#LIMIT_FPS,Variable Objects.test.LIMIT_FPS=Objects.test-module.html#LIMIT_FPS,Variable Objects.tile.LIMIT_FPS=Objects.tile-module.html#LIMIT_FPS,Variable game.LIMIT_FPS=game-module.html#LIMIT_FPS,Variable initialize.LIMIT_FPS=initialize-module.html#LIMIT_FPS"><a title="Config.creatures.LIMIT_FPS
+Config.game.LIMIT_FPS
+Config.items.LIMIT_FPS
+Config.tiles.LIMIT_FPS
+GUI.control.LIMIT_FPS
+GUI.menu.LIMIT_FPS
+GUI.panel.LIMIT_FPS
+GUI.plain_text.LIMIT_FPS
+GUI.text.LIMIT_FPS
+Mixins.action.LIMIT_FPS
+Mixins.ai.LIMIT_FPS
+Mixins.effect.LIMIT_FPS
+Mixins.fight.LIMIT_FPS
+Mixins.fighter.LIMIT_FPS
+Mixins.stat.LIMIT_FPS
+Mixins.stats.LIMIT_FPS
+Objects.aim.LIMIT_FPS
+Objects.base_object.LIMIT_FPS
+Objects.creature.LIMIT_FPS
+Objects.item.LIMIT_FPS
+Objects.object.LIMIT_FPS
+Objects.player.LIMIT_FPS
+Objects.test.LIMIT_FPS
+Objects.tile.LIMIT_FPS
+game.LIMIT_FPS
+initialize.LIMIT_FPS" class="py-name" href="#" onclick="return doclink('link-4', 'LIMIT_FPS', 'link-4');">LIMIT_FPS</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment">### Console</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable Config.creatures.con=Config.creatures-module.html#con,Variable GUI.control.con=GUI.control-module.html#con,Variable GUI.menu.con=GUI.menu-module.html#con,Variable GUI.panel.con=GUI.panel-module.html#con,Variable GUI.plain_text.con=GUI.plain_text-module.html#con,Variable GUI.text.con=GUI.text-module.html#con,Variable Mixins.action.con=Mixins.action-module.html#con,Variable Mixins.ai.con=Mixins.ai-module.html#con,Variable Mixins.effect.con=Mixins.effect-module.html#con,Variable Mixins.fight.con=Mixins.fight-module.html#con,Variable Mixins.fighter.con=Mixins.fighter-module.html#con,Variable Mixins.stat.con=Mixins.stat-module.html#con,Variable Mixins.stats.con=Mixins.stats-module.html#con,Variable Objects.aim.con=Objects.aim-module.html#con,Variable Objects.base_object.con=Objects.base_object-module.html#con,Variable Objects.creature.con=Objects.creature-module.html#con,Variable Objects.item.con=Objects.item-module.html#con,Variable Objects.object.con=Objects.object-module.html#con,Variable Objects.player.con=Objects.player-module.html#con,Variable Objects.test.con=Objects.test-module.html#con,Variable Objects.tile.con=Objects.tile-module.html#con,Variable initialize.con=initialize-module.html#con"><a title="Config.creatures.con
+GUI.control.con
+GUI.menu.con
+GUI.panel.con
+GUI.plain_text.con
+GUI.text.con
+Mixins.action.con
+Mixins.ai.con
+Mixins.effect.con
+Mixins.fight.con
+Mixins.fighter.con
+Mixins.stat.con
+Mixins.stats.con
+Objects.aim.con
+Objects.base_object.con
+Objects.creature.con
+Objects.item.con
+Objects.object.con
+Objects.player.con
+Objects.test.con
+Objects.tile.con
+initialize.con" class="py-name" href="#" onclick="return doclink('link-5', 'con', 'link-5');">con</a></tt> <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">console_new</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name" targets="Variable Config.creatures.MAP=Config.creatures-module.html#MAP,Variable Config.game.MAP=Config.game-module.html#MAP,Variable Config.items.MAP=Config.items-module.html#MAP,Variable Config.tiles.MAP=Config.tiles-module.html#MAP,Variable GUI.control.MAP=GUI.control-module.html#MAP,Variable GUI.menu.MAP=GUI.menu-module.html#MAP,Variable GUI.panel.MAP=GUI.panel-module.html#MAP,Variable GUI.plain_text.MAP=GUI.plain_text-module.html#MAP,Variable GUI.text.MAP=GUI.text-module.html#MAP,Variable Mixins.action.MAP=Mixins.action-module.html#MAP,Variable Mixins.ai.MAP=Mixins.ai-module.html#MAP,Variable Mixins.effect.MAP=Mixins.effect-module.html#MAP,Variable Mixins.fight.MAP=Mixins.fight-module.html#MAP,Variable Mixins.fighter.MAP=Mixins.fighter-module.html#MAP,Variable Mixins.stat.MAP=Mixins.stat-module.html#MAP,Variable Mixins.stats.MAP=Mixins.stats-module.html#MAP,Variable Objects.aim.MAP=Objects.aim-module.html#MAP,Variable Objects.base_object.MAP=Objects.base_object-module.html#MAP,Variable Objects.creature.MAP=Objects.creature-module.html#MAP,Variable Objects.item.MAP=Objects.item-module.html#MAP,Variable Objects.object.MAP=Objects.object-module.html#MAP,Variable Objects.player.MAP=Objects.player-module.html#MAP,Variable Objects.test.MAP=Objects.test-module.html#MAP,Variable Objects.tile.MAP=Objects.tile-module.html#MAP,Variable game.MAP=game-module.html#MAP,Variable initialize.MAP=initialize-module.html#MAP"><a title="Config.creatures.MAP
+Config.game.MAP
+Config.items.MAP
+Config.tiles.MAP
+GUI.control.MAP
+GUI.menu.MAP
+GUI.panel.MAP
+GUI.plain_text.MAP
+GUI.text.MAP
+Mixins.action.MAP
+Mixins.ai.MAP
+Mixins.effect.MAP
+Mixins.fight.MAP
+Mixins.fighter.MAP
+Mixins.stat.MAP
+Mixins.stats.MAP
+Objects.aim.MAP
+Objects.base_object.MAP
+Objects.creature.MAP
+Objects.item.MAP
+Objects.object.MAP
+Objects.player.MAP
+Objects.test.MAP
+Objects.tile.MAP
+game.MAP
+initialize.MAP" class="py-name" href="#" onclick="return doclink('link-6', 'MAP', 'link-6');">MAP</a></tt><tt class="py-op">[</tt><tt class="py-string">'WIDTH'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name"><a title="Config.creatures.MAP
+Config.game.MAP
+Config.items.MAP
+Config.tiles.MAP
+GUI.control.MAP
+GUI.menu.MAP
+GUI.panel.MAP
+GUI.plain_text.MAP
+GUI.text.MAP
+Mixins.action.MAP
+Mixins.ai.MAP
+Mixins.effect.MAP
+Mixins.fight.MAP
+Mixins.fighter.MAP
+Mixins.stat.MAP
+Mixins.stats.MAP
+Objects.aim.MAP
+Objects.base_object.MAP
+Objects.creature.MAP
+Objects.item.MAP
+Objects.object.MAP
+Objects.player.MAP
+Objects.test.MAP
+Objects.tile.MAP
+game.MAP
+initialize.MAP" class="py-name" href="#" onclick="return doclink('link-7', 'MAP', 'link-6');">MAP</a></tt><tt class="py-op">[</tt><tt class="py-string">'HEIGHT'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Jan 29 22:53:27 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

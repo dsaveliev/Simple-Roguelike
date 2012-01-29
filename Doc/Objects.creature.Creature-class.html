@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Objects.creature.Creature</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="Objects-module.html">Package&nbsp;Objects</a> ::
+        <a href="Objects.creature-module.html">Module&nbsp;creature</a> ::
+        Class&nbsp;Creature
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Objects.creature.Creature-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Creature</h1><p class="nomargin-top"><span class="codelink"><a href="Objects.creature-pysrc.html#Creature">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_objects__3" name="uml_class_diagram_for_objects__3">
+<area shape="rect" id="node1" href="Objects.player.Player-class.html" title="Description of player" alt="" coords="422,510,533,549"/>
+<area shape="rect" id="node2_31" href="Objects.object.Object-class.html#draw" title="Objects.object.Object.draw" alt="" coords="17,39,189,57"/>
+<area shape="rect" id="node2_32" href="Objects.object.Object-class.html#clear" title="Objects.object.Object.clear" alt="" coords="17,57,189,76"/>
+<area shape="rect" id="node2_33" href="Objects.object.Object-class.html#distance_to" title="Objects.object.Object.distance_to" alt="" coords="17,76,189,95"/>
+<area shape="rect" id="node2_34" href="Objects.object.Object-class.html#set_position" title="Objects.object.Object.set_position" alt="" coords="17,95,189,113"/>
+<area shape="rect" id="node2_35" href="Objects.object.Object-class.html#clear_all" title="Objects.object.Object.clear_all" alt="" coords="17,113,189,132"/>
+<area shape="rect" id="node2_36" href="Objects.object.Object-class.html#draw_all" title="Objects.object.Object.draw_all" alt="" coords="17,132,189,151"/>
+<area shape="rect" id="node2_37" href="Objects.object.Object-class.html#get_by_position" title="Objects.object.Object.get_by_position" alt="" coords="17,151,189,169"/>
+<area shape="rect" id="node2" href="Objects.object.Object-class.html" title="Objects.object.Object" alt="" coords="5,6,201,175"/>
+<area shape="rect" id="node5_38" href="Objects.creature.Creature-class.html#list" title="Description of creature" alt="" coords="343,220,611,239"/>
+<area shape="rect" id="node5_39" href="Objects.creature.Creature-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="343,241,611,260"/>
+<area shape="rect" id="node5_40" href="Objects.creature.Creature-class.html#action_on_area" title="Objects.creature.Creature.action_on_area" alt="" coords="343,260,611,279"/>
+<area shape="rect" id="node5_41" href="Objects.creature.Creature-class.html#action_on_himself" title="Objects.creature.Creature.action_on_himself" alt="" coords="343,279,611,297"/>
+<area shape="rect" id="node5_42" href="Objects.creature.Creature-class.html#action_on_nearest_target" title="Objects.creature.Creature.action_on_nearest_target" alt="" coords="343,297,611,316"/>
+<area shape="rect" id="node5_43" href="Objects.creature.Creature-class.html#action_on_target" title="Objects.creature.Creature.action_on_target" alt="" coords="343,316,611,335"/>
+<area shape="rect" id="node5_44" href="Objects.creature.Creature-class.html#death" title="Objects.creature.Creature.death" alt="" coords="343,335,611,353"/>
+<area shape="rect" id="node5_45" href="Objects.creature.Creature-class.html#drop" title="Objects.creature.Creature.drop" alt="" coords="343,353,611,372"/>
+<area shape="rect" id="node5_46" href="Objects.creature.Creature-class.html#drop_all" title="Objects.creature.Creature.drop_all" alt="" coords="343,372,611,391"/>
+<area shape="rect" id="node5_47" href="Objects.creature.Creature-class.html#get_nearest_creature" title="Objects.creature.Creature.get_nearest_creature" alt="" coords="343,391,611,409"/>
+<area shape="rect" id="node5_48" href="Objects.creature.Creature-class.html#get_random_type" title="Objects.creature.Creature.get_random_type" alt="" coords="343,409,611,428"/>
+<area shape="rect" id="node5_49" href="Objects.creature.Creature-class.html#get_surrounding_creatures" title="Objects.creature.Creature.get_surrounding_creatures" alt="" coords="343,428,611,447"/>
+<area shape="rect" id="node5_50" href="Objects.creature.Creature-class.html#inventory_weight" title="Objects.creature.Creature.inventory_weight" alt="" coords="343,447,611,465"/>
+<area shape="rect" id="node5_51" href="Objects.creature.Creature-class.html#move" title="Objects.creature.Creature.move" alt="" coords="343,465,611,484"/>
+<area shape="rect" id="node5" href="Objects.creature.Creature-class.html" title="Objects.creature.Creature" alt="" coords="330,195,622,490"/>
+<area shape="rect" id="node3_52" href="Mixins.stats.Stats-class.html#stat_show" title="Mixins.stats.Stats.stat_show" alt="" coords="243,95,465,113"/>
+<area shape="rect" id="node3" href="Mixins.stats.Stats-class.html" title="docstring for Stats" alt="" coords="230,62,477,119"/>
+<area shape="rect" id="node4_53" href="Mixins.fight.Fight-class.html#attack" title="Mixins.fight.Fight.attack" alt="" coords="519,76,683,95"/>
+<area shape="rect" id="node4_54" href="Mixins.fight.Fight-class.html#spread_blood" title="Mixins.fight.Fight.spread_blood" alt="" coords="519,95,683,113"/>
+<area shape="rect" id="node4_55" href="Mixins.fight.Fight-class.html#take_damage" title="Mixins.fight.Fight.take_damage" alt="" coords="519,113,683,132"/>
+<area shape="rect" id="node4" href="Mixins.fight.Fight-class.html" title="docstring for Fighter" alt="" coords="506,43,694,138"/>
+<area shape="rect" id="node6_56" href="Mixins.ai.Ai-class.html#base_behavior" title="Mixins.ai.Ai.base_behavior" alt="" coords="736,48,941,67"/>
+<area shape="rect" id="node6_57" href="Mixins.ai.Ai-class.html#check_deviation_time" title="Mixins.ai.Ai.check_deviation_time" alt="" coords="736,67,941,85"/>
+<area shape="rect" id="node6_58" href="Mixins.ai.Ai-class.html#confuse" title="Mixins.ai.Ai.confuse" alt="" coords="736,85,941,104"/>
+<area shape="rect" id="node6_59" href="Mixins.ai.Ai-class.html#confused_behavior" title="Mixins.ai.Ai.confused_behavior" alt="" coords="736,104,941,123"/>
+<area shape="rect" id="node6_60" href="Mixins.ai.Ai-class.html#move_towards" title="Mixins.ai.Ai.move_towards" alt="" coords="736,123,941,141"/>
+<area shape="rect" id="node6_61" href="Mixins.ai.Ai-class.html#take_turn" title="Mixins.ai.Ai.take_turn" alt="" coords="736,141,941,160"/>
+<area shape="rect" id="node6" href="Mixins.ai.Ai-class.html" title="docstring for Ai" alt="" coords="724,15,953,166"/>
+</map>
+  <img src="uml_class_diagram_for_objects__3.gif" alt='' usemap="#uml_class_diagram_for_objects__3" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Objects.creature.Creature-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">game</span>,
+        <span class="summary-sig-arg">position</span>,
+        <span class="summary-sig-arg">type</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="action_on_area"></a><span class="summary-sig-name">action_on_area</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">effect</span>,
+        <span class="summary-sig-arg">params</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.action_on_area">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="action_on_himself"></a><span class="summary-sig-name">action_on_himself</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">effect</span>,
+        <span class="summary-sig-arg">params</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.action_on_himself">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="action_on_nearest_target"></a><span class="summary-sig-name">action_on_nearest_target</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">effect</span>,
+        <span class="summary-sig-arg">params</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.action_on_nearest_target">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="action_on_target"></a><span class="summary-sig-name">action_on_target</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">effect</span>,
+        <span class="summary-sig-arg">params</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.action_on_target">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="death"></a><span class="summary-sig-name">death</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.death">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="drop"></a><span class="summary-sig-name">drop</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">item</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.drop">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="drop_all"></a><span class="summary-sig-name">drop_all</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.drop_all">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_nearest_creature"></a><span class="summary-sig-name">get_nearest_creature</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">range_value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.get_nearest_creature">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_surrounding_creatures"></a><span class="summary-sig-name">get_surrounding_creatures</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">range_value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.get_surrounding_creatures">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="inventory_weight"></a><span class="summary-sig-name">inventory_weight</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.inventory_weight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="move"></a><span class="summary-sig-name">move</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">dx</span>,
+        <span class="summary-sig-arg">dy</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.move">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="Objects.object.Object-class.html">object.Object</a></code></b>:
+      <code><a href="Objects.object.Object-class.html#clear">clear</a></code>,
+      <code><a href="Objects.object.Object-class.html#distance_to">distance_to</a></code>,
+      <code><a href="Objects.object.Object-class.html#draw">draw</a></code>,
+      <code><a href="Objects.object.Object-class.html#set_position">set_position</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="Mixins.stats.Stats-class.html">Mixins.stats.Stats</a></code></b>:
+      <code><a href="Mixins.stats.Stats-class.html#stat_show">stat_show</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="Mixins.fight.Fight-class.html">Mixins.fight.Fight</a></code></b>:
+      <code><a href="Mixins.fight.Fight-class.html#attack">attack</a></code>,
+      <code><a href="Mixins.fight.Fight-class.html#spread_blood">spread_blood</a></code>,
+      <code><a href="Mixins.fight.Fight-class.html#take_damage">take_damage</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="Mixins.ai.Ai-class.html">Mixins.ai.Ai</a></code></b>:
+      <code><a href="Mixins.ai.Ai-class.html#base_behavior">base_behavior</a></code>,
+      <code><a href="Mixins.ai.Ai-class.html#check_deviation_time">check_deviation_time</a></code>,
+      <code><a href="Mixins.ai.Ai-class.html#confuse">confuse</a></code>,
+      <code><a href="Mixins.ai.Ai-class.html#confused_behavior">confused_behavior</a></code>,
+      <code><a href="Mixins.ai.Ai-class.html#move_towards">move_towards</a></code>,
+      <code><a href="Mixins.ai.Ai-class.html#take_turn">take_turn</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="Objects.object.Object-class.html">object.Object</a></code></b>:
+      <code><a href="Objects.object.Object-class.html#clear_all">clear_all</a></code>,
+      <code><a href="Objects.object.Object-class.html#draw_all">draw_all</a></code>,
+      <code><a href="Objects.object.Object-class.html#get_by_position">get_by_position</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== STATIC METHODS ==================== -->
+<a name="section-StaticMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Static Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-StaticMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_random_type"></a><span class="summary-sig-name">get_random_type</span>(<span class="summary-sig-arg">policy</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="Objects.creature-pysrc.html#Creature.get_random_type">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="list"></a><span class="summary-name">list</span> = <code title="[]">[]</code><br />
+      Description of creature
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">game</span>,
+        <span class="sig-arg">position</span>,
+        <span class="sig-arg">type</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="Objects.creature-pysrc.html#Creature.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Jan 29 22:53:26 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

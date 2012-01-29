@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["Objects.base_object.Object-c", "Objects.creature.Creature-c", "GUI.plain_text.PlainText-c", "Mixins.fighter.Fighter-c", "Objects.object.Object-c", "Objects.player.Player-c", "Objects.base_object-m", "GUI.control.Control-c", "Mixins.fight.Fight-c", "Mixins.stats.Stats-c", "Objects.item.Item-c", "Objects.test.Test-c", "Objects.tile.Tile-c", "Config.creatures-m", "Objects.creature-m", "Mixins.stat.Stat-c", "GUI.panel.Panel-c", "Objects.aim.Aim-c", "GUI.plain_text-m", "Mixins.fighter-m", "Objects.object-m", "Objects.player-m", "Mixins.action-m", "Mixins.effect-m", "GUI.menu.Menu-c", "Config.items-m", "Config.tiles-m", "Mixins.fight-m", "Mixins.stats-m", "Objects.item-m", "Objects.test-m", "Objects.tile-m", "Mixins.ai.Ai-c", "Config.game-m", "GUI.control-m", "Mixins.stat-m", "Mixins.test-m", "Objects.aim-m", "initialize-m", "GUI.panel-m", "Mixins.ai-m", "game.Game-c", "GUI.menu-m", "GUI.text-m", "Objects-m", "Config-m", "Mixins-m", "game-m", "GUI-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>
