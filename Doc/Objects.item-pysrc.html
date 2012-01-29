@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Objects.item</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="Objects-module.html">Package&nbsp;Objects</a> ::
+        Module&nbsp;item
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Objects.item-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="Objects.item-module.html">Module Objects.item</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">modules</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="Item"></a><div id="Item-def"><a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt> <a class="py-toggle" href="#" id="Item-toggle" onclick="return toggle('Item');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="Objects.item.Item-class.html">Item</a><tt class="py-op">(</tt><tt class="py-base-class">Object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Item-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Item-expanded"><a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line">  <tt id="link-0" class="py-name" targets="Variable Objects.base_object.Object.list=Objects.base_object.Object-class.html#list,Variable Objects.creature.Creature.list=Objects.creature.Creature-class.html#list,Variable Objects.item.Item.list=Objects.item.Item-class.html#list,Variable Objects.object.Object.list=Objects.object.Object-class.html#list"><a title="Objects.base_object.Object.list
+Objects.creature.Creature.list
+Objects.item.Item.list
+Objects.object.Object.list" class="py-name" href="#" onclick="return doclink('link-0', 'list', 'link-0');">list</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line">  <tt class="py-string">""" Description of creature """</tt> </tt>
+<a name="Item.__init__"></a><div id="Item.__init__-def"><a name="L6"></a><tt class="py-lineno"> 6</tt> <a class="py-toggle" href="#" id="Item.__init__-toggle" onclick="return toggle('Item.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="Objects.item.Item-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">position</tt><tt class="py-op">,</tt> <tt class="py-param">type</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Item.__init__-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="Item.__init__-expanded"><a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line">    <tt class="py-name">params</tt> <tt class="py-op">=</tt> <tt id="link-1" class="py-name" targets="Variable Config.creatures.ITEMS=Config.creatures-module.html#ITEMS,Variable Config.items.ITEMS=Config.items-module.html#ITEMS,Variable GUI.control.ITEMS=GUI.control-module.html#ITEMS,Variable GUI.menu.ITEMS=GUI.menu-module.html#ITEMS,Variable GUI.panel.ITEMS=GUI.panel-module.html#ITEMS,Variable GUI.plain_text.ITEMS=GUI.plain_text-module.html#ITEMS,Variable GUI.text.ITEMS=GUI.text-module.html#ITEMS,Variable Mixins.action.ITEMS=Mixins.action-module.html#ITEMS,Variable Mixins.ai.ITEMS=Mixins.ai-module.html#ITEMS,Variable Mixins.effect.ITEMS=Mixins.effect-module.html#ITEMS,Variable Mixins.fight.ITEMS=Mixins.fight-module.html#ITEMS,Variable Mixins.fighter.ITEMS=Mixins.fighter-module.html#ITEMS,Variable Mixins.stat.ITEMS=Mixins.stat-module.html#ITEMS,Variable Mixins.stats.ITEMS=Mixins.stats-module.html#ITEMS,Variable Objects.aim.ITEMS=Objects.aim-module.html#ITEMS,Variable Objects.base_object.ITEMS=Objects.base_object-module.html#ITEMS,Variable Objects.creature.ITEMS=Objects.creature-module.html#ITEMS,Variable Objects.item.ITEMS=Objects.item-module.html#ITEMS,Variable Objects.object.ITEMS=Objects.object-module.html#ITEMS,Variable Objects.player.ITEMS=Objects.player-module.html#ITEMS,Variable Objects.test.ITEMS=Objects.test-module.html#ITEMS,Variable Objects.tile.ITEMS=Objects.tile-module.html#ITEMS,Variable game.ITEMS=game-module.html#ITEMS,Variable initialize.ITEMS=initialize-module.html#ITEMS"><a title="Config.creatures.ITEMS
+Config.items.ITEMS
+GUI.control.ITEMS
+GUI.menu.ITEMS
+GUI.panel.ITEMS
+GUI.plain_text.ITEMS
+GUI.text.ITEMS
+Mixins.action.ITEMS
+Mixins.ai.ITEMS
+Mixins.effect.ITEMS
+Mixins.fight.ITEMS
+Mixins.fighter.ITEMS
+Mixins.stat.ITEMS
+Mixins.stats.ITEMS
+Objects.aim.ITEMS
+Objects.base_object.ITEMS
+Objects.creature.ITEMS
+Objects.item.ITEMS
+Objects.object.ITEMS
+Objects.player.ITEMS
+Objects.test.ITEMS
+Objects.tile.ITEMS
+game.ITEMS
+initialize.ITEMS" class="py-name" href="#" onclick="return doclink('link-1', 'ITEMS', 'link-1');">ITEMS</a></tt><tt class="py-op">[</tt><tt class="py-name">type</tt><tt class="py-op">]</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">position</tt><tt class="py-op">:</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">      <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-2" class="py-name" targets="Class Objects.item.Item=Objects.item.Item-class.html"><a title="Objects.item.Item" class="py-name" href="#" onclick="return doclink('link-2', 'Item', 'link-2');">Item</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method GUI.control.Control.__init__()=GUI.control.Control-class.html#__init__,Method GUI.menu.Menu.__init__()=GUI.menu.Menu-class.html#__init__,Method GUI.panel.Panel.__init__()=GUI.panel.Panel-class.html#__init__,Method GUI.plain_text.PlainText.__init__()=GUI.plain_text.PlainText-class.html#__init__,Method Mixins.ai.Ai.__init__()=Mixins.ai.Ai-class.html#__init__,Method Mixins.fight.Fight.__init__()=Mixins.fight.Fight-class.html#__init__,Method Mixins.fighter.Fighter.__init__()=Mixins.fighter.Fighter-class.html#__init__,Method Mixins.stat.Stat.__init__()=Mixins.stat.Stat-class.html#__init__,Method Mixins.stats.Stats.__init__()=Mixins.stats.Stats-class.html#__init__,Method Objects.aim.Aim.__init__()=Objects.aim.Aim-class.html#__init__,Method Objects.base_object.Object.__init__()=Objects.base_object.Object-class.html#__init__,Method Objects.creature.Creature.__init__()=Objects.creature.Creature-class.html#__init__,Method Objects.item.Item.__init__()=Objects.item.Item-class.html#__init__,Method Objects.object.Object.__init__()=Objects.object.Object-class.html#__init__,Method Objects.player.Player.__init__()=Objects.player.Player-class.html#__init__,Method Objects.test.Test.__init__()=Objects.test.Test-class.html#__init__,Method Objects.tile.Tile.__init__()=Objects.tile.Tile-class.html#__init__,Method game.Game.__init__()=game.Game-class.html#__init__"><a title="GUI.control.Control.__init__
+GUI.menu.Menu.__init__
+GUI.panel.Panel.__init__
+GUI.plain_text.PlainText.__init__
+Mixins.ai.Ai.__init__
+Mixins.fight.Fight.__init__
+Mixins.fighter.Fighter.__init__
+Mixins.stat.Stat.__init__
+Mixins.stats.Stats.__init__
+Objects.aim.Aim.__init__
+Objects.base_object.Object.__init__
+Objects.creature.Creature.__init__
+Objects.item.Item.__init__
+Objects.object.Object.__init__
+Objects.player.Player.__init__
+Objects.test.Test.__init__
+Objects.tile.Tile.__init__
+game.Game.__init__" class="py-name" href="#" onclick="return doclink('link-3', '__init__', 'link-3');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">position</tt><tt class="py-op">,</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'OBJECT'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">      <tt id="link-4" class="py-name"><a title="Objects.item.Item" class="py-name" href="#" onclick="return doclink('link-4', 'Item', 'link-2');">Item</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="Objects.base_object.Object.list
+Objects.creature.Creature.list
+Objects.item.Item.list
+Objects.object.Object.list" class="py-name" href="#" onclick="return doclink('link-5', 'list', 'link-0');">list</a></tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">      <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name"><a title="Objects.item.Item" class="py-name" href="#" onclick="return doclink('link-6', 'Item', 'link-2');">Item</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="GUI.control.Control.__init__
+GUI.menu.Menu.__init__
+GUI.panel.Panel.__init__
+GUI.plain_text.PlainText.__init__
+Mixins.ai.Ai.__init__
+Mixins.fight.Fight.__init__
+Mixins.fighter.Fighter.__init__
+Mixins.stat.Stat.__init__
+Mixins.stats.Stats.__init__
+Objects.aim.Aim.__init__
+Objects.base_object.Object.__init__
+Objects.creature.Creature.__init__
+Objects.item.Item.__init__
+Objects.object.Object.__init__
+Objects.player.Player.__init__
+Objects.test.Test.__init__
+Objects.tile.Tile.__init__
+game.Game.__init__" class="py-name" href="#" onclick="return doclink('link-7', '__init__', 'link-3');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'OBJECT'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">prevalence</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'PREVALENCE'</tt><tt class="py-op">]</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">actions</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'ACTIONS'</tt><tt class="py-op">]</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">effects</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'EFFECTS'</tt><tt class="py-op">]</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">effects_use</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'EFFECTS USE'</tt><tt class="py-op">]</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">durability</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt class="py-string">'DURABILITY'</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">  <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="Item.get_random_type"></a><div id="Item.get_random_type-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="Item.get_random_type-toggle" onclick="return toggle('Item.get_random_type');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="Objects.item.Item-class.html#get_random_type">get_random_type</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Item.get_random_type-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="Item.get_random_type-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Module Objects.item=Objects.item-module.html"><a title="Objects.item" class="py-name" href="#" onclick="return doclink('link-8', 'item', 'link-8');">item</a></tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">    <tt class="py-name">max_prevalence</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt id="link-9" class="py-name"><a title="Config.creatures.ITEMS
+Config.items.ITEMS
+GUI.control.ITEMS
+GUI.menu.ITEMS
+GUI.panel.ITEMS
+GUI.plain_text.ITEMS
+GUI.text.ITEMS
+Mixins.action.ITEMS
+Mixins.ai.ITEMS
+Mixins.effect.ITEMS
+Mixins.fight.ITEMS
+Mixins.fighter.ITEMS
+Mixins.stat.ITEMS
+Mixins.stats.ITEMS
+Objects.aim.ITEMS
+Objects.base_object.ITEMS
+Objects.creature.ITEMS
+Objects.item.ITEMS
+Objects.object.ITEMS
+Objects.player.ITEMS
+Objects.test.ITEMS
+Objects.tile.ITEMS
+game.ITEMS
+initialize.ITEMS" class="py-name" href="#" onclick="return doclink('link-9', 'ITEMS', 'link-1');">ITEMS</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt id="link-10" class="py-name"><a title="Config.creatures.ITEMS
+Config.items.ITEMS
+GUI.control.ITEMS
+GUI.menu.ITEMS
+GUI.panel.ITEMS
+GUI.plain_text.ITEMS
+GUI.text.ITEMS
+Mixins.action.ITEMS
+Mixins.ai.ITEMS
+Mixins.effect.ITEMS
+Mixins.fight.ITEMS
+Mixins.fighter.ITEMS
+Mixins.stat.ITEMS
+Mixins.stats.ITEMS
+Objects.aim.ITEMS
+Objects.base_object.ITEMS
+Objects.creature.ITEMS
+Objects.item.ITEMS
+Objects.object.ITEMS
+Objects.player.ITEMS
+Objects.test.ITEMS
+Objects.tile.ITEMS
+game.ITEMS
+initialize.ITEMS" class="py-name" href="#" onclick="return doclink('link-10', 'ITEMS', 'link-1');">ITEMS</a></tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'PREVALENCE'</tt><tt class="py-op">]</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-name">prevalence</tt> <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">random_get_int</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name"><a title="Config.creatures.ITEMS
+Config.items.ITEMS
+GUI.control.ITEMS
+GUI.menu.ITEMS
+GUI.panel.ITEMS
+GUI.plain_text.ITEMS
+GUI.text.ITEMS
+Mixins.action.ITEMS
+Mixins.ai.ITEMS
+Mixins.effect.ITEMS
+Mixins.fight.ITEMS
+Mixins.fighter.ITEMS
+Mixins.stat.ITEMS
+Mixins.stats.ITEMS
+Objects.aim.ITEMS
+Objects.base_object.ITEMS
+Objects.creature.ITEMS
+Objects.item.ITEMS
+Objects.object.ITEMS
+Objects.player.ITEMS
+Objects.test.ITEMS
+Objects.tile.ITEMS
+game.ITEMS
+initialize.ITEMS" class="py-name" href="#" onclick="return doclink('link-11', 'ITEMS', 'link-1');">ITEMS</a></tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-string">'PREVALENCE'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">prevalence</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">max_prevalence</tt><tt class="py-op">:</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">          <tt class="py-name">max_prevalence</tt> <tt class="py-op">=</tt> <tt class="py-name">prevalence</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">          <tt id="link-12" class="py-name"><a title="Objects.item" class="py-name" href="#" onclick="return doclink('link-12', 'item', 'link-8');">item</a></tt> <tt class="py-op">=</tt> <tt class="py-name">i</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-13" class="py-name"><a title="Objects.item" class="py-name" href="#" onclick="return doclink('link-13', 'item', 'link-8');">item</a></tt> </tt>
+</div></div><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Jan 29 22:53:27 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

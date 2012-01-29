@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from modules import *
 
 class Aim(Object):
@@ -9,6 +10,7 @@ class Aim(Object):
     self.effect = None
     self.params = None
     self.game = game
+    self.state = 'ALIVE'
 
   def activate(self, owner, effect, params):
     self.owner = owner

@@ -1,0 +1,1595 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Config.game</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="Config-module.html">Package&nbsp;Config</a> ::
+        Module&nbsp;game
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Config.game-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="Config.game-module.html">Module Config.game</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">modules</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment">### Stuff</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable Config.creatures.LIMIT_FPS=Config.creatures-module.html#LIMIT_FPS,Variable Config.game.LIMIT_FPS=Config.game-module.html#LIMIT_FPS,Variable Config.items.LIMIT_FPS=Config.items-module.html#LIMIT_FPS,Variable Config.tiles.LIMIT_FPS=Config.tiles-module.html#LIMIT_FPS,Variable GUI.control.LIMIT_FPS=GUI.control-module.html#LIMIT_FPS,Variable GUI.menu.LIMIT_FPS=GUI.menu-module.html#LIMIT_FPS,Variable GUI.panel.LIMIT_FPS=GUI.panel-module.html#LIMIT_FPS,Variable GUI.plain_text.LIMIT_FPS=GUI.plain_text-module.html#LIMIT_FPS,Variable GUI.text.LIMIT_FPS=GUI.text-module.html#LIMIT_FPS,Variable Mixins.action.LIMIT_FPS=Mixins.action-module.html#LIMIT_FPS,Variable Mixins.ai.LIMIT_FPS=Mixins.ai-module.html#LIMIT_FPS,Variable Mixins.effect.LIMIT_FPS=Mixins.effect-module.html#LIMIT_FPS,Variable Mixins.fight.LIMIT_FPS=Mixins.fight-module.html#LIMIT_FPS,Variable Mixins.fighter.LIMIT_FPS=Mixins.fighter-module.html#LIMIT_FPS,Variable Mixins.stat.LIMIT_FPS=Mixins.stat-module.html#LIMIT_FPS,Variable Mixins.stats.LIMIT_FPS=Mixins.stats-module.html#LIMIT_FPS,Variable Objects.aim.LIMIT_FPS=Objects.aim-module.html#LIMIT_FPS,Variable Objects.base_object.LIMIT_FPS=Objects.base_object-module.html#LIMIT_FPS,Variable Objects.creature.LIMIT_FPS=Objects.creature-module.html#LIMIT_FPS,Variable Objects.item.LIMIT_FPS=Objects.item-module.html#LIMIT_FPS,Variable Objects.object.LIMIT_FPS=Objects.object-module.html#LIMIT_FPS,Variable Objects.player.LIMIT_FPS=Objects.player-module.html#LIMIT_FPS,Variable Objects.test.LIMIT_FPS=Objects.test-module.html#LIMIT_FPS,Variable Objects.tile.LIMIT_FPS=Objects.tile-module.html#LIMIT_FPS,Variable game.LIMIT_FPS=game-module.html#LIMIT_FPS,Variable initialize.LIMIT_FPS=initialize-module.html#LIMIT_FPS"><a title="Config.creatures.LIMIT_FPS
+Config.game.LIMIT_FPS
+Config.items.LIMIT_FPS
+Config.tiles.LIMIT_FPS
+GUI.control.LIMIT_FPS
+GUI.menu.LIMIT_FPS
+GUI.panel.LIMIT_FPS
+GUI.plain_text.LIMIT_FPS
+GUI.text.LIMIT_FPS
+Mixins.action.LIMIT_FPS
+Mixins.ai.LIMIT_FPS
+Mixins.effect.LIMIT_FPS
+Mixins.fight.LIMIT_FPS
+Mixins.fighter.LIMIT_FPS
+Mixins.stat.LIMIT_FPS
+Mixins.stats.LIMIT_FPS
+Objects.aim.LIMIT_FPS
+Objects.base_object.LIMIT_FPS
+Objects.creature.LIMIT_FPS
+Objects.item.LIMIT_FPS
+Objects.object.LIMIT_FPS
+Objects.player.LIMIT_FPS
+Objects.test.LIMIT_FPS
+Objects.tile.LIMIT_FPS
+game.LIMIT_FPS
+initialize.LIMIT_FPS" class="py-name" href="#" onclick="return doclink('link-0', 'LIMIT_FPS', 'link-0');">LIMIT_FPS</a></tt>     <tt class="py-op">=</tt> <tt class="py-number">20</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable Config.creatures.FONT=Config.creatures-module.html#FONT,Variable Config.game.FONT=Config.game-module.html#FONT,Variable Config.items.FONT=Config.items-module.html#FONT,Variable Config.tiles.FONT=Config.tiles-module.html#FONT,Variable GUI.control.FONT=GUI.control-module.html#FONT,Variable GUI.menu.FONT=GUI.menu-module.html#FONT,Variable GUI.panel.FONT=GUI.panel-module.html#FONT,Variable GUI.plain_text.FONT=GUI.plain_text-module.html#FONT,Variable GUI.text.FONT=GUI.text-module.html#FONT,Variable Mixins.action.FONT=Mixins.action-module.html#FONT,Variable Mixins.ai.FONT=Mixins.ai-module.html#FONT,Variable Mixins.effect.FONT=Mixins.effect-module.html#FONT,Variable Mixins.fight.FONT=Mixins.fight-module.html#FONT,Variable Mixins.fighter.FONT=Mixins.fighter-module.html#FONT,Variable Mixins.stat.FONT=Mixins.stat-module.html#FONT,Variable Mixins.stats.FONT=Mixins.stats-module.html#FONT,Variable Objects.aim.FONT=Objects.aim-module.html#FONT,Variable Objects.base_object.FONT=Objects.base_object-module.html#FONT,Variable Objects.creature.FONT=Objects.creature-module.html#FONT,Variable Objects.item.FONT=Objects.item-module.html#FONT,Variable Objects.object.FONT=Objects.object-module.html#FONT,Variable Objects.player.FONT=Objects.player-module.html#FONT,Variable Objects.test.FONT=Objects.test-module.html#FONT,Variable Objects.tile.FONT=Objects.tile-module.html#FONT,Variable game.FONT=game-module.html#FONT,Variable initialize.FONT=initialize-module.html#FONT"><a title="Config.creatures.FONT
+Config.game.FONT
+Config.items.FONT
+Config.tiles.FONT
+GUI.control.FONT
+GUI.menu.FONT
+GUI.panel.FONT
+GUI.plain_text.FONT
+GUI.text.FONT
+Mixins.action.FONT
+Mixins.ai.FONT
+Mixins.effect.FONT
+Mixins.fight.FONT
+Mixins.fighter.FONT
+Mixins.stat.FONT
+Mixins.stats.FONT
+Objects.aim.FONT
+Objects.base_object.FONT
+Objects.creature.FONT
+Objects.item.FONT
+Objects.object.FONT
+Objects.player.FONT
+Objects.test.FONT
+Objects.tile.FONT
+game.FONT
+initialize.FONT" class="py-name" href="#" onclick="return doclink('link-1', 'FONT', 'link-1');">FONT</a></tt>          <tt class="py-op">=</tt> <tt class="py-string">'./Fonts/arial12x12.png'</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable Config.creatures.TITLE=Config.creatures-module.html#TITLE,Variable Config.game.TITLE=Config.game-module.html#TITLE,Variable Config.items.TITLE=Config.items-module.html#TITLE,Variable Config.tiles.TITLE=Config.tiles-module.html#TITLE,Variable GUI.control.TITLE=GUI.control-module.html#TITLE,Variable GUI.menu.TITLE=GUI.menu-module.html#TITLE,Variable GUI.panel.TITLE=GUI.panel-module.html#TITLE,Variable GUI.plain_text.TITLE=GUI.plain_text-module.html#TITLE,Variable GUI.text.TITLE=GUI.text-module.html#TITLE,Variable Mixins.action.TITLE=Mixins.action-module.html#TITLE,Variable Mixins.ai.TITLE=Mixins.ai-module.html#TITLE,Variable Mixins.effect.TITLE=Mixins.effect-module.html#TITLE,Variable Mixins.fight.TITLE=Mixins.fight-module.html#TITLE,Variable Mixins.fighter.TITLE=Mixins.fighter-module.html#TITLE,Variable Mixins.stat.TITLE=Mixins.stat-module.html#TITLE,Variable Mixins.stats.TITLE=Mixins.stats-module.html#TITLE,Variable Objects.aim.TITLE=Objects.aim-module.html#TITLE,Variable Objects.base_object.TITLE=Objects.base_object-module.html#TITLE,Variable Objects.creature.TITLE=Objects.creature-module.html#TITLE,Variable Objects.item.TITLE=Objects.item-module.html#TITLE,Variable Objects.object.TITLE=Objects.object-module.html#TITLE,Variable Objects.player.TITLE=Objects.player-module.html#TITLE,Variable Objects.test.TITLE=Objects.test-module.html#TITLE,Variable Objects.tile.TITLE=Objects.tile-module.html#TITLE,Variable game.TITLE=game-module.html#TITLE,Variable initialize.TITLE=initialize-module.html#TITLE"><a title="Config.creatures.TITLE
+Config.game.TITLE
+Config.items.TITLE
+Config.tiles.TITLE
+GUI.control.TITLE
+GUI.menu.TITLE
+GUI.panel.TITLE
+GUI.plain_text.TITLE
+GUI.text.TITLE
+Mixins.action.TITLE
+Mixins.ai.TITLE
+Mixins.effect.TITLE
+Mixins.fight.TITLE
+Mixins.fighter.TITLE
+Mixins.stat.TITLE
+Mixins.stats.TITLE
+Objects.aim.TITLE
+Objects.base_object.TITLE
+Objects.creature.TITLE
+Objects.item.TITLE
+Objects.object.TITLE
+Objects.player.TITLE
+Objects.test.TITLE
+Objects.tile.TITLE
+game.TITLE
+initialize.TITLE" class="py-name" href="#" onclick="return doclink('link-2', 'TITLE', 'link-2');">TITLE</a></tt>         <tt class="py-op">=</tt> <tt class="py-string">'Tombs of the Ancient Kings'</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable Config.creatures.SPLASH_IMAGE=Config.creatures-module.html#SPLASH_IMAGE,Variable Config.game.SPLASH_IMAGE=Config.game-module.html#SPLASH_IMAGE,Variable Config.items.SPLASH_IMAGE=Config.items-module.html#SPLASH_IMAGE,Variable Config.tiles.SPLASH_IMAGE=Config.tiles-module.html#SPLASH_IMAGE,Variable GUI.control.SPLASH_IMAGE=GUI.control-module.html#SPLASH_IMAGE,Variable GUI.menu.SPLASH_IMAGE=GUI.menu-module.html#SPLASH_IMAGE,Variable GUI.panel.SPLASH_IMAGE=GUI.panel-module.html#SPLASH_IMAGE,Variable GUI.plain_text.SPLASH_IMAGE=GUI.plain_text-module.html#SPLASH_IMAGE,Variable GUI.text.SPLASH_IMAGE=GUI.text-module.html#SPLASH_IMAGE,Variable Mixins.action.SPLASH_IMAGE=Mixins.action-module.html#SPLASH_IMAGE,Variable Mixins.ai.SPLASH_IMAGE=Mixins.ai-module.html#SPLASH_IMAGE,Variable Mixins.effect.SPLASH_IMAGE=Mixins.effect-module.html#SPLASH_IMAGE,Variable Mixins.fight.SPLASH_IMAGE=Mixins.fight-module.html#SPLASH_IMAGE,Variable Mixins.fighter.SPLASH_IMAGE=Mixins.fighter-module.html#SPLASH_IMAGE,Variable Mixins.stat.SPLASH_IMAGE=Mixins.stat-module.html#SPLASH_IMAGE,Variable Mixins.stats.SPLASH_IMAGE=Mixins.stats-module.html#SPLASH_IMAGE,Variable Objects.aim.SPLASH_IMAGE=Objects.aim-module.html#SPLASH_IMAGE,Variable Objects.base_object.SPLASH_IMAGE=Objects.base_object-module.html#SPLASH_IMAGE,Variable Objects.creature.SPLASH_IMAGE=Objects.creature-module.html#SPLASH_IMAGE,Variable Objects.item.SPLASH_IMAGE=Objects.item-module.html#SPLASH_IMAGE,Variable Objects.object.SPLASH_IMAGE=Objects.object-module.html#SPLASH_IMAGE,Variable Objects.player.SPLASH_IMAGE=Objects.player-module.html#SPLASH_IMAGE,Variable Objects.test.SPLASH_IMAGE=Objects.test-module.html#SPLASH_IMAGE,Variable Objects.tile.SPLASH_IMAGE=Objects.tile-module.html#SPLASH_IMAGE,Variable game.SPLASH_IMAGE=game-module.html#SPLASH_IMAGE,Variable initialize.SPLASH_IMAGE=initialize-module.html#SPLASH_IMAGE"><a title="Config.creatures.SPLASH_IMAGE
+Config.game.SPLASH_IMAGE
+Config.items.SPLASH_IMAGE
+Config.tiles.SPLASH_IMAGE
+GUI.control.SPLASH_IMAGE
+GUI.menu.SPLASH_IMAGE
+GUI.panel.SPLASH_IMAGE
+GUI.plain_text.SPLASH_IMAGE
+GUI.text.SPLASH_IMAGE
+Mixins.action.SPLASH_IMAGE
+Mixins.ai.SPLASH_IMAGE
+Mixins.effect.SPLASH_IMAGE
+Mixins.fight.SPLASH_IMAGE
+Mixins.fighter.SPLASH_IMAGE
+Mixins.stat.SPLASH_IMAGE
+Mixins.stats.SPLASH_IMAGE
+Objects.aim.SPLASH_IMAGE
+Objects.base_object.SPLASH_IMAGE
+Objects.creature.SPLASH_IMAGE
+Objects.item.SPLASH_IMAGE
+Objects.object.SPLASH_IMAGE
+Objects.player.SPLASH_IMAGE
+Objects.test.SPLASH_IMAGE
+Objects.tile.SPLASH_IMAGE
+game.SPLASH_IMAGE
+initialize.SPLASH_IMAGE" class="py-name" href="#" onclick="return doclink('link-3', 'SPLASH_IMAGE', 'link-3');">SPLASH_IMAGE</a></tt>  <tt class="py-op">=</tt> <tt class="py-string">'./Images/menu_background.png'</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable Config.creatures.CREDITS=Config.creatures-module.html#CREDITS,Variable Config.game.CREDITS=Config.game-module.html#CREDITS,Variable Config.items.CREDITS=Config.items-module.html#CREDITS,Variable Config.tiles.CREDITS=Config.tiles-module.html#CREDITS,Variable GUI.control.CREDITS=GUI.control-module.html#CREDITS,Variable GUI.menu.CREDITS=GUI.menu-module.html#CREDITS,Variable GUI.panel.CREDITS=GUI.panel-module.html#CREDITS,Variable GUI.plain_text.CREDITS=GUI.plain_text-module.html#CREDITS,Variable GUI.text.CREDITS=GUI.text-module.html#CREDITS,Variable Mixins.action.CREDITS=Mixins.action-module.html#CREDITS,Variable Mixins.ai.CREDITS=Mixins.ai-module.html#CREDITS,Variable Mixins.effect.CREDITS=Mixins.effect-module.html#CREDITS,Variable Mixins.fight.CREDITS=Mixins.fight-module.html#CREDITS,Variable Mixins.fighter.CREDITS=Mixins.fighter-module.html#CREDITS,Variable Mixins.stat.CREDITS=Mixins.stat-module.html#CREDITS,Variable Mixins.stats.CREDITS=Mixins.stats-module.html#CREDITS,Variable Objects.aim.CREDITS=Objects.aim-module.html#CREDITS,Variable Objects.base_object.CREDITS=Objects.base_object-module.html#CREDITS,Variable Objects.creature.CREDITS=Objects.creature-module.html#CREDITS,Variable Objects.item.CREDITS=Objects.item-module.html#CREDITS,Variable Objects.object.CREDITS=Objects.object-module.html#CREDITS,Variable Objects.player.CREDITS=Objects.player-module.html#CREDITS,Variable Objects.test.CREDITS=Objects.test-module.html#CREDITS,Variable Objects.tile.CREDITS=Objects.tile-module.html#CREDITS,Variable game.CREDITS=game-module.html#CREDITS,Variable initialize.CREDITS=initialize-module.html#CREDITS"><a title="Config.creatures.CREDITS
+Config.game.CREDITS
+Config.items.CREDITS
+Config.tiles.CREDITS
+GUI.control.CREDITS
+GUI.menu.CREDITS
+GUI.panel.CREDITS
+GUI.plain_text.CREDITS
+GUI.text.CREDITS
+Mixins.action.CREDITS
+Mixins.ai.CREDITS
+Mixins.effect.CREDITS
+Mixins.fight.CREDITS
+Mixins.fighter.CREDITS
+Mixins.stat.CREDITS
+Mixins.stats.CREDITS
+Objects.aim.CREDITS
+Objects.base_object.CREDITS
+Objects.creature.CREDITS
+Objects.item.CREDITS
+Objects.object.CREDITS
+Objects.player.CREDITS
+Objects.test.CREDITS
+Objects.tile.CREDITS
+game.CREDITS
+initialize.CREDITS" class="py-name" href="#" onclick="return doclink('link-4', 'CREDITS', 'link-4');">CREDITS</a></tt>       <tt class="py-op">=</tt> <tt class="py-string">'d.e.saveliev@gmail.com'</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable Config.creatures.SAVE_FILE=Config.creatures-module.html#SAVE_FILE,Variable Config.game.SAVE_FILE=Config.game-module.html#SAVE_FILE,Variable Config.items.SAVE_FILE=Config.items-module.html#SAVE_FILE,Variable Config.tiles.SAVE_FILE=Config.tiles-module.html#SAVE_FILE,Variable GUI.control.SAVE_FILE=GUI.control-module.html#SAVE_FILE,Variable GUI.menu.SAVE_FILE=GUI.menu-module.html#SAVE_FILE,Variable GUI.panel.SAVE_FILE=GUI.panel-module.html#SAVE_FILE,Variable GUI.plain_text.SAVE_FILE=GUI.plain_text-module.html#SAVE_FILE,Variable GUI.text.SAVE_FILE=GUI.text-module.html#SAVE_FILE,Variable Mixins.action.SAVE_FILE=Mixins.action-module.html#SAVE_FILE,Variable Mixins.ai.SAVE_FILE=Mixins.ai-module.html#SAVE_FILE,Variable Mixins.effect.SAVE_FILE=Mixins.effect-module.html#SAVE_FILE,Variable Mixins.fight.SAVE_FILE=Mixins.fight-module.html#SAVE_FILE,Variable Mixins.fighter.SAVE_FILE=Mixins.fighter-module.html#SAVE_FILE,Variable Mixins.stat.SAVE_FILE=Mixins.stat-module.html#SAVE_FILE,Variable Mixins.stats.SAVE_FILE=Mixins.stats-module.html#SAVE_FILE,Variable Objects.aim.SAVE_FILE=Objects.aim-module.html#SAVE_FILE,Variable Objects.base_object.SAVE_FILE=Objects.base_object-module.html#SAVE_FILE,Variable Objects.creature.SAVE_FILE=Objects.creature-module.html#SAVE_FILE,Variable Objects.item.SAVE_FILE=Objects.item-module.html#SAVE_FILE,Variable Objects.object.SAVE_FILE=Objects.object-module.html#SAVE_FILE,Variable Objects.player.SAVE_FILE=Objects.player-module.html#SAVE_FILE,Variable Objects.test.SAVE_FILE=Objects.test-module.html#SAVE_FILE,Variable Objects.tile.SAVE_FILE=Objects.tile-module.html#SAVE_FILE,Variable game.SAVE_FILE=game-module.html#SAVE_FILE,Variable initialize.SAVE_FILE=initialize-module.html#SAVE_FILE"><a title="Config.creatures.SAVE_FILE
+Config.game.SAVE_FILE
+Config.items.SAVE_FILE
+Config.tiles.SAVE_FILE
+GUI.control.SAVE_FILE
+GUI.menu.SAVE_FILE
+GUI.panel.SAVE_FILE
+GUI.plain_text.SAVE_FILE
+GUI.text.SAVE_FILE
+Mixins.action.SAVE_FILE
+Mixins.ai.SAVE_FILE
+Mixins.effect.SAVE_FILE
+Mixins.fight.SAVE_FILE
+Mixins.fighter.SAVE_FILE
+Mixins.stat.SAVE_FILE
+Mixins.stats.SAVE_FILE
+Objects.aim.SAVE_FILE
+Objects.base_object.SAVE_FILE
+Objects.creature.SAVE_FILE
+Objects.item.SAVE_FILE
+Objects.object.SAVE_FILE
+Objects.player.SAVE_FILE
+Objects.test.SAVE_FILE
+Objects.tile.SAVE_FILE
+game.SAVE_FILE
+initialize.SAVE_FILE" class="py-name" href="#" onclick="return doclink('link-5', 'SAVE_FILE', 'link-5');">SAVE_FILE</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'./Saves/savefile'</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">### Set terminal size</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable Config.creatures.SCREEN_WIDTH=Config.creatures-module.html#SCREEN_WIDTH,Variable Config.game.SCREEN_WIDTH=Config.game-module.html#SCREEN_WIDTH,Variable Config.items.SCREEN_WIDTH=Config.items-module.html#SCREEN_WIDTH,Variable Config.tiles.SCREEN_WIDTH=Config.tiles-module.html#SCREEN_WIDTH,Variable GUI.control.SCREEN_WIDTH=GUI.control-module.html#SCREEN_WIDTH,Variable GUI.menu.SCREEN_WIDTH=GUI.menu-module.html#SCREEN_WIDTH,Variable GUI.panel.SCREEN_WIDTH=GUI.panel-module.html#SCREEN_WIDTH,Variable GUI.plain_text.SCREEN_WIDTH=GUI.plain_text-module.html#SCREEN_WIDTH,Variable GUI.text.SCREEN_WIDTH=GUI.text-module.html#SCREEN_WIDTH,Variable Mixins.action.SCREEN_WIDTH=Mixins.action-module.html#SCREEN_WIDTH,Variable Mixins.ai.SCREEN_WIDTH=Mixins.ai-module.html#SCREEN_WIDTH,Variable Mixins.effect.SCREEN_WIDTH=Mixins.effect-module.html#SCREEN_WIDTH,Variable Mixins.fight.SCREEN_WIDTH=Mixins.fight-module.html#SCREEN_WIDTH,Variable Mixins.fighter.SCREEN_WIDTH=Mixins.fighter-module.html#SCREEN_WIDTH,Variable Mixins.stat.SCREEN_WIDTH=Mixins.stat-module.html#SCREEN_WIDTH,Variable Mixins.stats.SCREEN_WIDTH=Mixins.stats-module.html#SCREEN_WIDTH,Variable Objects.aim.SCREEN_WIDTH=Objects.aim-module.html#SCREEN_WIDTH,Variable Objects.base_object.SCREEN_WIDTH=Objects.base_object-module.html#SCREEN_WIDTH,Variable Objects.creature.SCREEN_WIDTH=Objects.creature-module.html#SCREEN_WIDTH,Variable Objects.item.SCREEN_WIDTH=Objects.item-module.html#SCREEN_WIDTH,Variable Objects.object.SCREEN_WIDTH=Objects.object-module.html#SCREEN_WIDTH,Variable Objects.player.SCREEN_WIDTH=Objects.player-module.html#SCREEN_WIDTH,Variable Objects.test.SCREEN_WIDTH=Objects.test-module.html#SCREEN_WIDTH,Variable Objects.tile.SCREEN_WIDTH=Objects.tile-module.html#SCREEN_WIDTH,Variable game.SCREEN_WIDTH=game-module.html#SCREEN_WIDTH,Variable initialize.SCREEN_WIDTH=initialize-module.html#SCREEN_WIDTH"><a title="Config.creatures.SCREEN_WIDTH
+Config.game.SCREEN_WIDTH
+Config.items.SCREEN_WIDTH
+Config.tiles.SCREEN_WIDTH
+GUI.control.SCREEN_WIDTH
+GUI.menu.SCREEN_WIDTH
+GUI.panel.SCREEN_WIDTH
+GUI.plain_text.SCREEN_WIDTH
+GUI.text.SCREEN_WIDTH
+Mixins.action.SCREEN_WIDTH
+Mixins.ai.SCREEN_WIDTH
+Mixins.effect.SCREEN_WIDTH
+Mixins.fight.SCREEN_WIDTH
+Mixins.fighter.SCREEN_WIDTH
+Mixins.stat.SCREEN_WIDTH
+Mixins.stats.SCREEN_WIDTH
+Objects.aim.SCREEN_WIDTH
+Objects.base_object.SCREEN_WIDTH
+Objects.creature.SCREEN_WIDTH
+Objects.item.SCREEN_WIDTH
+Objects.object.SCREEN_WIDTH
+Objects.player.SCREEN_WIDTH
+Objects.test.SCREEN_WIDTH
+Objects.tile.SCREEN_WIDTH
+game.SCREEN_WIDTH
+initialize.SCREEN_WIDTH" class="py-name" href="#" onclick="return doclink('link-6', 'SCREEN_WIDTH', 'link-6');">SCREEN_WIDTH</a></tt>  <tt class="py-op">=</tt> <tt class="py-number">80</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable Config.creatures.SCREEN_HEIGHT=Config.creatures-module.html#SCREEN_HEIGHT,Variable Config.game.SCREEN_HEIGHT=Config.game-module.html#SCREEN_HEIGHT,Variable Config.items.SCREEN_HEIGHT=Config.items-module.html#SCREEN_HEIGHT,Variable Config.tiles.SCREEN_HEIGHT=Config.tiles-module.html#SCREEN_HEIGHT,Variable GUI.control.SCREEN_HEIGHT=GUI.control-module.html#SCREEN_HEIGHT,Variable GUI.menu.SCREEN_HEIGHT=GUI.menu-module.html#SCREEN_HEIGHT,Variable GUI.panel.SCREEN_HEIGHT=GUI.panel-module.html#SCREEN_HEIGHT,Variable GUI.plain_text.SCREEN_HEIGHT=GUI.plain_text-module.html#SCREEN_HEIGHT,Variable GUI.text.SCREEN_HEIGHT=GUI.text-module.html#SCREEN_HEIGHT,Variable Mixins.action.SCREEN_HEIGHT=Mixins.action-module.html#SCREEN_HEIGHT,Variable Mixins.ai.SCREEN_HEIGHT=Mixins.ai-module.html#SCREEN_HEIGHT,Variable Mixins.effect.SCREEN_HEIGHT=Mixins.effect-module.html#SCREEN_HEIGHT,Variable Mixins.fight.SCREEN_HEIGHT=Mixins.fight-module.html#SCREEN_HEIGHT,Variable Mixins.fighter.SCREEN_HEIGHT=Mixins.fighter-module.html#SCREEN_HEIGHT,Variable Mixins.stat.SCREEN_HEIGHT=Mixins.stat-module.html#SCREEN_HEIGHT,Variable Mixins.stats.SCREEN_HEIGHT=Mixins.stats-module.html#SCREEN_HEIGHT,Variable Objects.aim.SCREEN_HEIGHT=Objects.aim-module.html#SCREEN_HEIGHT,Variable Objects.base_object.SCREEN_HEIGHT=Objects.base_object-module.html#SCREEN_HEIGHT,Variable Objects.creature.SCREEN_HEIGHT=Objects.creature-module.html#SCREEN_HEIGHT,Variable Objects.item.SCREEN_HEIGHT=Objects.item-module.html#SCREEN_HEIGHT,Variable Objects.object.SCREEN_HEIGHT=Objects.object-module.html#SCREEN_HEIGHT,Variable Objects.player.SCREEN_HEIGHT=Objects.player-module.html#SCREEN_HEIGHT,Variable Objects.test.SCREEN_HEIGHT=Objects.test-module.html#SCREEN_HEIGHT,Variable Objects.tile.SCREEN_HEIGHT=Objects.tile-module.html#SCREEN_HEIGHT,Variable game.SCREEN_HEIGHT=game-module.html#SCREEN_HEIGHT,Variable initialize.SCREEN_HEIGHT=initialize-module.html#SCREEN_HEIGHT"><a title="Config.creatures.SCREEN_HEIGHT
+Config.game.SCREEN_HEIGHT
+Config.items.SCREEN_HEIGHT
+Config.tiles.SCREEN_HEIGHT
+GUI.control.SCREEN_HEIGHT
+GUI.menu.SCREEN_HEIGHT
+GUI.panel.SCREEN_HEIGHT
+GUI.plain_text.SCREEN_HEIGHT
+GUI.text.SCREEN_HEIGHT
+Mixins.action.SCREEN_HEIGHT
+Mixins.ai.SCREEN_HEIGHT
+Mixins.effect.SCREEN_HEIGHT
+Mixins.fight.SCREEN_HEIGHT
+Mixins.fighter.SCREEN_HEIGHT
+Mixins.stat.SCREEN_HEIGHT
+Mixins.stats.SCREEN_HEIGHT
+Objects.aim.SCREEN_HEIGHT
+Objects.base_object.SCREEN_HEIGHT
+Objects.creature.SCREEN_HEIGHT
+Objects.item.SCREEN_HEIGHT
+Objects.object.SCREEN_HEIGHT
+Objects.player.SCREEN_HEIGHT
+Objects.test.SCREEN_HEIGHT
+Objects.tile.SCREEN_HEIGHT
+game.SCREEN_HEIGHT
+initialize.SCREEN_HEIGHT" class="py-name" href="#" onclick="return doclink('link-7', 'SCREEN_HEIGHT', 'link-7');">SCREEN_HEIGHT</a></tt> <tt class="py-op">=</tt> <tt class="py-number">55</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">### Set menu size</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable Config.creatures.PANEL=Config.creatures-module.html#PANEL,Variable Config.game.PANEL=Config.game-module.html#PANEL,Variable Config.items.PANEL=Config.items-module.html#PANEL,Variable Config.tiles.PANEL=Config.tiles-module.html#PANEL,Variable GUI.control.PANEL=GUI.control-module.html#PANEL,Variable GUI.menu.PANEL=GUI.menu-module.html#PANEL,Variable GUI.panel.PANEL=GUI.panel-module.html#PANEL,Variable GUI.plain_text.PANEL=GUI.plain_text-module.html#PANEL,Variable GUI.text.PANEL=GUI.text-module.html#PANEL,Variable Mixins.action.PANEL=Mixins.action-module.html#PANEL,Variable Mixins.ai.PANEL=Mixins.ai-module.html#PANEL,Variable Mixins.effect.PANEL=Mixins.effect-module.html#PANEL,Variable Mixins.fight.PANEL=Mixins.fight-module.html#PANEL,Variable Mixins.fighter.PANEL=Mixins.fighter-module.html#PANEL,Variable Mixins.stat.PANEL=Mixins.stat-module.html#PANEL,Variable Mixins.stats.PANEL=Mixins.stats-module.html#PANEL,Variable Objects.aim.PANEL=Objects.aim-module.html#PANEL,Variable Objects.base_object.PANEL=Objects.base_object-module.html#PANEL,Variable Objects.creature.PANEL=Objects.creature-module.html#PANEL,Variable Objects.item.PANEL=Objects.item-module.html#PANEL,Variable Objects.object.PANEL=Objects.object-module.html#PANEL,Variable Objects.player.PANEL=Objects.player-module.html#PANEL,Variable Objects.test.PANEL=Objects.test-module.html#PANEL,Variable Objects.tile.PANEL=Objects.tile-module.html#PANEL,Variable game.PANEL=game-module.html#PANEL,Variable initialize.PANEL=initialize-module.html#PANEL"><a title="Config.creatures.PANEL
+Config.game.PANEL
+Config.items.PANEL
+Config.tiles.PANEL
+GUI.control.PANEL
+GUI.menu.PANEL
+GUI.panel.PANEL
+GUI.plain_text.PANEL
+GUI.text.PANEL
+Mixins.action.PANEL
+Mixins.ai.PANEL
+Mixins.effect.PANEL
+Mixins.fight.PANEL
+Mixins.fighter.PANEL
+Mixins.stat.PANEL
+Mixins.stats.PANEL
+Objects.aim.PANEL
+Objects.base_object.PANEL
+Objects.creature.PANEL
+Objects.item.PANEL
+Objects.object.PANEL
+Objects.player.PANEL
+Objects.test.PANEL
+Objects.tile.PANEL
+game.PANEL
+initialize.PANEL" class="py-name" href="#" onclick="return doclink('link-8', 'PANEL', 'link-8');">PANEL</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">  <tt class="py-string">'HEIGHT'</tt><tt class="py-op">:</tt><tt class="py-number">9</tt><tt class="py-op">,</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">  <tt class="py-string">'WIDTH'</tt><tt class="py-op">:</tt><tt id="link-9" class="py-name"><a title="Config.creatures.SCREEN_WIDTH
+Config.game.SCREEN_WIDTH
+Config.items.SCREEN_WIDTH
+Config.tiles.SCREEN_WIDTH
+GUI.control.SCREEN_WIDTH
+GUI.menu.SCREEN_WIDTH
+GUI.panel.SCREEN_WIDTH
+GUI.plain_text.SCREEN_WIDTH
+GUI.text.SCREEN_WIDTH
+Mixins.action.SCREEN_WIDTH
+Mixins.ai.SCREEN_WIDTH
+Mixins.effect.SCREEN_WIDTH
+Mixins.fight.SCREEN_WIDTH
+Mixins.fighter.SCREEN_WIDTH
+Mixins.stat.SCREEN_WIDTH
+Mixins.stats.SCREEN_WIDTH
+Objects.aim.SCREEN_WIDTH
+Objects.base_object.SCREEN_WIDTH
+Objects.creature.SCREEN_WIDTH
+Objects.item.SCREEN_WIDTH
+Objects.object.SCREEN_WIDTH
+Objects.player.SCREEN_WIDTH
+Objects.test.SCREEN_WIDTH
+Objects.tile.SCREEN_WIDTH
+game.SCREEN_WIDTH
+initialize.SCREEN_WIDTH" class="py-name" href="#" onclick="return doclink('link-9', 'SCREEN_WIDTH', 'link-6');">SCREEN_WIDTH</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">  <tt class="py-string">'X'</tt><tt class="py-op">:</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">  <tt class="py-string">'Y'</tt><tt class="py-op">:</tt><tt class="py-number">0</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment">### Bar size</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable Config.creatures.BAR=Config.creatures-module.html#BAR,Variable Config.game.BAR=Config.game-module.html#BAR,Variable Config.items.BAR=Config.items-module.html#BAR,Variable Config.tiles.BAR=Config.tiles-module.html#BAR,Variable GUI.control.BAR=GUI.control-module.html#BAR,Variable GUI.menu.BAR=GUI.menu-module.html#BAR,Variable GUI.panel.BAR=GUI.panel-module.html#BAR,Variable GUI.plain_text.BAR=GUI.plain_text-module.html#BAR,Variable GUI.text.BAR=GUI.text-module.html#BAR,Variable Mixins.action.BAR=Mixins.action-module.html#BAR,Variable Mixins.ai.BAR=Mixins.ai-module.html#BAR,Variable Mixins.effect.BAR=Mixins.effect-module.html#BAR,Variable Mixins.fight.BAR=Mixins.fight-module.html#BAR,Variable Mixins.fighter.BAR=Mixins.fighter-module.html#BAR,Variable Mixins.stat.BAR=Mixins.stat-module.html#BAR,Variable Mixins.stats.BAR=Mixins.stats-module.html#BAR,Variable Objects.aim.BAR=Objects.aim-module.html#BAR,Variable Objects.base_object.BAR=Objects.base_object-module.html#BAR,Variable Objects.creature.BAR=Objects.creature-module.html#BAR,Variable Objects.item.BAR=Objects.item-module.html#BAR,Variable Objects.object.BAR=Objects.object-module.html#BAR,Variable Objects.player.BAR=Objects.player-module.html#BAR,Variable Objects.test.BAR=Objects.test-module.html#BAR,Variable Objects.tile.BAR=Objects.tile-module.html#BAR,Variable game.BAR=game-module.html#BAR,Variable initialize.BAR=initialize-module.html#BAR"><a title="Config.creatures.BAR
+Config.game.BAR
+Config.items.BAR
+Config.tiles.BAR
+GUI.control.BAR
+GUI.menu.BAR
+GUI.panel.BAR
+GUI.plain_text.BAR
+GUI.text.BAR
+Mixins.action.BAR
+Mixins.ai.BAR
+Mixins.effect.BAR
+Mixins.fight.BAR
+Mixins.fighter.BAR
+Mixins.stat.BAR
+Mixins.stats.BAR
+Objects.aim.BAR
+Objects.base_object.BAR
+Objects.creature.BAR
+Objects.item.BAR
+Objects.object.BAR
+Objects.player.BAR
+Objects.test.BAR
+Objects.tile.BAR
+game.BAR
+initialize.BAR" class="py-name" href="#" onclick="return doclink('link-10', 'BAR', 'link-10');">BAR</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">  <tt class="py-string">'HEIGHT'</tt><tt class="py-op">:</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">  <tt class="py-string">'WIDTH'</tt><tt class="py-op">:</tt><tt class="py-number">11</tt><tt class="py-op">,</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">  <tt class="py-string">'X'</tt><tt class="py-op">:</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">  <tt class="py-string">'Y'</tt><tt class="py-op">:</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">  <tt class="py-string">'INDENT'</tt><tt class="py-op">:</tt><tt class="py-number">2</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-comment">### Set map size</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable Config.creatures.MAP=Config.creatures-module.html#MAP,Variable Config.game.MAP=Config.game-module.html#MAP,Variable Config.items.MAP=Config.items-module.html#MAP,Variable Config.tiles.MAP=Config.tiles-module.html#MAP,Variable GUI.control.MAP=GUI.control-module.html#MAP,Variable GUI.menu.MAP=GUI.menu-module.html#MAP,Variable GUI.panel.MAP=GUI.panel-module.html#MAP,Variable GUI.plain_text.MAP=GUI.plain_text-module.html#MAP,Variable GUI.text.MAP=GUI.text-module.html#MAP,Variable Mixins.action.MAP=Mixins.action-module.html#MAP,Variable Mixins.ai.MAP=Mixins.ai-module.html#MAP,Variable Mixins.effect.MAP=Mixins.effect-module.html#MAP,Variable Mixins.fight.MAP=Mixins.fight-module.html#MAP,Variable Mixins.fighter.MAP=Mixins.fighter-module.html#MAP,Variable Mixins.stat.MAP=Mixins.stat-module.html#MAP,Variable Mixins.stats.MAP=Mixins.stats-module.html#MAP,Variable Objects.aim.MAP=Objects.aim-module.html#MAP,Variable Objects.base_object.MAP=Objects.base_object-module.html#MAP,Variable Objects.creature.MAP=Objects.creature-module.html#MAP,Variable Objects.item.MAP=Objects.item-module.html#MAP,Variable Objects.object.MAP=Objects.object-module.html#MAP,Variable Objects.player.MAP=Objects.player-module.html#MAP,Variable Objects.test.MAP=Objects.test-module.html#MAP,Variable Objects.tile.MAP=Objects.tile-module.html#MAP,Variable game.MAP=game-module.html#MAP,Variable initialize.MAP=initialize-module.html#MAP"><a title="Config.creatures.MAP
+Config.game.MAP
+Config.items.MAP
+Config.tiles.MAP
+GUI.control.MAP
+GUI.menu.MAP
+GUI.panel.MAP
+GUI.plain_text.MAP
+GUI.text.MAP
+Mixins.action.MAP
+Mixins.ai.MAP
+Mixins.effect.MAP
+Mixins.fight.MAP
+Mixins.fighter.MAP
+Mixins.stat.MAP
+Mixins.stats.MAP
+Objects.aim.MAP
+Objects.base_object.MAP
+Objects.creature.MAP
+Objects.item.MAP
+Objects.object.MAP
+Objects.player.MAP
+Objects.test.MAP
+Objects.tile.MAP
+game.MAP
+initialize.MAP" class="py-name" href="#" onclick="return doclink('link-11', 'MAP', 'link-11');">MAP</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">  <tt class="py-string">'HEIGHT'</tt><tt class="py-op">:</tt><tt id="link-12" class="py-name"><a title="Config.creatures.SCREEN_HEIGHT
+Config.game.SCREEN_HEIGHT
+Config.items.SCREEN_HEIGHT
+Config.tiles.SCREEN_HEIGHT
+GUI.control.SCREEN_HEIGHT
+GUI.menu.SCREEN_HEIGHT
+GUI.panel.SCREEN_HEIGHT
+GUI.plain_text.SCREEN_HEIGHT
+GUI.text.SCREEN_HEIGHT
+Mixins.action.SCREEN_HEIGHT
+Mixins.ai.SCREEN_HEIGHT
+Mixins.effect.SCREEN_HEIGHT
+Mixins.fight.SCREEN_HEIGHT
+Mixins.fighter.SCREEN_HEIGHT
+Mixins.stat.SCREEN_HEIGHT
+Mixins.stats.SCREEN_HEIGHT
+Objects.aim.SCREEN_HEIGHT
+Objects.base_object.SCREEN_HEIGHT
+Objects.creature.SCREEN_HEIGHT
+Objects.item.SCREEN_HEIGHT
+Objects.object.SCREEN_HEIGHT
+Objects.player.SCREEN_HEIGHT
+Objects.test.SCREEN_HEIGHT
+Objects.tile.SCREEN_HEIGHT
+game.SCREEN_HEIGHT
+initialize.SCREEN_HEIGHT" class="py-name" href="#" onclick="return doclink('link-12', 'SCREEN_HEIGHT', 'link-7');">SCREEN_HEIGHT</a></tt> <tt class="py-op">-</tt> <tt id="link-13" class="py-name"><a title="Config.creatures.PANEL
+Config.game.PANEL
+Config.items.PANEL
+Config.tiles.PANEL
+GUI.control.PANEL
+GUI.menu.PANEL
+GUI.panel.PANEL
+GUI.plain_text.PANEL
+GUI.text.PANEL
+Mixins.action.PANEL
+Mixins.ai.PANEL
+Mixins.effect.PANEL
+Mixins.fight.PANEL
+Mixins.fighter.PANEL
+Mixins.stat.PANEL
+Mixins.stats.PANEL
+Objects.aim.PANEL
+Objects.base_object.PANEL
+Objects.creature.PANEL
+Objects.item.PANEL
+Objects.object.PANEL
+Objects.player.PANEL
+Objects.test.PANEL
+Objects.tile.PANEL
+game.PANEL
+initialize.PANEL" class="py-name" href="#" onclick="return doclink('link-13', 'PANEL', 'link-8');">PANEL</a></tt><tt class="py-op">[</tt><tt class="py-string">'HEIGHT'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">  <tt class="py-string">'WIDTH'</tt><tt class="py-op">:</tt><tt id="link-14" class="py-name"><a title="Config.creatures.SCREEN_WIDTH
+Config.game.SCREEN_WIDTH
+Config.items.SCREEN_WIDTH
+Config.tiles.SCREEN_WIDTH
+GUI.control.SCREEN_WIDTH
+GUI.menu.SCREEN_WIDTH
+GUI.panel.SCREEN_WIDTH
+GUI.plain_text.SCREEN_WIDTH
+GUI.text.SCREEN_WIDTH
+Mixins.action.SCREEN_WIDTH
+Mixins.ai.SCREEN_WIDTH
+Mixins.effect.SCREEN_WIDTH
+Mixins.fight.SCREEN_WIDTH
+Mixins.fighter.SCREEN_WIDTH
+Mixins.stat.SCREEN_WIDTH
+Mixins.stats.SCREEN_WIDTH
+Objects.aim.SCREEN_WIDTH
+Objects.base_object.SCREEN_WIDTH
+Objects.creature.SCREEN_WIDTH
+Objects.item.SCREEN_WIDTH
+Objects.object.SCREEN_WIDTH
+Objects.player.SCREEN_WIDTH
+Objects.test.SCREEN_WIDTH
+Objects.tile.SCREEN_WIDTH
+game.SCREEN_WIDTH
+initialize.SCREEN_WIDTH" class="py-name" href="#" onclick="return doclink('link-14', 'SCREEN_WIDTH', 'link-6');">SCREEN_WIDTH</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">  <tt class="py-string">'X'</tt><tt class="py-op">:</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">  <tt class="py-string">'Y'</tt><tt class="py-op">:</tt><tt id="link-15" class="py-name"><a title="Config.creatures.PANEL
+Config.game.PANEL
+Config.items.PANEL
+Config.tiles.PANEL
+GUI.control.PANEL
+GUI.menu.PANEL
+GUI.panel.PANEL
+GUI.plain_text.PANEL
+GUI.text.PANEL
+Mixins.action.PANEL
+Mixins.ai.PANEL
+Mixins.effect.PANEL
+Mixins.fight.PANEL
+Mixins.fighter.PANEL
+Mixins.stat.PANEL
+Mixins.stats.PANEL
+Objects.aim.PANEL
+Objects.base_object.PANEL
+Objects.creature.PANEL
+Objects.item.PANEL
+Objects.object.PANEL
+Objects.player.PANEL
+Objects.test.PANEL
+Objects.tile.PANEL
+game.PANEL
+initialize.PANEL" class="py-name" href="#" onclick="return doclink('link-15', 'PANEL', 'link-8');">PANEL</a></tt><tt class="py-op">[</tt><tt class="py-string">'HEIGHT'</tt><tt class="py-op">]</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-comment">### Message log</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt id="link-16" class="py-name" targets="Variable Config.creatures.MSG=Config.creatures-module.html#MSG,Variable Config.game.MSG=Config.game-module.html#MSG,Variable Config.items.MSG=Config.items-module.html#MSG,Variable Config.tiles.MSG=Config.tiles-module.html#MSG,Variable GUI.control.MSG=GUI.control-module.html#MSG,Variable GUI.menu.MSG=GUI.menu-module.html#MSG,Variable GUI.panel.MSG=GUI.panel-module.html#MSG,Variable GUI.plain_text.MSG=GUI.plain_text-module.html#MSG,Variable GUI.text.MSG=GUI.text-module.html#MSG,Variable Mixins.action.MSG=Mixins.action-module.html#MSG,Variable Mixins.ai.MSG=Mixins.ai-module.html#MSG,Variable Mixins.effect.MSG=Mixins.effect-module.html#MSG,Variable Mixins.fight.MSG=Mixins.fight-module.html#MSG,Variable Mixins.fighter.MSG=Mixins.fighter-module.html#MSG,Variable Mixins.stat.MSG=Mixins.stat-module.html#MSG,Variable Mixins.stats.MSG=Mixins.stats-module.html#MSG,Variable Objects.aim.MSG=Objects.aim-module.html#MSG,Variable Objects.base_object.MSG=Objects.base_object-module.html#MSG,Variable Objects.creature.MSG=Objects.creature-module.html#MSG,Variable Objects.item.MSG=Objects.item-module.html#MSG,Variable Objects.object.MSG=Objects.object-module.html#MSG,Variable Objects.player.MSG=Objects.player-module.html#MSG,Variable Objects.test.MSG=Objects.test-module.html#MSG,Variable Objects.tile.MSG=Objects.tile-module.html#MSG,Variable game.MSG=game-module.html#MSG,Variable initialize.MSG=initialize-module.html#MSG"><a title="Config.creatures.MSG
+Config.game.MSG
+Config.items.MSG
+Config.tiles.MSG
+GUI.control.MSG
+GUI.menu.MSG
+GUI.panel.MSG
+GUI.plain_text.MSG
+GUI.text.MSG
+Mixins.action.MSG
+Mixins.ai.MSG
+Mixins.effect.MSG
+Mixins.fight.MSG
+Mixins.fighter.MSG
+Mixins.stat.MSG
+Mixins.stats.MSG
+Objects.aim.MSG
+Objects.base_object.MSG
+Objects.creature.MSG
+Objects.item.MSG
+Objects.object.MSG
+Objects.player.MSG
+Objects.test.MSG
+Objects.tile.MSG
+game.MSG
+initialize.MSG" class="py-name" href="#" onclick="return doclink('link-16', 'MSG', 'link-16');">MSG</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">  <tt class="py-string">'HEIGHT'</tt><tt class="py-op">:</tt><tt id="link-17" class="py-name"><a title="Config.creatures.PANEL
+Config.game.PANEL
+Config.items.PANEL
+Config.tiles.PANEL
+GUI.control.PANEL
+GUI.menu.PANEL
+GUI.panel.PANEL
+GUI.plain_text.PANEL
+GUI.text.PANEL
+Mixins.action.PANEL
+Mixins.ai.PANEL
+Mixins.effect.PANEL
+Mixins.fight.PANEL
+Mixins.fighter.PANEL
+Mixins.stat.PANEL
+Mixins.stats.PANEL
+Objects.aim.PANEL
+Objects.base_object.PANEL
+Objects.creature.PANEL
+Objects.item.PANEL
+Objects.object.PANEL
+Objects.player.PANEL
+Objects.test.PANEL
+Objects.tile.PANEL
+game.PANEL
+initialize.PANEL" class="py-name" href="#" onclick="return doclink('link-17', 'PANEL', 'link-8');">PANEL</a></tt><tt class="py-op">[</tt><tt class="py-string">'HEIGHT'</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt class="py-number">3</tt><tt class="py-op">,</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">  <tt class="py-string">'WIDTH'</tt><tt class="py-op">:</tt><tt id="link-18" class="py-name"><a title="Config.creatures.PANEL
+Config.game.PANEL
+Config.items.PANEL
+Config.tiles.PANEL
+GUI.control.PANEL
+GUI.menu.PANEL
+GUI.panel.PANEL
+GUI.plain_text.PANEL
+GUI.text.PANEL
+Mixins.action.PANEL
+Mixins.ai.PANEL
+Mixins.effect.PANEL
+Mixins.fight.PANEL
+Mixins.fighter.PANEL
+Mixins.stat.PANEL
+Mixins.stats.PANEL
+Objects.aim.PANEL
+Objects.base_object.PANEL
+Objects.creature.PANEL
+Objects.item.PANEL
+Objects.object.PANEL
+Objects.player.PANEL
+Objects.test.PANEL
+Objects.tile.PANEL
+game.PANEL
+initialize.PANEL" class="py-name" href="#" onclick="return doclink('link-18', 'PANEL', 'link-8');">PANEL</a></tt><tt class="py-op">[</tt><tt class="py-string">'WIDTH'</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt id="link-19" class="py-name"><a title="Config.creatures.BAR
+Config.game.BAR
+Config.items.BAR
+Config.tiles.BAR
+GUI.control.BAR
+GUI.menu.BAR
+GUI.panel.BAR
+GUI.plain_text.BAR
+GUI.text.BAR
+Mixins.action.BAR
+Mixins.ai.BAR
+Mixins.effect.BAR
+Mixins.fight.BAR
+Mixins.fighter.BAR
+Mixins.stat.BAR
+Mixins.stats.BAR
+Objects.aim.BAR
+Objects.base_object.BAR
+Objects.creature.BAR
+Objects.item.BAR
+Objects.object.BAR
+Objects.player.BAR
+Objects.test.BAR
+Objects.tile.BAR
+game.BAR
+initialize.BAR" class="py-name" href="#" onclick="return doclink('link-19', 'BAR', 'link-10');">BAR</a></tt><tt class="py-op">[</tt><tt class="py-string">'WIDTH'</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt class="py-number">3</tt><tt class="py-op">,</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">  <tt class="py-string">'X'</tt><tt class="py-op">:</tt><tt id="link-20" class="py-name"><a title="Config.creatures.BAR
+Config.game.BAR
+Config.items.BAR
+Config.tiles.BAR
+GUI.control.BAR
+GUI.menu.BAR
+GUI.panel.BAR
+GUI.plain_text.BAR
+GUI.text.BAR
+Mixins.action.BAR
+Mixins.ai.BAR
+Mixins.effect.BAR
+Mixins.fight.BAR
+Mixins.fighter.BAR
+Mixins.stat.BAR
+Mixins.stats.BAR
+Objects.aim.BAR
+Objects.base_object.BAR
+Objects.creature.BAR
+Objects.item.BAR
+Objects.object.BAR
+Objects.player.BAR
+Objects.test.BAR
+Objects.tile.BAR
+game.BAR
+initialize.BAR" class="py-name" href="#" onclick="return doclink('link-20', 'BAR', 'link-10');">BAR</a></tt><tt class="py-op">[</tt><tt class="py-string">'WIDTH'</tt><tt class="py-op">]</tt> <tt class="py-op">+</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">  <tt class="py-string">'Y'</tt><tt class="py-op">:</tt><tt class="py-number">0</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-comment">### Set movement keys</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable Config.creatures.KEY_LEFT=Config.creatures-module.html#KEY_LEFT,Variable Config.game.KEY_LEFT=Config.game-module.html#KEY_LEFT,Variable Config.items.KEY_LEFT=Config.items-module.html#KEY_LEFT,Variable Config.tiles.KEY_LEFT=Config.tiles-module.html#KEY_LEFT,Variable GUI.control.KEY_LEFT=GUI.control-module.html#KEY_LEFT,Variable GUI.menu.KEY_LEFT=GUI.menu-module.html#KEY_LEFT,Variable GUI.panel.KEY_LEFT=GUI.panel-module.html#KEY_LEFT,Variable GUI.plain_text.KEY_LEFT=GUI.plain_text-module.html#KEY_LEFT,Variable GUI.text.KEY_LEFT=GUI.text-module.html#KEY_LEFT,Variable Mixins.action.KEY_LEFT=Mixins.action-module.html#KEY_LEFT,Variable Mixins.ai.KEY_LEFT=Mixins.ai-module.html#KEY_LEFT,Variable Mixins.effect.KEY_LEFT=Mixins.effect-module.html#KEY_LEFT,Variable Mixins.fight.KEY_LEFT=Mixins.fight-module.html#KEY_LEFT,Variable Mixins.fighter.KEY_LEFT=Mixins.fighter-module.html#KEY_LEFT,Variable Mixins.stat.KEY_LEFT=Mixins.stat-module.html#KEY_LEFT,Variable Mixins.stats.KEY_LEFT=Mixins.stats-module.html#KEY_LEFT,Variable Objects.aim.KEY_LEFT=Objects.aim-module.html#KEY_LEFT,Variable Objects.base_object.KEY_LEFT=Objects.base_object-module.html#KEY_LEFT,Variable Objects.creature.KEY_LEFT=Objects.creature-module.html#KEY_LEFT,Variable Objects.item.KEY_LEFT=Objects.item-module.html#KEY_LEFT,Variable Objects.object.KEY_LEFT=Objects.object-module.html#KEY_LEFT,Variable Objects.player.KEY_LEFT=Objects.player-module.html#KEY_LEFT,Variable Objects.test.KEY_LEFT=Objects.test-module.html#KEY_LEFT,Variable Objects.tile.KEY_LEFT=Objects.tile-module.html#KEY_LEFT,Variable game.KEY_LEFT=game-module.html#KEY_LEFT,Variable initialize.KEY_LEFT=initialize-module.html#KEY_LEFT"><a title="Config.creatures.KEY_LEFT
+Config.game.KEY_LEFT
+Config.items.KEY_LEFT
+Config.tiles.KEY_LEFT
+GUI.control.KEY_LEFT
+GUI.menu.KEY_LEFT
+GUI.panel.KEY_LEFT
+GUI.plain_text.KEY_LEFT
+GUI.text.KEY_LEFT
+Mixins.action.KEY_LEFT
+Mixins.ai.KEY_LEFT
+Mixins.effect.KEY_LEFT
+Mixins.fight.KEY_LEFT
+Mixins.fighter.KEY_LEFT
+Mixins.stat.KEY_LEFT
+Mixins.stats.KEY_LEFT
+Objects.aim.KEY_LEFT
+Objects.base_object.KEY_LEFT
+Objects.creature.KEY_LEFT
+Objects.item.KEY_LEFT
+Objects.object.KEY_LEFT
+Objects.player.KEY_LEFT
+Objects.test.KEY_LEFT
+Objects.tile.KEY_LEFT
+game.KEY_LEFT
+initialize.KEY_LEFT" class="py-name" href="#" onclick="return doclink('link-21', 'KEY_LEFT', 'link-21');">KEY_LEFT</a></tt>        <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'h'</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable Config.creatures.KEY_RIGHT=Config.creatures-module.html#KEY_RIGHT,Variable Config.game.KEY_RIGHT=Config.game-module.html#KEY_RIGHT,Variable Config.items.KEY_RIGHT=Config.items-module.html#KEY_RIGHT,Variable Config.tiles.KEY_RIGHT=Config.tiles-module.html#KEY_RIGHT,Variable GUI.control.KEY_RIGHT=GUI.control-module.html#KEY_RIGHT,Variable GUI.menu.KEY_RIGHT=GUI.menu-module.html#KEY_RIGHT,Variable GUI.panel.KEY_RIGHT=GUI.panel-module.html#KEY_RIGHT,Variable GUI.plain_text.KEY_RIGHT=GUI.plain_text-module.html#KEY_RIGHT,Variable GUI.text.KEY_RIGHT=GUI.text-module.html#KEY_RIGHT,Variable Mixins.action.KEY_RIGHT=Mixins.action-module.html#KEY_RIGHT,Variable Mixins.ai.KEY_RIGHT=Mixins.ai-module.html#KEY_RIGHT,Variable Mixins.effect.KEY_RIGHT=Mixins.effect-module.html#KEY_RIGHT,Variable Mixins.fight.KEY_RIGHT=Mixins.fight-module.html#KEY_RIGHT,Variable Mixins.fighter.KEY_RIGHT=Mixins.fighter-module.html#KEY_RIGHT,Variable Mixins.stat.KEY_RIGHT=Mixins.stat-module.html#KEY_RIGHT,Variable Mixins.stats.KEY_RIGHT=Mixins.stats-module.html#KEY_RIGHT,Variable Objects.aim.KEY_RIGHT=Objects.aim-module.html#KEY_RIGHT,Variable Objects.base_object.KEY_RIGHT=Objects.base_object-module.html#KEY_RIGHT,Variable Objects.creature.KEY_RIGHT=Objects.creature-module.html#KEY_RIGHT,Variable Objects.item.KEY_RIGHT=Objects.item-module.html#KEY_RIGHT,Variable Objects.object.KEY_RIGHT=Objects.object-module.html#KEY_RIGHT,Variable Objects.player.KEY_RIGHT=Objects.player-module.html#KEY_RIGHT,Variable Objects.test.KEY_RIGHT=Objects.test-module.html#KEY_RIGHT,Variable Objects.tile.KEY_RIGHT=Objects.tile-module.html#KEY_RIGHT,Variable game.KEY_RIGHT=game-module.html#KEY_RIGHT,Variable initialize.KEY_RIGHT=initialize-module.html#KEY_RIGHT"><a title="Config.creatures.KEY_RIGHT
+Config.game.KEY_RIGHT
+Config.items.KEY_RIGHT
+Config.tiles.KEY_RIGHT
+GUI.control.KEY_RIGHT
+GUI.menu.KEY_RIGHT
+GUI.panel.KEY_RIGHT
+GUI.plain_text.KEY_RIGHT
+GUI.text.KEY_RIGHT
+Mixins.action.KEY_RIGHT
+Mixins.ai.KEY_RIGHT
+Mixins.effect.KEY_RIGHT
+Mixins.fight.KEY_RIGHT
+Mixins.fighter.KEY_RIGHT
+Mixins.stat.KEY_RIGHT
+Mixins.stats.KEY_RIGHT
+Objects.aim.KEY_RIGHT
+Objects.base_object.KEY_RIGHT
+Objects.creature.KEY_RIGHT
+Objects.item.KEY_RIGHT
+Objects.object.KEY_RIGHT
+Objects.player.KEY_RIGHT
+Objects.test.KEY_RIGHT
+Objects.tile.KEY_RIGHT
+game.KEY_RIGHT
+initialize.KEY_RIGHT" class="py-name" href="#" onclick="return doclink('link-22', 'KEY_RIGHT', 'link-22');">KEY_RIGHT</a></tt>       <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'l'</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt id="link-23" class="py-name" targets="Variable Config.creatures.KEY_DOWN=Config.creatures-module.html#KEY_DOWN,Variable Config.game.KEY_DOWN=Config.game-module.html#KEY_DOWN,Variable Config.items.KEY_DOWN=Config.items-module.html#KEY_DOWN,Variable Config.tiles.KEY_DOWN=Config.tiles-module.html#KEY_DOWN,Variable GUI.control.KEY_DOWN=GUI.control-module.html#KEY_DOWN,Variable GUI.menu.KEY_DOWN=GUI.menu-module.html#KEY_DOWN,Variable GUI.panel.KEY_DOWN=GUI.panel-module.html#KEY_DOWN,Variable GUI.plain_text.KEY_DOWN=GUI.plain_text-module.html#KEY_DOWN,Variable GUI.text.KEY_DOWN=GUI.text-module.html#KEY_DOWN,Variable Mixins.action.KEY_DOWN=Mixins.action-module.html#KEY_DOWN,Variable Mixins.ai.KEY_DOWN=Mixins.ai-module.html#KEY_DOWN,Variable Mixins.effect.KEY_DOWN=Mixins.effect-module.html#KEY_DOWN,Variable Mixins.fight.KEY_DOWN=Mixins.fight-module.html#KEY_DOWN,Variable Mixins.fighter.KEY_DOWN=Mixins.fighter-module.html#KEY_DOWN,Variable Mixins.stat.KEY_DOWN=Mixins.stat-module.html#KEY_DOWN,Variable Mixins.stats.KEY_DOWN=Mixins.stats-module.html#KEY_DOWN,Variable Objects.aim.KEY_DOWN=Objects.aim-module.html#KEY_DOWN,Variable Objects.base_object.KEY_DOWN=Objects.base_object-module.html#KEY_DOWN,Variable Objects.creature.KEY_DOWN=Objects.creature-module.html#KEY_DOWN,Variable Objects.item.KEY_DOWN=Objects.item-module.html#KEY_DOWN,Variable Objects.object.KEY_DOWN=Objects.object-module.html#KEY_DOWN,Variable Objects.player.KEY_DOWN=Objects.player-module.html#KEY_DOWN,Variable Objects.test.KEY_DOWN=Objects.test-module.html#KEY_DOWN,Variable Objects.tile.KEY_DOWN=Objects.tile-module.html#KEY_DOWN,Variable game.KEY_DOWN=game-module.html#KEY_DOWN,Variable initialize.KEY_DOWN=initialize-module.html#KEY_DOWN"><a title="Config.creatures.KEY_DOWN
+Config.game.KEY_DOWN
+Config.items.KEY_DOWN
+Config.tiles.KEY_DOWN
+GUI.control.KEY_DOWN
+GUI.menu.KEY_DOWN
+GUI.panel.KEY_DOWN
+GUI.plain_text.KEY_DOWN
+GUI.text.KEY_DOWN
+Mixins.action.KEY_DOWN
+Mixins.ai.KEY_DOWN
+Mixins.effect.KEY_DOWN
+Mixins.fight.KEY_DOWN
+Mixins.fighter.KEY_DOWN
+Mixins.stat.KEY_DOWN
+Mixins.stats.KEY_DOWN
+Objects.aim.KEY_DOWN
+Objects.base_object.KEY_DOWN
+Objects.creature.KEY_DOWN
+Objects.item.KEY_DOWN
+Objects.object.KEY_DOWN
+Objects.player.KEY_DOWN
+Objects.test.KEY_DOWN
+Objects.tile.KEY_DOWN
+game.KEY_DOWN
+initialize.KEY_DOWN" class="py-name" href="#" onclick="return doclink('link-23', 'KEY_DOWN', 'link-23');">KEY_DOWN</a></tt>        <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'j'</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-24" class="py-name" targets="Variable Config.creatures.KEY_UP=Config.creatures-module.html#KEY_UP,Variable Config.game.KEY_UP=Config.game-module.html#KEY_UP,Variable Config.items.KEY_UP=Config.items-module.html#KEY_UP,Variable Config.tiles.KEY_UP=Config.tiles-module.html#KEY_UP,Variable GUI.control.KEY_UP=GUI.control-module.html#KEY_UP,Variable GUI.menu.KEY_UP=GUI.menu-module.html#KEY_UP,Variable GUI.panel.KEY_UP=GUI.panel-module.html#KEY_UP,Variable GUI.plain_text.KEY_UP=GUI.plain_text-module.html#KEY_UP,Variable GUI.text.KEY_UP=GUI.text-module.html#KEY_UP,Variable Mixins.action.KEY_UP=Mixins.action-module.html#KEY_UP,Variable Mixins.ai.KEY_UP=Mixins.ai-module.html#KEY_UP,Variable Mixins.effect.KEY_UP=Mixins.effect-module.html#KEY_UP,Variable Mixins.fight.KEY_UP=Mixins.fight-module.html#KEY_UP,Variable Mixins.fighter.KEY_UP=Mixins.fighter-module.html#KEY_UP,Variable Mixins.stat.KEY_UP=Mixins.stat-module.html#KEY_UP,Variable Mixins.stats.KEY_UP=Mixins.stats-module.html#KEY_UP,Variable Objects.aim.KEY_UP=Objects.aim-module.html#KEY_UP,Variable Objects.base_object.KEY_UP=Objects.base_object-module.html#KEY_UP,Variable Objects.creature.KEY_UP=Objects.creature-module.html#KEY_UP,Variable Objects.item.KEY_UP=Objects.item-module.html#KEY_UP,Variable Objects.object.KEY_UP=Objects.object-module.html#KEY_UP,Variable Objects.player.KEY_UP=Objects.player-module.html#KEY_UP,Variable Objects.test.KEY_UP=Objects.test-module.html#KEY_UP,Variable Objects.tile.KEY_UP=Objects.tile-module.html#KEY_UP,Variable game.KEY_UP=game-module.html#KEY_UP,Variable initialize.KEY_UP=initialize-module.html#KEY_UP"><a title="Config.creatures.KEY_UP
+Config.game.KEY_UP
+Config.items.KEY_UP
+Config.tiles.KEY_UP
+GUI.control.KEY_UP
+GUI.menu.KEY_UP
+GUI.panel.KEY_UP
+GUI.plain_text.KEY_UP
+GUI.text.KEY_UP
+Mixins.action.KEY_UP
+Mixins.ai.KEY_UP
+Mixins.effect.KEY_UP
+Mixins.fight.KEY_UP
+Mixins.fighter.KEY_UP
+Mixins.stat.KEY_UP
+Mixins.stats.KEY_UP
+Objects.aim.KEY_UP
+Objects.base_object.KEY_UP
+Objects.creature.KEY_UP
+Objects.item.KEY_UP
+Objects.object.KEY_UP
+Objects.player.KEY_UP
+Objects.test.KEY_UP
+Objects.tile.KEY_UP
+game.KEY_UP
+initialize.KEY_UP" class="py-name" href="#" onclick="return doclink('link-24', 'KEY_UP', 'link-24');">KEY_UP</a></tt>          <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'k'</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt id="link-25" class="py-name" targets="Variable Config.creatures.KEY_LEFT_UP=Config.creatures-module.html#KEY_LEFT_UP,Variable Config.game.KEY_LEFT_UP=Config.game-module.html#KEY_LEFT_UP,Variable Config.items.KEY_LEFT_UP=Config.items-module.html#KEY_LEFT_UP,Variable Config.tiles.KEY_LEFT_UP=Config.tiles-module.html#KEY_LEFT_UP,Variable GUI.control.KEY_LEFT_UP=GUI.control-module.html#KEY_LEFT_UP,Variable GUI.menu.KEY_LEFT_UP=GUI.menu-module.html#KEY_LEFT_UP,Variable GUI.panel.KEY_LEFT_UP=GUI.panel-module.html#KEY_LEFT_UP,Variable GUI.plain_text.KEY_LEFT_UP=GUI.plain_text-module.html#KEY_LEFT_UP,Variable GUI.text.KEY_LEFT_UP=GUI.text-module.html#KEY_LEFT_UP,Variable Mixins.action.KEY_LEFT_UP=Mixins.action-module.html#KEY_LEFT_UP,Variable Mixins.ai.KEY_LEFT_UP=Mixins.ai-module.html#KEY_LEFT_UP,Variable Mixins.effect.KEY_LEFT_UP=Mixins.effect-module.html#KEY_LEFT_UP,Variable Mixins.fight.KEY_LEFT_UP=Mixins.fight-module.html#KEY_LEFT_UP,Variable Mixins.fighter.KEY_LEFT_UP=Mixins.fighter-module.html#KEY_LEFT_UP,Variable Mixins.stat.KEY_LEFT_UP=Mixins.stat-module.html#KEY_LEFT_UP,Variable Mixins.stats.KEY_LEFT_UP=Mixins.stats-module.html#KEY_LEFT_UP,Variable Objects.aim.KEY_LEFT_UP=Objects.aim-module.html#KEY_LEFT_UP,Variable Objects.base_object.KEY_LEFT_UP=Objects.base_object-module.html#KEY_LEFT_UP,Variable Objects.creature.KEY_LEFT_UP=Objects.creature-module.html#KEY_LEFT_UP,Variable Objects.item.KEY_LEFT_UP=Objects.item-module.html#KEY_LEFT_UP,Variable Objects.object.KEY_LEFT_UP=Objects.object-module.html#KEY_LEFT_UP,Variable Objects.player.KEY_LEFT_UP=Objects.player-module.html#KEY_LEFT_UP,Variable Objects.test.KEY_LEFT_UP=Objects.test-module.html#KEY_LEFT_UP,Variable Objects.tile.KEY_LEFT_UP=Objects.tile-module.html#KEY_LEFT_UP,Variable game.KEY_LEFT_UP=game-module.html#KEY_LEFT_UP,Variable initialize.KEY_LEFT_UP=initialize-module.html#KEY_LEFT_UP"><a title="Config.creatures.KEY_LEFT_UP
+Config.game.KEY_LEFT_UP
+Config.items.KEY_LEFT_UP
+Config.tiles.KEY_LEFT_UP
+GUI.control.KEY_LEFT_UP
+GUI.menu.KEY_LEFT_UP
+GUI.panel.KEY_LEFT_UP
+GUI.plain_text.KEY_LEFT_UP
+GUI.text.KEY_LEFT_UP
+Mixins.action.KEY_LEFT_UP
+Mixins.ai.KEY_LEFT_UP
+Mixins.effect.KEY_LEFT_UP
+Mixins.fight.KEY_LEFT_UP
+Mixins.fighter.KEY_LEFT_UP
+Mixins.stat.KEY_LEFT_UP
+Mixins.stats.KEY_LEFT_UP
+Objects.aim.KEY_LEFT_UP
+Objects.base_object.KEY_LEFT_UP
+Objects.creature.KEY_LEFT_UP
+Objects.item.KEY_LEFT_UP
+Objects.object.KEY_LEFT_UP
+Objects.player.KEY_LEFT_UP
+Objects.test.KEY_LEFT_UP
+Objects.tile.KEY_LEFT_UP
+game.KEY_LEFT_UP
+initialize.KEY_LEFT_UP" class="py-name" href="#" onclick="return doclink('link-25', 'KEY_LEFT_UP', 'link-25');">KEY_LEFT_UP</a></tt>     <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'y'</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt id="link-26" class="py-name" targets="Variable Config.creatures.KEY_RIGHT_UP=Config.creatures-module.html#KEY_RIGHT_UP,Variable Config.game.KEY_RIGHT_UP=Config.game-module.html#KEY_RIGHT_UP,Variable Config.items.KEY_RIGHT_UP=Config.items-module.html#KEY_RIGHT_UP,Variable Config.tiles.KEY_RIGHT_UP=Config.tiles-module.html#KEY_RIGHT_UP,Variable GUI.control.KEY_RIGHT_UP=GUI.control-module.html#KEY_RIGHT_UP,Variable GUI.menu.KEY_RIGHT_UP=GUI.menu-module.html#KEY_RIGHT_UP,Variable GUI.panel.KEY_RIGHT_UP=GUI.panel-module.html#KEY_RIGHT_UP,Variable GUI.plain_text.KEY_RIGHT_UP=GUI.plain_text-module.html#KEY_RIGHT_UP,Variable GUI.text.KEY_RIGHT_UP=GUI.text-module.html#KEY_RIGHT_UP,Variable Mixins.action.KEY_RIGHT_UP=Mixins.action-module.html#KEY_RIGHT_UP,Variable Mixins.ai.KEY_RIGHT_UP=Mixins.ai-module.html#KEY_RIGHT_UP,Variable Mixins.effect.KEY_RIGHT_UP=Mixins.effect-module.html#KEY_RIGHT_UP,Variable Mixins.fight.KEY_RIGHT_UP=Mixins.fight-module.html#KEY_RIGHT_UP,Variable Mixins.fighter.KEY_RIGHT_UP=Mixins.fighter-module.html#KEY_RIGHT_UP,Variable Mixins.stat.KEY_RIGHT_UP=Mixins.stat-module.html#KEY_RIGHT_UP,Variable Mixins.stats.KEY_RIGHT_UP=Mixins.stats-module.html#KEY_RIGHT_UP,Variable Objects.aim.KEY_RIGHT_UP=Objects.aim-module.html#KEY_RIGHT_UP,Variable Objects.base_object.KEY_RIGHT_UP=Objects.base_object-module.html#KEY_RIGHT_UP,Variable Objects.creature.KEY_RIGHT_UP=Objects.creature-module.html#KEY_RIGHT_UP,Variable Objects.item.KEY_RIGHT_UP=Objects.item-module.html#KEY_RIGHT_UP,Variable Objects.object.KEY_RIGHT_UP=Objects.object-module.html#KEY_RIGHT_UP,Variable Objects.player.KEY_RIGHT_UP=Objects.player-module.html#KEY_RIGHT_UP,Variable Objects.test.KEY_RIGHT_UP=Objects.test-module.html#KEY_RIGHT_UP,Variable Objects.tile.KEY_RIGHT_UP=Objects.tile-module.html#KEY_RIGHT_UP,Variable game.KEY_RIGHT_UP=game-module.html#KEY_RIGHT_UP,Variable initialize.KEY_RIGHT_UP=initialize-module.html#KEY_RIGHT_UP"><a title="Config.creatures.KEY_RIGHT_UP
+Config.game.KEY_RIGHT_UP
+Config.items.KEY_RIGHT_UP
+Config.tiles.KEY_RIGHT_UP
+GUI.control.KEY_RIGHT_UP
+GUI.menu.KEY_RIGHT_UP
+GUI.panel.KEY_RIGHT_UP
+GUI.plain_text.KEY_RIGHT_UP
+GUI.text.KEY_RIGHT_UP
+Mixins.action.KEY_RIGHT_UP
+Mixins.ai.KEY_RIGHT_UP
+Mixins.effect.KEY_RIGHT_UP
+Mixins.fight.KEY_RIGHT_UP
+Mixins.fighter.KEY_RIGHT_UP
+Mixins.stat.KEY_RIGHT_UP
+Mixins.stats.KEY_RIGHT_UP
+Objects.aim.KEY_RIGHT_UP
+Objects.base_object.KEY_RIGHT_UP
+Objects.creature.KEY_RIGHT_UP
+Objects.item.KEY_RIGHT_UP
+Objects.object.KEY_RIGHT_UP
+Objects.player.KEY_RIGHT_UP
+Objects.test.KEY_RIGHT_UP
+Objects.tile.KEY_RIGHT_UP
+game.KEY_RIGHT_UP
+initialize.KEY_RIGHT_UP" class="py-name" href="#" onclick="return doclink('link-26', 'KEY_RIGHT_UP', 'link-26');">KEY_RIGHT_UP</a></tt>    <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'u'</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt id="link-27" class="py-name" targets="Variable Config.creatures.KEY_LEFT_DOWN=Config.creatures-module.html#KEY_LEFT_DOWN,Variable Config.game.KEY_LEFT_DOWN=Config.game-module.html#KEY_LEFT_DOWN,Variable Config.items.KEY_LEFT_DOWN=Config.items-module.html#KEY_LEFT_DOWN,Variable Config.tiles.KEY_LEFT_DOWN=Config.tiles-module.html#KEY_LEFT_DOWN,Variable GUI.control.KEY_LEFT_DOWN=GUI.control-module.html#KEY_LEFT_DOWN,Variable GUI.menu.KEY_LEFT_DOWN=GUI.menu-module.html#KEY_LEFT_DOWN,Variable GUI.panel.KEY_LEFT_DOWN=GUI.panel-module.html#KEY_LEFT_DOWN,Variable GUI.plain_text.KEY_LEFT_DOWN=GUI.plain_text-module.html#KEY_LEFT_DOWN,Variable GUI.text.KEY_LEFT_DOWN=GUI.text-module.html#KEY_LEFT_DOWN,Variable Mixins.action.KEY_LEFT_DOWN=Mixins.action-module.html#KEY_LEFT_DOWN,Variable Mixins.ai.KEY_LEFT_DOWN=Mixins.ai-module.html#KEY_LEFT_DOWN,Variable Mixins.effect.KEY_LEFT_DOWN=Mixins.effect-module.html#KEY_LEFT_DOWN,Variable Mixins.fight.KEY_LEFT_DOWN=Mixins.fight-module.html#KEY_LEFT_DOWN,Variable Mixins.fighter.KEY_LEFT_DOWN=Mixins.fighter-module.html#KEY_LEFT_DOWN,Variable Mixins.stat.KEY_LEFT_DOWN=Mixins.stat-module.html#KEY_LEFT_DOWN,Variable Mixins.stats.KEY_LEFT_DOWN=Mixins.stats-module.html#KEY_LEFT_DOWN,Variable Objects.aim.KEY_LEFT_DOWN=Objects.aim-module.html#KEY_LEFT_DOWN,Variable Objects.base_object.KEY_LEFT_DOWN=Objects.base_object-module.html#KEY_LEFT_DOWN,Variable Objects.creature.KEY_LEFT_DOWN=Objects.creature-module.html#KEY_LEFT_DOWN,Variable Objects.item.KEY_LEFT_DOWN=Objects.item-module.html#KEY_LEFT_DOWN,Variable Objects.object.KEY_LEFT_DOWN=Objects.object-module.html#KEY_LEFT_DOWN,Variable Objects.player.KEY_LEFT_DOWN=Objects.player-module.html#KEY_LEFT_DOWN,Variable Objects.test.KEY_LEFT_DOWN=Objects.test-module.html#KEY_LEFT_DOWN,Variable Objects.tile.KEY_LEFT_DOWN=Objects.tile-module.html#KEY_LEFT_DOWN,Variable game.KEY_LEFT_DOWN=game-module.html#KEY_LEFT_DOWN,Variable initialize.KEY_LEFT_DOWN=initialize-module.html#KEY_LEFT_DOWN"><a title="Config.creatures.KEY_LEFT_DOWN
+Config.game.KEY_LEFT_DOWN
+Config.items.KEY_LEFT_DOWN
+Config.tiles.KEY_LEFT_DOWN
+GUI.control.KEY_LEFT_DOWN
+GUI.menu.KEY_LEFT_DOWN
+GUI.panel.KEY_LEFT_DOWN
+GUI.plain_text.KEY_LEFT_DOWN
+GUI.text.KEY_LEFT_DOWN
+Mixins.action.KEY_LEFT_DOWN
+Mixins.ai.KEY_LEFT_DOWN
+Mixins.effect.KEY_LEFT_DOWN
+Mixins.fight.KEY_LEFT_DOWN
+Mixins.fighter.KEY_LEFT_DOWN
+Mixins.stat.KEY_LEFT_DOWN
+Mixins.stats.KEY_LEFT_DOWN
+Objects.aim.KEY_LEFT_DOWN
+Objects.base_object.KEY_LEFT_DOWN
+Objects.creature.KEY_LEFT_DOWN
+Objects.item.KEY_LEFT_DOWN
+Objects.object.KEY_LEFT_DOWN
+Objects.player.KEY_LEFT_DOWN
+Objects.test.KEY_LEFT_DOWN
+Objects.tile.KEY_LEFT_DOWN
+game.KEY_LEFT_DOWN
+initialize.KEY_LEFT_DOWN" class="py-name" href="#" onclick="return doclink('link-27', 'KEY_LEFT_DOWN', 'link-27');">KEY_LEFT_DOWN</a></tt>   <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'b'</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-28" class="py-name" targets="Variable Config.creatures.KEY_RIGHT_DOWN=Config.creatures-module.html#KEY_RIGHT_DOWN,Variable Config.game.KEY_RIGHT_DOWN=Config.game-module.html#KEY_RIGHT_DOWN,Variable Config.items.KEY_RIGHT_DOWN=Config.items-module.html#KEY_RIGHT_DOWN,Variable Config.tiles.KEY_RIGHT_DOWN=Config.tiles-module.html#KEY_RIGHT_DOWN,Variable GUI.control.KEY_RIGHT_DOWN=GUI.control-module.html#KEY_RIGHT_DOWN,Variable GUI.menu.KEY_RIGHT_DOWN=GUI.menu-module.html#KEY_RIGHT_DOWN,Variable GUI.panel.KEY_RIGHT_DOWN=GUI.panel-module.html#KEY_RIGHT_DOWN,Variable GUI.plain_text.KEY_RIGHT_DOWN=GUI.plain_text-module.html#KEY_RIGHT_DOWN,Variable GUI.text.KEY_RIGHT_DOWN=GUI.text-module.html#KEY_RIGHT_DOWN,Variable Mixins.action.KEY_RIGHT_DOWN=Mixins.action-module.html#KEY_RIGHT_DOWN,Variable Mixins.ai.KEY_RIGHT_DOWN=Mixins.ai-module.html#KEY_RIGHT_DOWN,Variable Mixins.effect.KEY_RIGHT_DOWN=Mixins.effect-module.html#KEY_RIGHT_DOWN,Variable Mixins.fight.KEY_RIGHT_DOWN=Mixins.fight-module.html#KEY_RIGHT_DOWN,Variable Mixins.fighter.KEY_RIGHT_DOWN=Mixins.fighter-module.html#KEY_RIGHT_DOWN,Variable Mixins.stat.KEY_RIGHT_DOWN=Mixins.stat-module.html#KEY_RIGHT_DOWN,Variable Mixins.stats.KEY_RIGHT_DOWN=Mixins.stats-module.html#KEY_RIGHT_DOWN,Variable Objects.aim.KEY_RIGHT_DOWN=Objects.aim-module.html#KEY_RIGHT_DOWN,Variable Objects.base_object.KEY_RIGHT_DOWN=Objects.base_object-module.html#KEY_RIGHT_DOWN,Variable Objects.creature.KEY_RIGHT_DOWN=Objects.creature-module.html#KEY_RIGHT_DOWN,Variable Objects.item.KEY_RIGHT_DOWN=Objects.item-module.html#KEY_RIGHT_DOWN,Variable Objects.object.KEY_RIGHT_DOWN=Objects.object-module.html#KEY_RIGHT_DOWN,Variable Objects.player.KEY_RIGHT_DOWN=Objects.player-module.html#KEY_RIGHT_DOWN,Variable Objects.test.KEY_RIGHT_DOWN=Objects.test-module.html#KEY_RIGHT_DOWN,Variable Objects.tile.KEY_RIGHT_DOWN=Objects.tile-module.html#KEY_RIGHT_DOWN,Variable game.KEY_RIGHT_DOWN=game-module.html#KEY_RIGHT_DOWN,Variable initialize.KEY_RIGHT_DOWN=initialize-module.html#KEY_RIGHT_DOWN"><a title="Config.creatures.KEY_RIGHT_DOWN
+Config.game.KEY_RIGHT_DOWN
+Config.items.KEY_RIGHT_DOWN
+Config.tiles.KEY_RIGHT_DOWN
+GUI.control.KEY_RIGHT_DOWN
+GUI.menu.KEY_RIGHT_DOWN
+GUI.panel.KEY_RIGHT_DOWN
+GUI.plain_text.KEY_RIGHT_DOWN
+GUI.text.KEY_RIGHT_DOWN
+Mixins.action.KEY_RIGHT_DOWN
+Mixins.ai.KEY_RIGHT_DOWN
+Mixins.effect.KEY_RIGHT_DOWN
+Mixins.fight.KEY_RIGHT_DOWN
+Mixins.fighter.KEY_RIGHT_DOWN
+Mixins.stat.KEY_RIGHT_DOWN
+Mixins.stats.KEY_RIGHT_DOWN
+Objects.aim.KEY_RIGHT_DOWN
+Objects.base_object.KEY_RIGHT_DOWN
+Objects.creature.KEY_RIGHT_DOWN
+Objects.item.KEY_RIGHT_DOWN
+Objects.object.KEY_RIGHT_DOWN
+Objects.player.KEY_RIGHT_DOWN
+Objects.test.KEY_RIGHT_DOWN
+Objects.tile.KEY_RIGHT_DOWN
+game.KEY_RIGHT_DOWN
+initialize.KEY_RIGHT_DOWN" class="py-name" href="#" onclick="return doclink('link-28', 'KEY_RIGHT_DOWN', 'link-28');">KEY_RIGHT_DOWN</a></tt>  <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'n'</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt id="link-29" class="py-name" targets="Variable Config.creatures.KEY_PICK_UP=Config.creatures-module.html#KEY_PICK_UP,Variable Config.game.KEY_PICK_UP=Config.game-module.html#KEY_PICK_UP,Variable Config.items.KEY_PICK_UP=Config.items-module.html#KEY_PICK_UP,Variable Config.tiles.KEY_PICK_UP=Config.tiles-module.html#KEY_PICK_UP,Variable GUI.control.KEY_PICK_UP=GUI.control-module.html#KEY_PICK_UP,Variable GUI.menu.KEY_PICK_UP=GUI.menu-module.html#KEY_PICK_UP,Variable GUI.panel.KEY_PICK_UP=GUI.panel-module.html#KEY_PICK_UP,Variable GUI.plain_text.KEY_PICK_UP=GUI.plain_text-module.html#KEY_PICK_UP,Variable GUI.text.KEY_PICK_UP=GUI.text-module.html#KEY_PICK_UP,Variable Mixins.action.KEY_PICK_UP=Mixins.action-module.html#KEY_PICK_UP,Variable Mixins.ai.KEY_PICK_UP=Mixins.ai-module.html#KEY_PICK_UP,Variable Mixins.effect.KEY_PICK_UP=Mixins.effect-module.html#KEY_PICK_UP,Variable Mixins.fight.KEY_PICK_UP=Mixins.fight-module.html#KEY_PICK_UP,Variable Mixins.fighter.KEY_PICK_UP=Mixins.fighter-module.html#KEY_PICK_UP,Variable Mixins.stat.KEY_PICK_UP=Mixins.stat-module.html#KEY_PICK_UP,Variable Mixins.stats.KEY_PICK_UP=Mixins.stats-module.html#KEY_PICK_UP,Variable Objects.aim.KEY_PICK_UP=Objects.aim-module.html#KEY_PICK_UP,Variable Objects.base_object.KEY_PICK_UP=Objects.base_object-module.html#KEY_PICK_UP,Variable Objects.creature.KEY_PICK_UP=Objects.creature-module.html#KEY_PICK_UP,Variable Objects.item.KEY_PICK_UP=Objects.item-module.html#KEY_PICK_UP,Variable Objects.object.KEY_PICK_UP=Objects.object-module.html#KEY_PICK_UP,Variable Objects.player.KEY_PICK_UP=Objects.player-module.html#KEY_PICK_UP,Variable Objects.test.KEY_PICK_UP=Objects.test-module.html#KEY_PICK_UP,Variable Objects.tile.KEY_PICK_UP=Objects.tile-module.html#KEY_PICK_UP,Variable game.KEY_PICK_UP=game-module.html#KEY_PICK_UP,Variable initialize.KEY_PICK_UP=initialize-module.html#KEY_PICK_UP"><a title="Config.creatures.KEY_PICK_UP
+Config.game.KEY_PICK_UP
+Config.items.KEY_PICK_UP
+Config.tiles.KEY_PICK_UP
+GUI.control.KEY_PICK_UP
+GUI.menu.KEY_PICK_UP
+GUI.panel.KEY_PICK_UP
+GUI.plain_text.KEY_PICK_UP
+GUI.text.KEY_PICK_UP
+Mixins.action.KEY_PICK_UP
+Mixins.ai.KEY_PICK_UP
+Mixins.effect.KEY_PICK_UP
+Mixins.fight.KEY_PICK_UP
+Mixins.fighter.KEY_PICK_UP
+Mixins.stat.KEY_PICK_UP
+Mixins.stats.KEY_PICK_UP
+Objects.aim.KEY_PICK_UP
+Objects.base_object.KEY_PICK_UP
+Objects.creature.KEY_PICK_UP
+Objects.item.KEY_PICK_UP
+Objects.object.KEY_PICK_UP
+Objects.player.KEY_PICK_UP
+Objects.test.KEY_PICK_UP
+Objects.tile.KEY_PICK_UP
+game.KEY_PICK_UP
+initialize.KEY_PICK_UP" class="py-name" href="#" onclick="return doclink('link-29', 'KEY_PICK_UP', 'link-29');">KEY_PICK_UP</a></tt>     <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'g'</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt id="link-30" class="py-name" targets="Variable Config.creatures.KEY_INVENTORY=Config.creatures-module.html#KEY_INVENTORY,Variable Config.game.KEY_INVENTORY=Config.game-module.html#KEY_INVENTORY,Variable Config.items.KEY_INVENTORY=Config.items-module.html#KEY_INVENTORY,Variable Config.tiles.KEY_INVENTORY=Config.tiles-module.html#KEY_INVENTORY,Variable GUI.control.KEY_INVENTORY=GUI.control-module.html#KEY_INVENTORY,Variable GUI.menu.KEY_INVENTORY=GUI.menu-module.html#KEY_INVENTORY,Variable GUI.panel.KEY_INVENTORY=GUI.panel-module.html#KEY_INVENTORY,Variable GUI.plain_text.KEY_INVENTORY=GUI.plain_text-module.html#KEY_INVENTORY,Variable GUI.text.KEY_INVENTORY=GUI.text-module.html#KEY_INVENTORY,Variable Mixins.action.KEY_INVENTORY=Mixins.action-module.html#KEY_INVENTORY,Variable Mixins.ai.KEY_INVENTORY=Mixins.ai-module.html#KEY_INVENTORY,Variable Mixins.effect.KEY_INVENTORY=Mixins.effect-module.html#KEY_INVENTORY,Variable Mixins.fight.KEY_INVENTORY=Mixins.fight-module.html#KEY_INVENTORY,Variable Mixins.fighter.KEY_INVENTORY=Mixins.fighter-module.html#KEY_INVENTORY,Variable Mixins.stat.KEY_INVENTORY=Mixins.stat-module.html#KEY_INVENTORY,Variable Mixins.stats.KEY_INVENTORY=Mixins.stats-module.html#KEY_INVENTORY,Variable Objects.aim.KEY_INVENTORY=Objects.aim-module.html#KEY_INVENTORY,Variable Objects.base_object.KEY_INVENTORY=Objects.base_object-module.html#KEY_INVENTORY,Variable Objects.creature.KEY_INVENTORY=Objects.creature-module.html#KEY_INVENTORY,Variable Objects.item.KEY_INVENTORY=Objects.item-module.html#KEY_INVENTORY,Variable Objects.object.KEY_INVENTORY=Objects.object-module.html#KEY_INVENTORY,Variable Objects.player.KEY_INVENTORY=Objects.player-module.html#KEY_INVENTORY,Variable Objects.test.KEY_INVENTORY=Objects.test-module.html#KEY_INVENTORY,Variable Objects.tile.KEY_INVENTORY=Objects.tile-module.html#KEY_INVENTORY,Variable game.KEY_INVENTORY=game-module.html#KEY_INVENTORY,Variable initialize.KEY_INVENTORY=initialize-module.html#KEY_INVENTORY"><a title="Config.creatures.KEY_INVENTORY
+Config.game.KEY_INVENTORY
+Config.items.KEY_INVENTORY
+Config.tiles.KEY_INVENTORY
+GUI.control.KEY_INVENTORY
+GUI.menu.KEY_INVENTORY
+GUI.panel.KEY_INVENTORY
+GUI.plain_text.KEY_INVENTORY
+GUI.text.KEY_INVENTORY
+Mixins.action.KEY_INVENTORY
+Mixins.ai.KEY_INVENTORY
+Mixins.effect.KEY_INVENTORY
+Mixins.fight.KEY_INVENTORY
+Mixins.fighter.KEY_INVENTORY
+Mixins.stat.KEY_INVENTORY
+Mixins.stats.KEY_INVENTORY
+Objects.aim.KEY_INVENTORY
+Objects.base_object.KEY_INVENTORY
+Objects.creature.KEY_INVENTORY
+Objects.item.KEY_INVENTORY
+Objects.object.KEY_INVENTORY
+Objects.player.KEY_INVENTORY
+Objects.test.KEY_INVENTORY
+Objects.tile.KEY_INVENTORY
+game.KEY_INVENTORY
+initialize.KEY_INVENTORY" class="py-name" href="#" onclick="return doclink('link-30', 'KEY_INVENTORY', 'link-30');">KEY_INVENTORY</a></tt>   <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'i'</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt id="link-31" class="py-name" targets="Variable Config.creatures.KEY_USE=Config.creatures-module.html#KEY_USE,Variable Config.game.KEY_USE=Config.game-module.html#KEY_USE,Variable Config.items.KEY_USE=Config.items-module.html#KEY_USE,Variable Config.tiles.KEY_USE=Config.tiles-module.html#KEY_USE,Variable GUI.control.KEY_USE=GUI.control-module.html#KEY_USE,Variable GUI.menu.KEY_USE=GUI.menu-module.html#KEY_USE,Variable GUI.panel.KEY_USE=GUI.panel-module.html#KEY_USE,Variable GUI.plain_text.KEY_USE=GUI.plain_text-module.html#KEY_USE,Variable GUI.text.KEY_USE=GUI.text-module.html#KEY_USE,Variable Mixins.action.KEY_USE=Mixins.action-module.html#KEY_USE,Variable Mixins.ai.KEY_USE=Mixins.ai-module.html#KEY_USE,Variable Mixins.effect.KEY_USE=Mixins.effect-module.html#KEY_USE,Variable Mixins.fight.KEY_USE=Mixins.fight-module.html#KEY_USE,Variable Mixins.fighter.KEY_USE=Mixins.fighter-module.html#KEY_USE,Variable Mixins.stat.KEY_USE=Mixins.stat-module.html#KEY_USE,Variable Mixins.stats.KEY_USE=Mixins.stats-module.html#KEY_USE,Variable Objects.aim.KEY_USE=Objects.aim-module.html#KEY_USE,Variable Objects.base_object.KEY_USE=Objects.base_object-module.html#KEY_USE,Variable Objects.creature.KEY_USE=Objects.creature-module.html#KEY_USE,Variable Objects.item.KEY_USE=Objects.item-module.html#KEY_USE,Variable Objects.object.KEY_USE=Objects.object-module.html#KEY_USE,Variable Objects.player.KEY_USE=Objects.player-module.html#KEY_USE,Variable Objects.test.KEY_USE=Objects.test-module.html#KEY_USE,Variable Objects.tile.KEY_USE=Objects.tile-module.html#KEY_USE,Variable game.KEY_USE=game-module.html#KEY_USE,Variable initialize.KEY_USE=initialize-module.html#KEY_USE"><a title="Config.creatures.KEY_USE
+Config.game.KEY_USE
+Config.items.KEY_USE
+Config.tiles.KEY_USE
+GUI.control.KEY_USE
+GUI.menu.KEY_USE
+GUI.panel.KEY_USE
+GUI.plain_text.KEY_USE
+GUI.text.KEY_USE
+Mixins.action.KEY_USE
+Mixins.ai.KEY_USE
+Mixins.effect.KEY_USE
+Mixins.fight.KEY_USE
+Mixins.fighter.KEY_USE
+Mixins.stat.KEY_USE
+Mixins.stats.KEY_USE
+Objects.aim.KEY_USE
+Objects.base_object.KEY_USE
+Objects.creature.KEY_USE
+Objects.item.KEY_USE
+Objects.object.KEY_USE
+Objects.player.KEY_USE
+Objects.test.KEY_USE
+Objects.tile.KEY_USE
+game.KEY_USE
+initialize.KEY_USE" class="py-name" href="#" onclick="return doclink('link-31', 'KEY_USE', 'link-31');">KEY_USE</a></tt>         <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'a'</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt id="link-32" class="py-name" targets="Variable Config.creatures.KEY_DROP=Config.creatures-module.html#KEY_DROP,Variable Config.game.KEY_DROP=Config.game-module.html#KEY_DROP,Variable Config.items.KEY_DROP=Config.items-module.html#KEY_DROP,Variable Config.tiles.KEY_DROP=Config.tiles-module.html#KEY_DROP,Variable GUI.control.KEY_DROP=GUI.control-module.html#KEY_DROP,Variable GUI.menu.KEY_DROP=GUI.menu-module.html#KEY_DROP,Variable GUI.panel.KEY_DROP=GUI.panel-module.html#KEY_DROP,Variable GUI.plain_text.KEY_DROP=GUI.plain_text-module.html#KEY_DROP,Variable GUI.text.KEY_DROP=GUI.text-module.html#KEY_DROP,Variable Mixins.action.KEY_DROP=Mixins.action-module.html#KEY_DROP,Variable Mixins.ai.KEY_DROP=Mixins.ai-module.html#KEY_DROP,Variable Mixins.effect.KEY_DROP=Mixins.effect-module.html#KEY_DROP,Variable Mixins.fight.KEY_DROP=Mixins.fight-module.html#KEY_DROP,Variable Mixins.fighter.KEY_DROP=Mixins.fighter-module.html#KEY_DROP,Variable Mixins.stat.KEY_DROP=Mixins.stat-module.html#KEY_DROP,Variable Mixins.stats.KEY_DROP=Mixins.stats-module.html#KEY_DROP,Variable Objects.aim.KEY_DROP=Objects.aim-module.html#KEY_DROP,Variable Objects.base_object.KEY_DROP=Objects.base_object-module.html#KEY_DROP,Variable Objects.creature.KEY_DROP=Objects.creature-module.html#KEY_DROP,Variable Objects.item.KEY_DROP=Objects.item-module.html#KEY_DROP,Variable Objects.object.KEY_DROP=Objects.object-module.html#KEY_DROP,Variable Objects.player.KEY_DROP=Objects.player-module.html#KEY_DROP,Variable Objects.test.KEY_DROP=Objects.test-module.html#KEY_DROP,Variable Objects.tile.KEY_DROP=Objects.tile-module.html#KEY_DROP,Variable game.KEY_DROP=game-module.html#KEY_DROP,Variable initialize.KEY_DROP=initialize-module.html#KEY_DROP"><a title="Config.creatures.KEY_DROP
+Config.game.KEY_DROP
+Config.items.KEY_DROP
+Config.tiles.KEY_DROP
+GUI.control.KEY_DROP
+GUI.menu.KEY_DROP
+GUI.panel.KEY_DROP
+GUI.plain_text.KEY_DROP
+GUI.text.KEY_DROP
+Mixins.action.KEY_DROP
+Mixins.ai.KEY_DROP
+Mixins.effect.KEY_DROP
+Mixins.fight.KEY_DROP
+Mixins.fighter.KEY_DROP
+Mixins.stat.KEY_DROP
+Mixins.stats.KEY_DROP
+Objects.aim.KEY_DROP
+Objects.base_object.KEY_DROP
+Objects.creature.KEY_DROP
+Objects.item.KEY_DROP
+Objects.object.KEY_DROP
+Objects.player.KEY_DROP
+Objects.test.KEY_DROP
+Objects.tile.KEY_DROP
+game.KEY_DROP
+initialize.KEY_DROP" class="py-name" href="#" onclick="return doclink('link-32', 'KEY_DROP', 'link-32');">KEY_DROP</a></tt>        <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'d'</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt id="link-33" class="py-name" targets="Variable Config.creatures.KEY_FIRE=Config.creatures-module.html#KEY_FIRE,Variable Config.game.KEY_FIRE=Config.game-module.html#KEY_FIRE,Variable Config.items.KEY_FIRE=Config.items-module.html#KEY_FIRE,Variable Config.tiles.KEY_FIRE=Config.tiles-module.html#KEY_FIRE,Variable GUI.control.KEY_FIRE=GUI.control-module.html#KEY_FIRE,Variable GUI.menu.KEY_FIRE=GUI.menu-module.html#KEY_FIRE,Variable GUI.panel.KEY_FIRE=GUI.panel-module.html#KEY_FIRE,Variable GUI.plain_text.KEY_FIRE=GUI.plain_text-module.html#KEY_FIRE,Variable GUI.text.KEY_FIRE=GUI.text-module.html#KEY_FIRE,Variable Mixins.action.KEY_FIRE=Mixins.action-module.html#KEY_FIRE,Variable Mixins.ai.KEY_FIRE=Mixins.ai-module.html#KEY_FIRE,Variable Mixins.effect.KEY_FIRE=Mixins.effect-module.html#KEY_FIRE,Variable Mixins.fight.KEY_FIRE=Mixins.fight-module.html#KEY_FIRE,Variable Mixins.fighter.KEY_FIRE=Mixins.fighter-module.html#KEY_FIRE,Variable Mixins.stat.KEY_FIRE=Mixins.stat-module.html#KEY_FIRE,Variable Mixins.stats.KEY_FIRE=Mixins.stats-module.html#KEY_FIRE,Variable Objects.aim.KEY_FIRE=Objects.aim-module.html#KEY_FIRE,Variable Objects.base_object.KEY_FIRE=Objects.base_object-module.html#KEY_FIRE,Variable Objects.creature.KEY_FIRE=Objects.creature-module.html#KEY_FIRE,Variable Objects.item.KEY_FIRE=Objects.item-module.html#KEY_FIRE,Variable Objects.object.KEY_FIRE=Objects.object-module.html#KEY_FIRE,Variable Objects.player.KEY_FIRE=Objects.player-module.html#KEY_FIRE,Variable Objects.test.KEY_FIRE=Objects.test-module.html#KEY_FIRE,Variable Objects.tile.KEY_FIRE=Objects.tile-module.html#KEY_FIRE,Variable game.KEY_FIRE=game-module.html#KEY_FIRE,Variable initialize.KEY_FIRE=initialize-module.html#KEY_FIRE"><a title="Config.creatures.KEY_FIRE
+Config.game.KEY_FIRE
+Config.items.KEY_FIRE
+Config.tiles.KEY_FIRE
+GUI.control.KEY_FIRE
+GUI.menu.KEY_FIRE
+GUI.panel.KEY_FIRE
+GUI.plain_text.KEY_FIRE
+GUI.text.KEY_FIRE
+Mixins.action.KEY_FIRE
+Mixins.ai.KEY_FIRE
+Mixins.effect.KEY_FIRE
+Mixins.fight.KEY_FIRE
+Mixins.fighter.KEY_FIRE
+Mixins.stat.KEY_FIRE
+Mixins.stats.KEY_FIRE
+Objects.aim.KEY_FIRE
+Objects.base_object.KEY_FIRE
+Objects.creature.KEY_FIRE
+Objects.item.KEY_FIRE
+Objects.object.KEY_FIRE
+Objects.player.KEY_FIRE
+Objects.test.KEY_FIRE
+Objects.tile.KEY_FIRE
+game.KEY_FIRE
+initialize.KEY_FIRE" class="py-name" href="#" onclick="return doclink('link-33', 'KEY_FIRE', 'link-33');">KEY_FIRE</a></tt>        <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-comment">### Rooms params</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt id="link-34" class="py-name" targets="Variable Config.creatures.ROOM_MAX_SIZE=Config.creatures-module.html#ROOM_MAX_SIZE,Variable Config.game.ROOM_MAX_SIZE=Config.game-module.html#ROOM_MAX_SIZE,Variable Config.items.ROOM_MAX_SIZE=Config.items-module.html#ROOM_MAX_SIZE,Variable Config.tiles.ROOM_MAX_SIZE=Config.tiles-module.html#ROOM_MAX_SIZE,Variable GUI.control.ROOM_MAX_SIZE=GUI.control-module.html#ROOM_MAX_SIZE,Variable GUI.menu.ROOM_MAX_SIZE=GUI.menu-module.html#ROOM_MAX_SIZE,Variable GUI.panel.ROOM_MAX_SIZE=GUI.panel-module.html#ROOM_MAX_SIZE,Variable GUI.plain_text.ROOM_MAX_SIZE=GUI.plain_text-module.html#ROOM_MAX_SIZE,Variable GUI.text.ROOM_MAX_SIZE=GUI.text-module.html#ROOM_MAX_SIZE,Variable Mixins.action.ROOM_MAX_SIZE=Mixins.action-module.html#ROOM_MAX_SIZE,Variable Mixins.ai.ROOM_MAX_SIZE=Mixins.ai-module.html#ROOM_MAX_SIZE,Variable Mixins.effect.ROOM_MAX_SIZE=Mixins.effect-module.html#ROOM_MAX_SIZE,Variable Mixins.fight.ROOM_MAX_SIZE=Mixins.fight-module.html#ROOM_MAX_SIZE,Variable Mixins.fighter.ROOM_MAX_SIZE=Mixins.fighter-module.html#ROOM_MAX_SIZE,Variable Mixins.stat.ROOM_MAX_SIZE=Mixins.stat-module.html#ROOM_MAX_SIZE,Variable Mixins.stats.ROOM_MAX_SIZE=Mixins.stats-module.html#ROOM_MAX_SIZE,Variable Objects.aim.ROOM_MAX_SIZE=Objects.aim-module.html#ROOM_MAX_SIZE,Variable Objects.base_object.ROOM_MAX_SIZE=Objects.base_object-module.html#ROOM_MAX_SIZE,Variable Objects.creature.ROOM_MAX_SIZE=Objects.creature-module.html#ROOM_MAX_SIZE,Variable Objects.item.ROOM_MAX_SIZE=Objects.item-module.html#ROOM_MAX_SIZE,Variable Objects.object.ROOM_MAX_SIZE=Objects.object-module.html#ROOM_MAX_SIZE,Variable Objects.player.ROOM_MAX_SIZE=Objects.player-module.html#ROOM_MAX_SIZE,Variable Objects.test.ROOM_MAX_SIZE=Objects.test-module.html#ROOM_MAX_SIZE,Variable Objects.tile.ROOM_MAX_SIZE=Objects.tile-module.html#ROOM_MAX_SIZE,Variable game.ROOM_MAX_SIZE=game-module.html#ROOM_MAX_SIZE,Variable initialize.ROOM_MAX_SIZE=initialize-module.html#ROOM_MAX_SIZE"><a title="Config.creatures.ROOM_MAX_SIZE
+Config.game.ROOM_MAX_SIZE
+Config.items.ROOM_MAX_SIZE
+Config.tiles.ROOM_MAX_SIZE
+GUI.control.ROOM_MAX_SIZE
+GUI.menu.ROOM_MAX_SIZE
+GUI.panel.ROOM_MAX_SIZE
+GUI.plain_text.ROOM_MAX_SIZE
+GUI.text.ROOM_MAX_SIZE
+Mixins.action.ROOM_MAX_SIZE
+Mixins.ai.ROOM_MAX_SIZE
+Mixins.effect.ROOM_MAX_SIZE
+Mixins.fight.ROOM_MAX_SIZE
+Mixins.fighter.ROOM_MAX_SIZE
+Mixins.stat.ROOM_MAX_SIZE
+Mixins.stats.ROOM_MAX_SIZE
+Objects.aim.ROOM_MAX_SIZE
+Objects.base_object.ROOM_MAX_SIZE
+Objects.creature.ROOM_MAX_SIZE
+Objects.item.ROOM_MAX_SIZE
+Objects.object.ROOM_MAX_SIZE
+Objects.player.ROOM_MAX_SIZE
+Objects.test.ROOM_MAX_SIZE
+Objects.tile.ROOM_MAX_SIZE
+game.ROOM_MAX_SIZE
+initialize.ROOM_MAX_SIZE" class="py-name" href="#" onclick="return doclink('link-34', 'ROOM_MAX_SIZE', 'link-34');">ROOM_MAX_SIZE</a></tt> <tt class="py-op">=</tt> <tt class="py-number">10</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt id="link-35" class="py-name" targets="Variable Config.creatures.ROOM_MIN_SIZE=Config.creatures-module.html#ROOM_MIN_SIZE,Variable Config.game.ROOM_MIN_SIZE=Config.game-module.html#ROOM_MIN_SIZE,Variable Config.items.ROOM_MIN_SIZE=Config.items-module.html#ROOM_MIN_SIZE,Variable Config.tiles.ROOM_MIN_SIZE=Config.tiles-module.html#ROOM_MIN_SIZE,Variable GUI.control.ROOM_MIN_SIZE=GUI.control-module.html#ROOM_MIN_SIZE,Variable GUI.menu.ROOM_MIN_SIZE=GUI.menu-module.html#ROOM_MIN_SIZE,Variable GUI.panel.ROOM_MIN_SIZE=GUI.panel-module.html#ROOM_MIN_SIZE,Variable GUI.plain_text.ROOM_MIN_SIZE=GUI.plain_text-module.html#ROOM_MIN_SIZE,Variable GUI.text.ROOM_MIN_SIZE=GUI.text-module.html#ROOM_MIN_SIZE,Variable Mixins.action.ROOM_MIN_SIZE=Mixins.action-module.html#ROOM_MIN_SIZE,Variable Mixins.ai.ROOM_MIN_SIZE=Mixins.ai-module.html#ROOM_MIN_SIZE,Variable Mixins.effect.ROOM_MIN_SIZE=Mixins.effect-module.html#ROOM_MIN_SIZE,Variable Mixins.fight.ROOM_MIN_SIZE=Mixins.fight-module.html#ROOM_MIN_SIZE,Variable Mixins.fighter.ROOM_MIN_SIZE=Mixins.fighter-module.html#ROOM_MIN_SIZE,Variable Mixins.stat.ROOM_MIN_SIZE=Mixins.stat-module.html#ROOM_MIN_SIZE,Variable Mixins.stats.ROOM_MIN_SIZE=Mixins.stats-module.html#ROOM_MIN_SIZE,Variable Objects.aim.ROOM_MIN_SIZE=Objects.aim-module.html#ROOM_MIN_SIZE,Variable Objects.base_object.ROOM_MIN_SIZE=Objects.base_object-module.html#ROOM_MIN_SIZE,Variable Objects.creature.ROOM_MIN_SIZE=Objects.creature-module.html#ROOM_MIN_SIZE,Variable Objects.item.ROOM_MIN_SIZE=Objects.item-module.html#ROOM_MIN_SIZE,Variable Objects.object.ROOM_MIN_SIZE=Objects.object-module.html#ROOM_MIN_SIZE,Variable Objects.player.ROOM_MIN_SIZE=Objects.player-module.html#ROOM_MIN_SIZE,Variable Objects.test.ROOM_MIN_SIZE=Objects.test-module.html#ROOM_MIN_SIZE,Variable Objects.tile.ROOM_MIN_SIZE=Objects.tile-module.html#ROOM_MIN_SIZE,Variable game.ROOM_MIN_SIZE=game-module.html#ROOM_MIN_SIZE,Variable initialize.ROOM_MIN_SIZE=initialize-module.html#ROOM_MIN_SIZE"><a title="Config.creatures.ROOM_MIN_SIZE
+Config.game.ROOM_MIN_SIZE
+Config.items.ROOM_MIN_SIZE
+Config.tiles.ROOM_MIN_SIZE
+GUI.control.ROOM_MIN_SIZE
+GUI.menu.ROOM_MIN_SIZE
+GUI.panel.ROOM_MIN_SIZE
+GUI.plain_text.ROOM_MIN_SIZE
+GUI.text.ROOM_MIN_SIZE
+Mixins.action.ROOM_MIN_SIZE
+Mixins.ai.ROOM_MIN_SIZE
+Mixins.effect.ROOM_MIN_SIZE
+Mixins.fight.ROOM_MIN_SIZE
+Mixins.fighter.ROOM_MIN_SIZE
+Mixins.stat.ROOM_MIN_SIZE
+Mixins.stats.ROOM_MIN_SIZE
+Objects.aim.ROOM_MIN_SIZE
+Objects.base_object.ROOM_MIN_SIZE
+Objects.creature.ROOM_MIN_SIZE
+Objects.item.ROOM_MIN_SIZE
+Objects.object.ROOM_MIN_SIZE
+Objects.player.ROOM_MIN_SIZE
+Objects.test.ROOM_MIN_SIZE
+Objects.tile.ROOM_MIN_SIZE
+game.ROOM_MIN_SIZE
+initialize.ROOM_MIN_SIZE" class="py-name" href="#" onclick="return doclink('link-35', 'ROOM_MIN_SIZE', 'link-35');">ROOM_MIN_SIZE</a></tt> <tt class="py-op">=</tt> <tt class="py-number">6</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt id="link-36" class="py-name" targets="Variable Config.creatures.MAX_ROOMS=Config.creatures-module.html#MAX_ROOMS,Variable Config.game.MAX_ROOMS=Config.game-module.html#MAX_ROOMS,Variable Config.items.MAX_ROOMS=Config.items-module.html#MAX_ROOMS,Variable Config.tiles.MAX_ROOMS=Config.tiles-module.html#MAX_ROOMS,Variable GUI.control.MAX_ROOMS=GUI.control-module.html#MAX_ROOMS,Variable GUI.menu.MAX_ROOMS=GUI.menu-module.html#MAX_ROOMS,Variable GUI.panel.MAX_ROOMS=GUI.panel-module.html#MAX_ROOMS,Variable GUI.plain_text.MAX_ROOMS=GUI.plain_text-module.html#MAX_ROOMS,Variable GUI.text.MAX_ROOMS=GUI.text-module.html#MAX_ROOMS,Variable Mixins.action.MAX_ROOMS=Mixins.action-module.html#MAX_ROOMS,Variable Mixins.ai.MAX_ROOMS=Mixins.ai-module.html#MAX_ROOMS,Variable Mixins.effect.MAX_ROOMS=Mixins.effect-module.html#MAX_ROOMS,Variable Mixins.fight.MAX_ROOMS=Mixins.fight-module.html#MAX_ROOMS,Variable Mixins.fighter.MAX_ROOMS=Mixins.fighter-module.html#MAX_ROOMS,Variable Mixins.stat.MAX_ROOMS=Mixins.stat-module.html#MAX_ROOMS,Variable Mixins.stats.MAX_ROOMS=Mixins.stats-module.html#MAX_ROOMS,Variable Objects.aim.MAX_ROOMS=Objects.aim-module.html#MAX_ROOMS,Variable Objects.base_object.MAX_ROOMS=Objects.base_object-module.html#MAX_ROOMS,Variable Objects.creature.MAX_ROOMS=Objects.creature-module.html#MAX_ROOMS,Variable Objects.item.MAX_ROOMS=Objects.item-module.html#MAX_ROOMS,Variable Objects.object.MAX_ROOMS=Objects.object-module.html#MAX_ROOMS,Variable Objects.player.MAX_ROOMS=Objects.player-module.html#MAX_ROOMS,Variable Objects.test.MAX_ROOMS=Objects.test-module.html#MAX_ROOMS,Variable Objects.tile.MAX_ROOMS=Objects.tile-module.html#MAX_ROOMS,Variable game.MAX_ROOMS=game-module.html#MAX_ROOMS,Variable initialize.MAX_ROOMS=initialize-module.html#MAX_ROOMS"><a title="Config.creatures.MAX_ROOMS
+Config.game.MAX_ROOMS
+Config.items.MAX_ROOMS
+Config.tiles.MAX_ROOMS
+GUI.control.MAX_ROOMS
+GUI.menu.MAX_ROOMS
+GUI.panel.MAX_ROOMS
+GUI.plain_text.MAX_ROOMS
+GUI.text.MAX_ROOMS
+Mixins.action.MAX_ROOMS
+Mixins.ai.MAX_ROOMS
+Mixins.effect.MAX_ROOMS
+Mixins.fight.MAX_ROOMS
+Mixins.fighter.MAX_ROOMS
+Mixins.stat.MAX_ROOMS
+Mixins.stats.MAX_ROOMS
+Objects.aim.MAX_ROOMS
+Objects.base_object.MAX_ROOMS
+Objects.creature.MAX_ROOMS
+Objects.item.MAX_ROOMS
+Objects.object.MAX_ROOMS
+Objects.player.MAX_ROOMS
+Objects.test.MAX_ROOMS
+Objects.tile.MAX_ROOMS
+game.MAX_ROOMS
+initialize.MAX_ROOMS" class="py-name" href="#" onclick="return doclink('link-36', 'MAX_ROOMS', 'link-36');">MAX_ROOMS</a></tt>     <tt class="py-op">=</tt> <tt class="py-number">30</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt id="link-37" class="py-name" targets="Variable Config.creatures.MAX_ROOM_CREATURES=Config.creatures-module.html#MAX_ROOM_CREATURES,Variable Config.game.MAX_ROOM_CREATURES=Config.game-module.html#MAX_ROOM_CREATURES,Variable Config.items.MAX_ROOM_CREATURES=Config.items-module.html#MAX_ROOM_CREATURES,Variable Config.tiles.MAX_ROOM_CREATURES=Config.tiles-module.html#MAX_ROOM_CREATURES,Variable GUI.control.MAX_ROOM_CREATURES=GUI.control-module.html#MAX_ROOM_CREATURES,Variable GUI.menu.MAX_ROOM_CREATURES=GUI.menu-module.html#MAX_ROOM_CREATURES,Variable GUI.panel.MAX_ROOM_CREATURES=GUI.panel-module.html#MAX_ROOM_CREATURES,Variable GUI.plain_text.MAX_ROOM_CREATURES=GUI.plain_text-module.html#MAX_ROOM_CREATURES,Variable GUI.text.MAX_ROOM_CREATURES=GUI.text-module.html#MAX_ROOM_CREATURES,Variable Mixins.action.MAX_ROOM_CREATURES=Mixins.action-module.html#MAX_ROOM_CREATURES,Variable Mixins.ai.MAX_ROOM_CREATURES=Mixins.ai-module.html#MAX_ROOM_CREATURES,Variable Mixins.effect.MAX_ROOM_CREATURES=Mixins.effect-module.html#MAX_ROOM_CREATURES,Variable Mixins.fight.MAX_ROOM_CREATURES=Mixins.fight-module.html#MAX_ROOM_CREATURES,Variable Mixins.fighter.MAX_ROOM_CREATURES=Mixins.fighter-module.html#MAX_ROOM_CREATURES,Variable Mixins.stat.MAX_ROOM_CREATURES=Mixins.stat-module.html#MAX_ROOM_CREATURES,Variable Mixins.stats.MAX_ROOM_CREATURES=Mixins.stats-module.html#MAX_ROOM_CREATURES,Variable Objects.aim.MAX_ROOM_CREATURES=Objects.aim-module.html#MAX_ROOM_CREATURES,Variable Objects.base_object.MAX_ROOM_CREATURES=Objects.base_object-module.html#MAX_ROOM_CREATURES,Variable Objects.creature.MAX_ROOM_CREATURES=Objects.creature-module.html#MAX_ROOM_CREATURES,Variable Objects.item.MAX_ROOM_CREATURES=Objects.item-module.html#MAX_ROOM_CREATURES,Variable Objects.object.MAX_ROOM_CREATURES=Objects.object-module.html#MAX_ROOM_CREATURES,Variable Objects.player.MAX_ROOM_CREATURES=Objects.player-module.html#MAX_ROOM_CREATURES,Variable Objects.test.MAX_ROOM_CREATURES=Objects.test-module.html#MAX_ROOM_CREATURES,Variable Objects.tile.MAX_ROOM_CREATURES=Objects.tile-module.html#MAX_ROOM_CREATURES,Variable game.MAX_ROOM_CREATURES=game-module.html#MAX_ROOM_CREATURES,Variable initialize.MAX_ROOM_CREATURES=initialize-module.html#MAX_ROOM_CREATURES"><a title="Config.creatures.MAX_ROOM_CREATURES
+Config.game.MAX_ROOM_CREATURES
+Config.items.MAX_ROOM_CREATURES
+Config.tiles.MAX_ROOM_CREATURES
+GUI.control.MAX_ROOM_CREATURES
+GUI.menu.MAX_ROOM_CREATURES
+GUI.panel.MAX_ROOM_CREATURES
+GUI.plain_text.MAX_ROOM_CREATURES
+GUI.text.MAX_ROOM_CREATURES
+Mixins.action.MAX_ROOM_CREATURES
+Mixins.ai.MAX_ROOM_CREATURES
+Mixins.effect.MAX_ROOM_CREATURES
+Mixins.fight.MAX_ROOM_CREATURES
+Mixins.fighter.MAX_ROOM_CREATURES
+Mixins.stat.MAX_ROOM_CREATURES
+Mixins.stats.MAX_ROOM_CREATURES
+Objects.aim.MAX_ROOM_CREATURES
+Objects.base_object.MAX_ROOM_CREATURES
+Objects.creature.MAX_ROOM_CREATURES
+Objects.item.MAX_ROOM_CREATURES
+Objects.object.MAX_ROOM_CREATURES
+Objects.player.MAX_ROOM_CREATURES
+Objects.test.MAX_ROOM_CREATURES
+Objects.tile.MAX_ROOM_CREATURES
+game.MAX_ROOM_CREATURES
+initialize.MAX_ROOM_CREATURES" class="py-name" href="#" onclick="return doclink('link-37', 'MAX_ROOM_CREATURES', 'link-37');">MAX_ROOM_CREATURES</a></tt> <tt class="py-op">=</tt> <tt class="py-number">3</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt id="link-38" class="py-name" targets="Variable Config.creatures.MAX_ROOM_ITEMS=Config.creatures-module.html#MAX_ROOM_ITEMS,Variable Config.game.MAX_ROOM_ITEMS=Config.game-module.html#MAX_ROOM_ITEMS,Variable Config.items.MAX_ROOM_ITEMS=Config.items-module.html#MAX_ROOM_ITEMS,Variable Config.tiles.MAX_ROOM_ITEMS=Config.tiles-module.html#MAX_ROOM_ITEMS,Variable GUI.control.MAX_ROOM_ITEMS=GUI.control-module.html#MAX_ROOM_ITEMS,Variable GUI.menu.MAX_ROOM_ITEMS=GUI.menu-module.html#MAX_ROOM_ITEMS,Variable GUI.panel.MAX_ROOM_ITEMS=GUI.panel-module.html#MAX_ROOM_ITEMS,Variable GUI.plain_text.MAX_ROOM_ITEMS=GUI.plain_text-module.html#MAX_ROOM_ITEMS,Variable GUI.text.MAX_ROOM_ITEMS=GUI.text-module.html#MAX_ROOM_ITEMS,Variable Mixins.action.MAX_ROOM_ITEMS=Mixins.action-module.html#MAX_ROOM_ITEMS,Variable Mixins.ai.MAX_ROOM_ITEMS=Mixins.ai-module.html#MAX_ROOM_ITEMS,Variable Mixins.effect.MAX_ROOM_ITEMS=Mixins.effect-module.html#MAX_ROOM_ITEMS,Variable Mixins.fight.MAX_ROOM_ITEMS=Mixins.fight-module.html#MAX_ROOM_ITEMS,Variable Mixins.fighter.MAX_ROOM_ITEMS=Mixins.fighter-module.html#MAX_ROOM_ITEMS,Variable Mixins.stat.MAX_ROOM_ITEMS=Mixins.stat-module.html#MAX_ROOM_ITEMS,Variable Mixins.stats.MAX_ROOM_ITEMS=Mixins.stats-module.html#MAX_ROOM_ITEMS,Variable Objects.aim.MAX_ROOM_ITEMS=Objects.aim-module.html#MAX_ROOM_ITEMS,Variable Objects.base_object.MAX_ROOM_ITEMS=Objects.base_object-module.html#MAX_ROOM_ITEMS,Variable Objects.creature.MAX_ROOM_ITEMS=Objects.creature-module.html#MAX_ROOM_ITEMS,Variable Objects.item.MAX_ROOM_ITEMS=Objects.item-module.html#MAX_ROOM_ITEMS,Variable Objects.object.MAX_ROOM_ITEMS=Objects.object-module.html#MAX_ROOM_ITEMS,Variable Objects.player.MAX_ROOM_ITEMS=Objects.player-module.html#MAX_ROOM_ITEMS,Variable Objects.test.MAX_ROOM_ITEMS=Objects.test-module.html#MAX_ROOM_ITEMS,Variable Objects.tile.MAX_ROOM_ITEMS=Objects.tile-module.html#MAX_ROOM_ITEMS,Variable game.MAX_ROOM_ITEMS=game-module.html#MAX_ROOM_ITEMS,Variable initialize.MAX_ROOM_ITEMS=initialize-module.html#MAX_ROOM_ITEMS"><a title="Config.creatures.MAX_ROOM_ITEMS
+Config.game.MAX_ROOM_ITEMS
+Config.items.MAX_ROOM_ITEMS
+Config.tiles.MAX_ROOM_ITEMS
+GUI.control.MAX_ROOM_ITEMS
+GUI.menu.MAX_ROOM_ITEMS
+GUI.panel.MAX_ROOM_ITEMS
+GUI.plain_text.MAX_ROOM_ITEMS
+GUI.text.MAX_ROOM_ITEMS
+Mixins.action.MAX_ROOM_ITEMS
+Mixins.ai.MAX_ROOM_ITEMS
+Mixins.effect.MAX_ROOM_ITEMS
+Mixins.fight.MAX_ROOM_ITEMS
+Mixins.fighter.MAX_ROOM_ITEMS
+Mixins.stat.MAX_ROOM_ITEMS
+Mixins.stats.MAX_ROOM_ITEMS
+Objects.aim.MAX_ROOM_ITEMS
+Objects.base_object.MAX_ROOM_ITEMS
+Objects.creature.MAX_ROOM_ITEMS
+Objects.item.MAX_ROOM_ITEMS
+Objects.object.MAX_ROOM_ITEMS
+Objects.player.MAX_ROOM_ITEMS
+Objects.test.MAX_ROOM_ITEMS
+Objects.tile.MAX_ROOM_ITEMS
+game.MAX_ROOM_ITEMS
+initialize.MAX_ROOM_ITEMS" class="py-name" href="#" onclick="return doclink('link-38', 'MAX_ROOM_ITEMS', 'link-38');">MAX_ROOM_ITEMS</a></tt> <tt class="py-op">=</tt> <tt class="py-number">3</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt id="link-39" class="py-name" targets="Variable Config.creatures.MAX_CREATURE_ITEMS=Config.creatures-module.html#MAX_CREATURE_ITEMS,Variable Config.game.MAX_CREATURE_ITEMS=Config.game-module.html#MAX_CREATURE_ITEMS,Variable Config.items.MAX_CREATURE_ITEMS=Config.items-module.html#MAX_CREATURE_ITEMS,Variable Config.tiles.MAX_CREATURE_ITEMS=Config.tiles-module.html#MAX_CREATURE_ITEMS,Variable GUI.control.MAX_CREATURE_ITEMS=GUI.control-module.html#MAX_CREATURE_ITEMS,Variable GUI.menu.MAX_CREATURE_ITEMS=GUI.menu-module.html#MAX_CREATURE_ITEMS,Variable GUI.panel.MAX_CREATURE_ITEMS=GUI.panel-module.html#MAX_CREATURE_ITEMS,Variable GUI.plain_text.MAX_CREATURE_ITEMS=GUI.plain_text-module.html#MAX_CREATURE_ITEMS,Variable GUI.text.MAX_CREATURE_ITEMS=GUI.text-module.html#MAX_CREATURE_ITEMS,Variable Mixins.action.MAX_CREATURE_ITEMS=Mixins.action-module.html#MAX_CREATURE_ITEMS,Variable Mixins.ai.MAX_CREATURE_ITEMS=Mixins.ai-module.html#MAX_CREATURE_ITEMS,Variable Mixins.effect.MAX_CREATURE_ITEMS=Mixins.effect-module.html#MAX_CREATURE_ITEMS,Variable Mixins.fight.MAX_CREATURE_ITEMS=Mixins.fight-module.html#MAX_CREATURE_ITEMS,Variable Mixins.fighter.MAX_CREATURE_ITEMS=Mixins.fighter-module.html#MAX_CREATURE_ITEMS,Variable Mixins.stat.MAX_CREATURE_ITEMS=Mixins.stat-module.html#MAX_CREATURE_ITEMS,Variable Mixins.stats.MAX_CREATURE_ITEMS=Mixins.stats-module.html#MAX_CREATURE_ITEMS,Variable Objects.aim.MAX_CREATURE_ITEMS=Objects.aim-module.html#MAX_CREATURE_ITEMS,Variable Objects.base_object.MAX_CREATURE_ITEMS=Objects.base_object-module.html#MAX_CREATURE_ITEMS,Variable Objects.creature.MAX_CREATURE_ITEMS=Objects.creature-module.html#MAX_CREATURE_ITEMS,Variable Objects.item.MAX_CREATURE_ITEMS=Objects.item-module.html#MAX_CREATURE_ITEMS,Variable Objects.object.MAX_CREATURE_ITEMS=Objects.object-module.html#MAX_CREATURE_ITEMS,Variable Objects.player.MAX_CREATURE_ITEMS=Objects.player-module.html#MAX_CREATURE_ITEMS,Variable Objects.test.MAX_CREATURE_ITEMS=Objects.test-module.html#MAX_CREATURE_ITEMS,Variable Objects.tile.MAX_CREATURE_ITEMS=Objects.tile-module.html#MAX_CREATURE_ITEMS,Variable game.MAX_CREATURE_ITEMS=game-module.html#MAX_CREATURE_ITEMS,Variable initialize.MAX_CREATURE_ITEMS=initialize-module.html#MAX_CREATURE_ITEMS"><a title="Config.creatures.MAX_CREATURE_ITEMS
+Config.game.MAX_CREATURE_ITEMS
+Config.items.MAX_CREATURE_ITEMS
+Config.tiles.MAX_CREATURE_ITEMS
+GUI.control.MAX_CREATURE_ITEMS
+GUI.menu.MAX_CREATURE_ITEMS
+GUI.panel.MAX_CREATURE_ITEMS
+GUI.plain_text.MAX_CREATURE_ITEMS
+GUI.text.MAX_CREATURE_ITEMS
+Mixins.action.MAX_CREATURE_ITEMS
+Mixins.ai.MAX_CREATURE_ITEMS
+Mixins.effect.MAX_CREATURE_ITEMS
+Mixins.fight.MAX_CREATURE_ITEMS
+Mixins.fighter.MAX_CREATURE_ITEMS
+Mixins.stat.MAX_CREATURE_ITEMS
+Mixins.stats.MAX_CREATURE_ITEMS
+Objects.aim.MAX_CREATURE_ITEMS
+Objects.base_object.MAX_CREATURE_ITEMS
+Objects.creature.MAX_CREATURE_ITEMS
+Objects.item.MAX_CREATURE_ITEMS
+Objects.object.MAX_CREATURE_ITEMS
+Objects.player.MAX_CREATURE_ITEMS
+Objects.test.MAX_CREATURE_ITEMS
+Objects.tile.MAX_CREATURE_ITEMS
+game.MAX_CREATURE_ITEMS
+initialize.MAX_CREATURE_ITEMS" class="py-name" href="#" onclick="return doclink('link-39', 'MAX_CREATURE_ITEMS', 'link-39');">MAX_CREATURE_ITEMS</a></tt> <tt class="py-op">=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable Config.creatures.INVETORY_LIMIT=Config.creatures-module.html#INVETORY_LIMIT,Variable Config.game.INVETORY_LIMIT=Config.game-module.html#INVETORY_LIMIT,Variable Config.items.INVETORY_LIMIT=Config.items-module.html#INVETORY_LIMIT,Variable Config.tiles.INVETORY_LIMIT=Config.tiles-module.html#INVETORY_LIMIT,Variable GUI.control.INVETORY_LIMIT=GUI.control-module.html#INVETORY_LIMIT,Variable GUI.menu.INVETORY_LIMIT=GUI.menu-module.html#INVETORY_LIMIT,Variable GUI.panel.INVETORY_LIMIT=GUI.panel-module.html#INVETORY_LIMIT,Variable GUI.plain_text.INVETORY_LIMIT=GUI.plain_text-module.html#INVETORY_LIMIT,Variable GUI.text.INVETORY_LIMIT=GUI.text-module.html#INVETORY_LIMIT,Variable Mixins.action.INVETORY_LIMIT=Mixins.action-module.html#INVETORY_LIMIT,Variable Mixins.ai.INVETORY_LIMIT=Mixins.ai-module.html#INVETORY_LIMIT,Variable Mixins.effect.INVETORY_LIMIT=Mixins.effect-module.html#INVETORY_LIMIT,Variable Mixins.fight.INVETORY_LIMIT=Mixins.fight-module.html#INVETORY_LIMIT,Variable Mixins.fighter.INVETORY_LIMIT=Mixins.fighter-module.html#INVETORY_LIMIT,Variable Mixins.stat.INVETORY_LIMIT=Mixins.stat-module.html#INVETORY_LIMIT,Variable Mixins.stats.INVETORY_LIMIT=Mixins.stats-module.html#INVETORY_LIMIT,Variable Objects.aim.INVETORY_LIMIT=Objects.aim-module.html#INVETORY_LIMIT,Variable Objects.base_object.INVETORY_LIMIT=Objects.base_object-module.html#INVETORY_LIMIT,Variable Objects.creature.INVETORY_LIMIT=Objects.creature-module.html#INVETORY_LIMIT,Variable Objects.item.INVETORY_LIMIT=Objects.item-module.html#INVETORY_LIMIT,Variable Objects.object.INVETORY_LIMIT=Objects.object-module.html#INVETORY_LIMIT,Variable Objects.player.INVETORY_LIMIT=Objects.player-module.html#INVETORY_LIMIT,Variable Objects.test.INVETORY_LIMIT=Objects.test-module.html#INVETORY_LIMIT,Variable Objects.tile.INVETORY_LIMIT=Objects.tile-module.html#INVETORY_LIMIT,Variable game.INVETORY_LIMIT=game-module.html#INVETORY_LIMIT,Variable initialize.INVETORY_LIMIT=initialize-module.html#INVETORY_LIMIT"><a title="Config.creatures.INVETORY_LIMIT
+Config.game.INVETORY_LIMIT
+Config.items.INVETORY_LIMIT
+Config.tiles.INVETORY_LIMIT
+GUI.control.INVETORY_LIMIT
+GUI.menu.INVETORY_LIMIT
+GUI.panel.INVETORY_LIMIT
+GUI.plain_text.INVETORY_LIMIT
+GUI.text.INVETORY_LIMIT
+Mixins.action.INVETORY_LIMIT
+Mixins.ai.INVETORY_LIMIT
+Mixins.effect.INVETORY_LIMIT
+Mixins.fight.INVETORY_LIMIT
+Mixins.fighter.INVETORY_LIMIT
+Mixins.stat.INVETORY_LIMIT
+Mixins.stats.INVETORY_LIMIT
+Objects.aim.INVETORY_LIMIT
+Objects.base_object.INVETORY_LIMIT
+Objects.creature.INVETORY_LIMIT
+Objects.item.INVETORY_LIMIT
+Objects.object.INVETORY_LIMIT
+Objects.player.INVETORY_LIMIT
+Objects.test.INVETORY_LIMIT
+Objects.tile.INVETORY_LIMIT
+game.INVETORY_LIMIT
+initialize.INVETORY_LIMIT" class="py-name" href="#" onclick="return doclink('link-40', 'INVETORY_LIMIT', 'link-40');">INVETORY_LIMIT</a></tt> <tt class="py-op">=</tt> <tt class="py-number">26</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt id="link-41" class="py-name" targets="Variable Config.creatures.BLOODY_BATTLES=Config.creatures-module.html#BLOODY_BATTLES,Variable Config.game.BLOODY_BATTLES=Config.game-module.html#BLOODY_BATTLES,Variable Config.items.BLOODY_BATTLES=Config.items-module.html#BLOODY_BATTLES,Variable Config.tiles.BLOODY_BATTLES=Config.tiles-module.html#BLOODY_BATTLES,Variable GUI.control.BLOODY_BATTLES=GUI.control-module.html#BLOODY_BATTLES,Variable GUI.menu.BLOODY_BATTLES=GUI.menu-module.html#BLOODY_BATTLES,Variable GUI.panel.BLOODY_BATTLES=GUI.panel-module.html#BLOODY_BATTLES,Variable GUI.plain_text.BLOODY_BATTLES=GUI.plain_text-module.html#BLOODY_BATTLES,Variable GUI.text.BLOODY_BATTLES=GUI.text-module.html#BLOODY_BATTLES,Variable Mixins.action.BLOODY_BATTLES=Mixins.action-module.html#BLOODY_BATTLES,Variable Mixins.ai.BLOODY_BATTLES=Mixins.ai-module.html#BLOODY_BATTLES,Variable Mixins.effect.BLOODY_BATTLES=Mixins.effect-module.html#BLOODY_BATTLES,Variable Mixins.fight.BLOODY_BATTLES=Mixins.fight-module.html#BLOODY_BATTLES,Variable Mixins.fighter.BLOODY_BATTLES=Mixins.fighter-module.html#BLOODY_BATTLES,Variable Mixins.stat.BLOODY_BATTLES=Mixins.stat-module.html#BLOODY_BATTLES,Variable Mixins.stats.BLOODY_BATTLES=Mixins.stats-module.html#BLOODY_BATTLES,Variable Objects.aim.BLOODY_BATTLES=Objects.aim-module.html#BLOODY_BATTLES,Variable Objects.base_object.BLOODY_BATTLES=Objects.base_object-module.html#BLOODY_BATTLES,Variable Objects.creature.BLOODY_BATTLES=Objects.creature-module.html#BLOODY_BATTLES,Variable Objects.item.BLOODY_BATTLES=Objects.item-module.html#BLOODY_BATTLES,Variable Objects.object.BLOODY_BATTLES=Objects.object-module.html#BLOODY_BATTLES,Variable Objects.player.BLOODY_BATTLES=Objects.player-module.html#BLOODY_BATTLES,Variable Objects.test.BLOODY_BATTLES=Objects.test-module.html#BLOODY_BATTLES,Variable Objects.tile.BLOODY_BATTLES=Objects.tile-module.html#BLOODY_BATTLES,Variable game.BLOODY_BATTLES=game-module.html#BLOODY_BATTLES,Variable initialize.BLOODY_BATTLES=initialize-module.html#BLOODY_BATTLES"><a title="Config.creatures.BLOODY_BATTLES
+Config.game.BLOODY_BATTLES
+Config.items.BLOODY_BATTLES
+Config.tiles.BLOODY_BATTLES
+GUI.control.BLOODY_BATTLES
+GUI.menu.BLOODY_BATTLES
+GUI.panel.BLOODY_BATTLES
+GUI.plain_text.BLOODY_BATTLES
+GUI.text.BLOODY_BATTLES
+Mixins.action.BLOODY_BATTLES
+Mixins.ai.BLOODY_BATTLES
+Mixins.effect.BLOODY_BATTLES
+Mixins.fight.BLOODY_BATTLES
+Mixins.fighter.BLOODY_BATTLES
+Mixins.stat.BLOODY_BATTLES
+Mixins.stats.BLOODY_BATTLES
+Objects.aim.BLOODY_BATTLES
+Objects.base_object.BLOODY_BATTLES
+Objects.creature.BLOODY_BATTLES
+Objects.item.BLOODY_BATTLES
+Objects.object.BLOODY_BATTLES
+Objects.player.BLOODY_BATTLES
+Objects.test.BLOODY_BATTLES
+Objects.tile.BLOODY_BATTLES
+game.BLOODY_BATTLES
+initialize.BLOODY_BATTLES" class="py-name" href="#" onclick="return doclink('link-41', 'BLOODY_BATTLES', 'link-41');">BLOODY_BATTLES</a></tt> <tt class="py-op">=</tt> <tt class="py-number">50</tt> <tt class="py-comment"># from 0 to 100%</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-comment">### FOV</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt id="link-42" class="py-name" targets="Variable Config.creatures.FOV_ALGO=Config.creatures-module.html#FOV_ALGO,Variable Config.game.FOV_ALGO=Config.game-module.html#FOV_ALGO,Variable Config.items.FOV_ALGO=Config.items-module.html#FOV_ALGO,Variable Config.tiles.FOV_ALGO=Config.tiles-module.html#FOV_ALGO,Variable GUI.control.FOV_ALGO=GUI.control-module.html#FOV_ALGO,Variable GUI.menu.FOV_ALGO=GUI.menu-module.html#FOV_ALGO,Variable GUI.panel.FOV_ALGO=GUI.panel-module.html#FOV_ALGO,Variable GUI.plain_text.FOV_ALGO=GUI.plain_text-module.html#FOV_ALGO,Variable GUI.text.FOV_ALGO=GUI.text-module.html#FOV_ALGO,Variable Mixins.action.FOV_ALGO=Mixins.action-module.html#FOV_ALGO,Variable Mixins.ai.FOV_ALGO=Mixins.ai-module.html#FOV_ALGO,Variable Mixins.effect.FOV_ALGO=Mixins.effect-module.html#FOV_ALGO,Variable Mixins.fight.FOV_ALGO=Mixins.fight-module.html#FOV_ALGO,Variable Mixins.fighter.FOV_ALGO=Mixins.fighter-module.html#FOV_ALGO,Variable Mixins.stat.FOV_ALGO=Mixins.stat-module.html#FOV_ALGO,Variable Mixins.stats.FOV_ALGO=Mixins.stats-module.html#FOV_ALGO,Variable Objects.aim.FOV_ALGO=Objects.aim-module.html#FOV_ALGO,Variable Objects.base_object.FOV_ALGO=Objects.base_object-module.html#FOV_ALGO,Variable Objects.creature.FOV_ALGO=Objects.creature-module.html#FOV_ALGO,Variable Objects.item.FOV_ALGO=Objects.item-module.html#FOV_ALGO,Variable Objects.object.FOV_ALGO=Objects.object-module.html#FOV_ALGO,Variable Objects.player.FOV_ALGO=Objects.player-module.html#FOV_ALGO,Variable Objects.test.FOV_ALGO=Objects.test-module.html#FOV_ALGO,Variable Objects.tile.FOV_ALGO=Objects.tile-module.html#FOV_ALGO,Variable game.FOV_ALGO=game-module.html#FOV_ALGO,Variable initialize.FOV_ALGO=initialize-module.html#FOV_ALGO"><a title="Config.creatures.FOV_ALGO
+Config.game.FOV_ALGO
+Config.items.FOV_ALGO
+Config.tiles.FOV_ALGO
+GUI.control.FOV_ALGO
+GUI.menu.FOV_ALGO
+GUI.panel.FOV_ALGO
+GUI.plain_text.FOV_ALGO
+GUI.text.FOV_ALGO
+Mixins.action.FOV_ALGO
+Mixins.ai.FOV_ALGO
+Mixins.effect.FOV_ALGO
+Mixins.fight.FOV_ALGO
+Mixins.fighter.FOV_ALGO
+Mixins.stat.FOV_ALGO
+Mixins.stats.FOV_ALGO
+Objects.aim.FOV_ALGO
+Objects.base_object.FOV_ALGO
+Objects.creature.FOV_ALGO
+Objects.item.FOV_ALGO
+Objects.object.FOV_ALGO
+Objects.player.FOV_ALGO
+Objects.test.FOV_ALGO
+Objects.tile.FOV_ALGO
+game.FOV_ALGO
+initialize.FOV_ALGO" class="py-name" href="#" onclick="return doclink('link-42', 'FOV_ALGO', 'link-42');">FOV_ALGO</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt>  <tt class="py-comment">#default FOV algorithm</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt id="link-43" class="py-name" targets="Variable Config.creatures.FOV_LIGHT_WALLS=Config.creatures-module.html#FOV_LIGHT_WALLS,Variable Config.game.FOV_LIGHT_WALLS=Config.game-module.html#FOV_LIGHT_WALLS,Variable Config.items.FOV_LIGHT_WALLS=Config.items-module.html#FOV_LIGHT_WALLS,Variable Config.tiles.FOV_LIGHT_WALLS=Config.tiles-module.html#FOV_LIGHT_WALLS,Variable GUI.control.FOV_LIGHT_WALLS=GUI.control-module.html#FOV_LIGHT_WALLS,Variable GUI.menu.FOV_LIGHT_WALLS=GUI.menu-module.html#FOV_LIGHT_WALLS,Variable GUI.panel.FOV_LIGHT_WALLS=GUI.panel-module.html#FOV_LIGHT_WALLS,Variable GUI.plain_text.FOV_LIGHT_WALLS=GUI.plain_text-module.html#FOV_LIGHT_WALLS,Variable GUI.text.FOV_LIGHT_WALLS=GUI.text-module.html#FOV_LIGHT_WALLS,Variable Mixins.action.FOV_LIGHT_WALLS=Mixins.action-module.html#FOV_LIGHT_WALLS,Variable Mixins.ai.FOV_LIGHT_WALLS=Mixins.ai-module.html#FOV_LIGHT_WALLS,Variable Mixins.effect.FOV_LIGHT_WALLS=Mixins.effect-module.html#FOV_LIGHT_WALLS,Variable Mixins.fight.FOV_LIGHT_WALLS=Mixins.fight-module.html#FOV_LIGHT_WALLS,Variable Mixins.fighter.FOV_LIGHT_WALLS=Mixins.fighter-module.html#FOV_LIGHT_WALLS,Variable Mixins.stat.FOV_LIGHT_WALLS=Mixins.stat-module.html#FOV_LIGHT_WALLS,Variable Mixins.stats.FOV_LIGHT_WALLS=Mixins.stats-module.html#FOV_LIGHT_WALLS,Variable Objects.aim.FOV_LIGHT_WALLS=Objects.aim-module.html#FOV_LIGHT_WALLS,Variable Objects.base_object.FOV_LIGHT_WALLS=Objects.base_object-module.html#FOV_LIGHT_WALLS,Variable Objects.creature.FOV_LIGHT_WALLS=Objects.creature-module.html#FOV_LIGHT_WALLS,Variable Objects.item.FOV_LIGHT_WALLS=Objects.item-module.html#FOV_LIGHT_WALLS,Variable Objects.object.FOV_LIGHT_WALLS=Objects.object-module.html#FOV_LIGHT_WALLS,Variable Objects.player.FOV_LIGHT_WALLS=Objects.player-module.html#FOV_LIGHT_WALLS,Variable Objects.test.FOV_LIGHT_WALLS=Objects.test-module.html#FOV_LIGHT_WALLS,Variable Objects.tile.FOV_LIGHT_WALLS=Objects.tile-module.html#FOV_LIGHT_WALLS,Variable game.FOV_LIGHT_WALLS=game-module.html#FOV_LIGHT_WALLS,Variable initialize.FOV_LIGHT_WALLS=initialize-module.html#FOV_LIGHT_WALLS"><a title="Config.creatures.FOV_LIGHT_WALLS
+Config.game.FOV_LIGHT_WALLS
+Config.items.FOV_LIGHT_WALLS
+Config.tiles.FOV_LIGHT_WALLS
+GUI.control.FOV_LIGHT_WALLS
+GUI.menu.FOV_LIGHT_WALLS
+GUI.panel.FOV_LIGHT_WALLS
+GUI.plain_text.FOV_LIGHT_WALLS
+GUI.text.FOV_LIGHT_WALLS
+Mixins.action.FOV_LIGHT_WALLS
+Mixins.ai.FOV_LIGHT_WALLS
+Mixins.effect.FOV_LIGHT_WALLS
+Mixins.fight.FOV_LIGHT_WALLS
+Mixins.fighter.FOV_LIGHT_WALLS
+Mixins.stat.FOV_LIGHT_WALLS
+Mixins.stats.FOV_LIGHT_WALLS
+Objects.aim.FOV_LIGHT_WALLS
+Objects.base_object.FOV_LIGHT_WALLS
+Objects.creature.FOV_LIGHT_WALLS
+Objects.item.FOV_LIGHT_WALLS
+Objects.object.FOV_LIGHT_WALLS
+Objects.player.FOV_LIGHT_WALLS
+Objects.test.FOV_LIGHT_WALLS
+Objects.tile.FOV_LIGHT_WALLS
+game.FOV_LIGHT_WALLS
+initialize.FOV_LIGHT_WALLS" class="py-name" href="#" onclick="return doclink('link-43', 'FOV_LIGHT_WALLS', 'link-43');">FOV_LIGHT_WALLS</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-comment">### Colors</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt id="link-44" class="py-name" targets="Variable Config.creatures.COLOR_DARK_WALL=Config.creatures-module.html#COLOR_DARK_WALL,Variable Config.game.COLOR_DARK_WALL=Config.game-module.html#COLOR_DARK_WALL,Variable Config.items.COLOR_DARK_WALL=Config.items-module.html#COLOR_DARK_WALL,Variable Config.tiles.COLOR_DARK_WALL=Config.tiles-module.html#COLOR_DARK_WALL,Variable GUI.control.COLOR_DARK_WALL=GUI.control-module.html#COLOR_DARK_WALL,Variable GUI.menu.COLOR_DARK_WALL=GUI.menu-module.html#COLOR_DARK_WALL,Variable GUI.panel.COLOR_DARK_WALL=GUI.panel-module.html#COLOR_DARK_WALL,Variable GUI.plain_text.COLOR_DARK_WALL=GUI.plain_text-module.html#COLOR_DARK_WALL,Variable GUI.text.COLOR_DARK_WALL=GUI.text-module.html#COLOR_DARK_WALL,Variable Mixins.action.COLOR_DARK_WALL=Mixins.action-module.html#COLOR_DARK_WALL,Variable Mixins.ai.COLOR_DARK_WALL=Mixins.ai-module.html#COLOR_DARK_WALL,Variable Mixins.effect.COLOR_DARK_WALL=Mixins.effect-module.html#COLOR_DARK_WALL,Variable Mixins.fight.COLOR_DARK_WALL=Mixins.fight-module.html#COLOR_DARK_WALL,Variable Mixins.fighter.COLOR_DARK_WALL=Mixins.fighter-module.html#COLOR_DARK_WALL,Variable Mixins.stat.COLOR_DARK_WALL=Mixins.stat-module.html#COLOR_DARK_WALL,Variable Mixins.stats.COLOR_DARK_WALL=Mixins.stats-module.html#COLOR_DARK_WALL,Variable Objects.aim.COLOR_DARK_WALL=Objects.aim-module.html#COLOR_DARK_WALL,Variable Objects.base_object.COLOR_DARK_WALL=Objects.base_object-module.html#COLOR_DARK_WALL,Variable Objects.creature.COLOR_DARK_WALL=Objects.creature-module.html#COLOR_DARK_WALL,Variable Objects.item.COLOR_DARK_WALL=Objects.item-module.html#COLOR_DARK_WALL,Variable Objects.object.COLOR_DARK_WALL=Objects.object-module.html#COLOR_DARK_WALL,Variable Objects.player.COLOR_DARK_WALL=Objects.player-module.html#COLOR_DARK_WALL,Variable Objects.test.COLOR_DARK_WALL=Objects.test-module.html#COLOR_DARK_WALL,Variable Objects.tile.COLOR_DARK_WALL=Objects.tile-module.html#COLOR_DARK_WALL,Variable game.COLOR_DARK_WALL=game-module.html#COLOR_DARK_WALL,Variable initialize.COLOR_DARK_WALL=initialize-module.html#COLOR_DARK_WALL"><a title="Config.creatures.COLOR_DARK_WALL
+Config.game.COLOR_DARK_WALL
+Config.items.COLOR_DARK_WALL
+Config.tiles.COLOR_DARK_WALL
+GUI.control.COLOR_DARK_WALL
+GUI.menu.COLOR_DARK_WALL
+GUI.panel.COLOR_DARK_WALL
+GUI.plain_text.COLOR_DARK_WALL
+GUI.text.COLOR_DARK_WALL
+Mixins.action.COLOR_DARK_WALL
+Mixins.ai.COLOR_DARK_WALL
+Mixins.effect.COLOR_DARK_WALL
+Mixins.fight.COLOR_DARK_WALL
+Mixins.fighter.COLOR_DARK_WALL
+Mixins.stat.COLOR_DARK_WALL
+Mixins.stats.COLOR_DARK_WALL
+Objects.aim.COLOR_DARK_WALL
+Objects.base_object.COLOR_DARK_WALL
+Objects.creature.COLOR_DARK_WALL
+Objects.item.COLOR_DARK_WALL
+Objects.object.COLOR_DARK_WALL
+Objects.player.COLOR_DARK_WALL
+Objects.test.COLOR_DARK_WALL
+Objects.tile.COLOR_DARK_WALL
+game.COLOR_DARK_WALL
+initialize.COLOR_DARK_WALL" class="py-name" href="#" onclick="return doclink('link-44', 'COLOR_DARK_WALL', 'link-44');">COLOR_DARK_WALL</a></tt>     <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">darker_sepia</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt id="link-45" class="py-name" targets="Variable Config.creatures.COLOR_DARK_GROUND=Config.creatures-module.html#COLOR_DARK_GROUND,Variable Config.game.COLOR_DARK_GROUND=Config.game-module.html#COLOR_DARK_GROUND,Variable Config.items.COLOR_DARK_GROUND=Config.items-module.html#COLOR_DARK_GROUND,Variable Config.tiles.COLOR_DARK_GROUND=Config.tiles-module.html#COLOR_DARK_GROUND,Variable GUI.control.COLOR_DARK_GROUND=GUI.control-module.html#COLOR_DARK_GROUND,Variable GUI.menu.COLOR_DARK_GROUND=GUI.menu-module.html#COLOR_DARK_GROUND,Variable GUI.panel.COLOR_DARK_GROUND=GUI.panel-module.html#COLOR_DARK_GROUND,Variable GUI.plain_text.COLOR_DARK_GROUND=GUI.plain_text-module.html#COLOR_DARK_GROUND,Variable GUI.text.COLOR_DARK_GROUND=GUI.text-module.html#COLOR_DARK_GROUND,Variable Mixins.action.COLOR_DARK_GROUND=Mixins.action-module.html#COLOR_DARK_GROUND,Variable Mixins.ai.COLOR_DARK_GROUND=Mixins.ai-module.html#COLOR_DARK_GROUND,Variable Mixins.effect.COLOR_DARK_GROUND=Mixins.effect-module.html#COLOR_DARK_GROUND,Variable Mixins.fight.COLOR_DARK_GROUND=Mixins.fight-module.html#COLOR_DARK_GROUND,Variable Mixins.fighter.COLOR_DARK_GROUND=Mixins.fighter-module.html#COLOR_DARK_GROUND,Variable Mixins.stat.COLOR_DARK_GROUND=Mixins.stat-module.html#COLOR_DARK_GROUND,Variable Mixins.stats.COLOR_DARK_GROUND=Mixins.stats-module.html#COLOR_DARK_GROUND,Variable Objects.aim.COLOR_DARK_GROUND=Objects.aim-module.html#COLOR_DARK_GROUND,Variable Objects.base_object.COLOR_DARK_GROUND=Objects.base_object-module.html#COLOR_DARK_GROUND,Variable Objects.creature.COLOR_DARK_GROUND=Objects.creature-module.html#COLOR_DARK_GROUND,Variable Objects.item.COLOR_DARK_GROUND=Objects.item-module.html#COLOR_DARK_GROUND,Variable Objects.object.COLOR_DARK_GROUND=Objects.object-module.html#COLOR_DARK_GROUND,Variable Objects.player.COLOR_DARK_GROUND=Objects.player-module.html#COLOR_DARK_GROUND,Variable Objects.test.COLOR_DARK_GROUND=Objects.test-module.html#COLOR_DARK_GROUND,Variable Objects.tile.COLOR_DARK_GROUND=Objects.tile-module.html#COLOR_DARK_GROUND,Variable game.COLOR_DARK_GROUND=game-module.html#COLOR_DARK_GROUND,Variable initialize.COLOR_DARK_GROUND=initialize-module.html#COLOR_DARK_GROUND"><a title="Config.creatures.COLOR_DARK_GROUND
+Config.game.COLOR_DARK_GROUND
+Config.items.COLOR_DARK_GROUND
+Config.tiles.COLOR_DARK_GROUND
+GUI.control.COLOR_DARK_GROUND
+GUI.menu.COLOR_DARK_GROUND
+GUI.panel.COLOR_DARK_GROUND
+GUI.plain_text.COLOR_DARK_GROUND
+GUI.text.COLOR_DARK_GROUND
+Mixins.action.COLOR_DARK_GROUND
+Mixins.ai.COLOR_DARK_GROUND
+Mixins.effect.COLOR_DARK_GROUND
+Mixins.fight.COLOR_DARK_GROUND
+Mixins.fighter.COLOR_DARK_GROUND
+Mixins.stat.COLOR_DARK_GROUND
+Mixins.stats.COLOR_DARK_GROUND
+Objects.aim.COLOR_DARK_GROUND
+Objects.base_object.COLOR_DARK_GROUND
+Objects.creature.COLOR_DARK_GROUND
+Objects.item.COLOR_DARK_GROUND
+Objects.object.COLOR_DARK_GROUND
+Objects.player.COLOR_DARK_GROUND
+Objects.test.COLOR_DARK_GROUND
+Objects.tile.COLOR_DARK_GROUND
+game.COLOR_DARK_GROUND
+initialize.COLOR_DARK_GROUND" class="py-name" href="#" onclick="return doclink('link-45', 'COLOR_DARK_GROUND', 'link-45');">COLOR_DARK_GROUND</a></tt>   <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">darker_orange</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable Config.creatures.COLOR_LIGHT_WALL=Config.creatures-module.html#COLOR_LIGHT_WALL,Variable Config.game.COLOR_LIGHT_WALL=Config.game-module.html#COLOR_LIGHT_WALL,Variable Config.items.COLOR_LIGHT_WALL=Config.items-module.html#COLOR_LIGHT_WALL,Variable Config.tiles.COLOR_LIGHT_WALL=Config.tiles-module.html#COLOR_LIGHT_WALL,Variable GUI.control.COLOR_LIGHT_WALL=GUI.control-module.html#COLOR_LIGHT_WALL,Variable GUI.menu.COLOR_LIGHT_WALL=GUI.menu-module.html#COLOR_LIGHT_WALL,Variable GUI.panel.COLOR_LIGHT_WALL=GUI.panel-module.html#COLOR_LIGHT_WALL,Variable GUI.plain_text.COLOR_LIGHT_WALL=GUI.plain_text-module.html#COLOR_LIGHT_WALL,Variable GUI.text.COLOR_LIGHT_WALL=GUI.text-module.html#COLOR_LIGHT_WALL,Variable Mixins.action.COLOR_LIGHT_WALL=Mixins.action-module.html#COLOR_LIGHT_WALL,Variable Mixins.ai.COLOR_LIGHT_WALL=Mixins.ai-module.html#COLOR_LIGHT_WALL,Variable Mixins.effect.COLOR_LIGHT_WALL=Mixins.effect-module.html#COLOR_LIGHT_WALL,Variable Mixins.fight.COLOR_LIGHT_WALL=Mixins.fight-module.html#COLOR_LIGHT_WALL,Variable Mixins.fighter.COLOR_LIGHT_WALL=Mixins.fighter-module.html#COLOR_LIGHT_WALL,Variable Mixins.stat.COLOR_LIGHT_WALL=Mixins.stat-module.html#COLOR_LIGHT_WALL,Variable Mixins.stats.COLOR_LIGHT_WALL=Mixins.stats-module.html#COLOR_LIGHT_WALL,Variable Objects.aim.COLOR_LIGHT_WALL=Objects.aim-module.html#COLOR_LIGHT_WALL,Variable Objects.base_object.COLOR_LIGHT_WALL=Objects.base_object-module.html#COLOR_LIGHT_WALL,Variable Objects.creature.COLOR_LIGHT_WALL=Objects.creature-module.html#COLOR_LIGHT_WALL,Variable Objects.item.COLOR_LIGHT_WALL=Objects.item-module.html#COLOR_LIGHT_WALL,Variable Objects.object.COLOR_LIGHT_WALL=Objects.object-module.html#COLOR_LIGHT_WALL,Variable Objects.player.COLOR_LIGHT_WALL=Objects.player-module.html#COLOR_LIGHT_WALL,Variable Objects.test.COLOR_LIGHT_WALL=Objects.test-module.html#COLOR_LIGHT_WALL,Variable Objects.tile.COLOR_LIGHT_WALL=Objects.tile-module.html#COLOR_LIGHT_WALL,Variable game.COLOR_LIGHT_WALL=game-module.html#COLOR_LIGHT_WALL,Variable initialize.COLOR_LIGHT_WALL=initialize-module.html#COLOR_LIGHT_WALL"><a title="Config.creatures.COLOR_LIGHT_WALL
+Config.game.COLOR_LIGHT_WALL
+Config.items.COLOR_LIGHT_WALL
+Config.tiles.COLOR_LIGHT_WALL
+GUI.control.COLOR_LIGHT_WALL
+GUI.menu.COLOR_LIGHT_WALL
+GUI.panel.COLOR_LIGHT_WALL
+GUI.plain_text.COLOR_LIGHT_WALL
+GUI.text.COLOR_LIGHT_WALL
+Mixins.action.COLOR_LIGHT_WALL
+Mixins.ai.COLOR_LIGHT_WALL
+Mixins.effect.COLOR_LIGHT_WALL
+Mixins.fight.COLOR_LIGHT_WALL
+Mixins.fighter.COLOR_LIGHT_WALL
+Mixins.stat.COLOR_LIGHT_WALL
+Mixins.stats.COLOR_LIGHT_WALL
+Objects.aim.COLOR_LIGHT_WALL
+Objects.base_object.COLOR_LIGHT_WALL
+Objects.creature.COLOR_LIGHT_WALL
+Objects.item.COLOR_LIGHT_WALL
+Objects.object.COLOR_LIGHT_WALL
+Objects.player.COLOR_LIGHT_WALL
+Objects.test.COLOR_LIGHT_WALL
+Objects.tile.COLOR_LIGHT_WALL
+game.COLOR_LIGHT_WALL
+initialize.COLOR_LIGHT_WALL" class="py-name" href="#" onclick="return doclink('link-46', 'COLOR_LIGHT_WALL', 'link-46');">COLOR_LIGHT_WALL</a></tt>    <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">light_sepia</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt id="link-47" class="py-name" targets="Variable Config.creatures.COLOR_LIGHT_GROUND=Config.creatures-module.html#COLOR_LIGHT_GROUND,Variable Config.game.COLOR_LIGHT_GROUND=Config.game-module.html#COLOR_LIGHT_GROUND,Variable Config.items.COLOR_LIGHT_GROUND=Config.items-module.html#COLOR_LIGHT_GROUND,Variable Config.tiles.COLOR_LIGHT_GROUND=Config.tiles-module.html#COLOR_LIGHT_GROUND,Variable GUI.control.COLOR_LIGHT_GROUND=GUI.control-module.html#COLOR_LIGHT_GROUND,Variable GUI.menu.COLOR_LIGHT_GROUND=GUI.menu-module.html#COLOR_LIGHT_GROUND,Variable GUI.panel.COLOR_LIGHT_GROUND=GUI.panel-module.html#COLOR_LIGHT_GROUND,Variable GUI.plain_text.COLOR_LIGHT_GROUND=GUI.plain_text-module.html#COLOR_LIGHT_GROUND,Variable GUI.text.COLOR_LIGHT_GROUND=GUI.text-module.html#COLOR_LIGHT_GROUND,Variable Mixins.action.COLOR_LIGHT_GROUND=Mixins.action-module.html#COLOR_LIGHT_GROUND,Variable Mixins.ai.COLOR_LIGHT_GROUND=Mixins.ai-module.html#COLOR_LIGHT_GROUND,Variable Mixins.effect.COLOR_LIGHT_GROUND=Mixins.effect-module.html#COLOR_LIGHT_GROUND,Variable Mixins.fight.COLOR_LIGHT_GROUND=Mixins.fight-module.html#COLOR_LIGHT_GROUND,Variable Mixins.fighter.COLOR_LIGHT_GROUND=Mixins.fighter-module.html#COLOR_LIGHT_GROUND,Variable Mixins.stat.COLOR_LIGHT_GROUND=Mixins.stat-module.html#COLOR_LIGHT_GROUND,Variable Mixins.stats.COLOR_LIGHT_GROUND=Mixins.stats-module.html#COLOR_LIGHT_GROUND,Variable Objects.aim.COLOR_LIGHT_GROUND=Objects.aim-module.html#COLOR_LIGHT_GROUND,Variable Objects.base_object.COLOR_LIGHT_GROUND=Objects.base_object-module.html#COLOR_LIGHT_GROUND,Variable Objects.creature.COLOR_LIGHT_GROUND=Objects.creature-module.html#COLOR_LIGHT_GROUND,Variable Objects.item.COLOR_LIGHT_GROUND=Objects.item-module.html#COLOR_LIGHT_GROUND,Variable Objects.object.COLOR_LIGHT_GROUND=Objects.object-module.html#COLOR_LIGHT_GROUND,Variable Objects.player.COLOR_LIGHT_GROUND=Objects.player-module.html#COLOR_LIGHT_GROUND,Variable Objects.test.COLOR_LIGHT_GROUND=Objects.test-module.html#COLOR_LIGHT_GROUND,Variable Objects.tile.COLOR_LIGHT_GROUND=Objects.tile-module.html#COLOR_LIGHT_GROUND,Variable game.COLOR_LIGHT_GROUND=game-module.html#COLOR_LIGHT_GROUND,Variable initialize.COLOR_LIGHT_GROUND=initialize-module.html#COLOR_LIGHT_GROUND"><a title="Config.creatures.COLOR_LIGHT_GROUND
+Config.game.COLOR_LIGHT_GROUND
+Config.items.COLOR_LIGHT_GROUND
+Config.tiles.COLOR_LIGHT_GROUND
+GUI.control.COLOR_LIGHT_GROUND
+GUI.menu.COLOR_LIGHT_GROUND
+GUI.panel.COLOR_LIGHT_GROUND
+GUI.plain_text.COLOR_LIGHT_GROUND
+GUI.text.COLOR_LIGHT_GROUND
+Mixins.action.COLOR_LIGHT_GROUND
+Mixins.ai.COLOR_LIGHT_GROUND
+Mixins.effect.COLOR_LIGHT_GROUND
+Mixins.fight.COLOR_LIGHT_GROUND
+Mixins.fighter.COLOR_LIGHT_GROUND
+Mixins.stat.COLOR_LIGHT_GROUND
+Mixins.stats.COLOR_LIGHT_GROUND
+Objects.aim.COLOR_LIGHT_GROUND
+Objects.base_object.COLOR_LIGHT_GROUND
+Objects.creature.COLOR_LIGHT_GROUND
+Objects.item.COLOR_LIGHT_GROUND
+Objects.object.COLOR_LIGHT_GROUND
+Objects.player.COLOR_LIGHT_GROUND
+Objects.test.COLOR_LIGHT_GROUND
+Objects.tile.COLOR_LIGHT_GROUND
+game.COLOR_LIGHT_GROUND
+initialize.COLOR_LIGHT_GROUND" class="py-name" href="#" onclick="return doclink('link-47', 'COLOR_LIGHT_GROUND', 'link-47');">COLOR_LIGHT_GROUND</a></tt>  <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">light_orange</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt id="link-48" class="py-name" targets="Variable Config.creatures.COLOR_BACKGROUND=Config.creatures-module.html#COLOR_BACKGROUND,Variable Config.game.COLOR_BACKGROUND=Config.game-module.html#COLOR_BACKGROUND,Variable Config.items.COLOR_BACKGROUND=Config.items-module.html#COLOR_BACKGROUND,Variable Config.tiles.COLOR_BACKGROUND=Config.tiles-module.html#COLOR_BACKGROUND,Variable GUI.control.COLOR_BACKGROUND=GUI.control-module.html#COLOR_BACKGROUND,Variable GUI.menu.COLOR_BACKGROUND=GUI.menu-module.html#COLOR_BACKGROUND,Variable GUI.panel.COLOR_BACKGROUND=GUI.panel-module.html#COLOR_BACKGROUND,Variable GUI.plain_text.COLOR_BACKGROUND=GUI.plain_text-module.html#COLOR_BACKGROUND,Variable GUI.text.COLOR_BACKGROUND=GUI.text-module.html#COLOR_BACKGROUND,Variable Mixins.action.COLOR_BACKGROUND=Mixins.action-module.html#COLOR_BACKGROUND,Variable Mixins.ai.COLOR_BACKGROUND=Mixins.ai-module.html#COLOR_BACKGROUND,Variable Mixins.effect.COLOR_BACKGROUND=Mixins.effect-module.html#COLOR_BACKGROUND,Variable Mixins.fight.COLOR_BACKGROUND=Mixins.fight-module.html#COLOR_BACKGROUND,Variable Mixins.fighter.COLOR_BACKGROUND=Mixins.fighter-module.html#COLOR_BACKGROUND,Variable Mixins.stat.COLOR_BACKGROUND=Mixins.stat-module.html#COLOR_BACKGROUND,Variable Mixins.stats.COLOR_BACKGROUND=Mixins.stats-module.html#COLOR_BACKGROUND,Variable Objects.aim.COLOR_BACKGROUND=Objects.aim-module.html#COLOR_BACKGROUND,Variable Objects.base_object.COLOR_BACKGROUND=Objects.base_object-module.html#COLOR_BACKGROUND,Variable Objects.creature.COLOR_BACKGROUND=Objects.creature-module.html#COLOR_BACKGROUND,Variable Objects.item.COLOR_BACKGROUND=Objects.item-module.html#COLOR_BACKGROUND,Variable Objects.object.COLOR_BACKGROUND=Objects.object-module.html#COLOR_BACKGROUND,Variable Objects.player.COLOR_BACKGROUND=Objects.player-module.html#COLOR_BACKGROUND,Variable Objects.test.COLOR_BACKGROUND=Objects.test-module.html#COLOR_BACKGROUND,Variable Objects.tile.COLOR_BACKGROUND=Objects.tile-module.html#COLOR_BACKGROUND,Variable game.COLOR_BACKGROUND=game-module.html#COLOR_BACKGROUND,Variable initialize.COLOR_BACKGROUND=initialize-module.html#COLOR_BACKGROUND"><a title="Config.creatures.COLOR_BACKGROUND
+Config.game.COLOR_BACKGROUND
+Config.items.COLOR_BACKGROUND
+Config.tiles.COLOR_BACKGROUND
+GUI.control.COLOR_BACKGROUND
+GUI.menu.COLOR_BACKGROUND
+GUI.panel.COLOR_BACKGROUND
+GUI.plain_text.COLOR_BACKGROUND
+GUI.text.COLOR_BACKGROUND
+Mixins.action.COLOR_BACKGROUND
+Mixins.ai.COLOR_BACKGROUND
+Mixins.effect.COLOR_BACKGROUND
+Mixins.fight.COLOR_BACKGROUND
+Mixins.fighter.COLOR_BACKGROUND
+Mixins.stat.COLOR_BACKGROUND
+Mixins.stats.COLOR_BACKGROUND
+Objects.aim.COLOR_BACKGROUND
+Objects.base_object.COLOR_BACKGROUND
+Objects.creature.COLOR_BACKGROUND
+Objects.item.COLOR_BACKGROUND
+Objects.object.COLOR_BACKGROUND
+Objects.player.COLOR_BACKGROUND
+Objects.test.COLOR_BACKGROUND
+Objects.tile.COLOR_BACKGROUND
+game.COLOR_BACKGROUND
+initialize.COLOR_BACKGROUND" class="py-name" href="#" onclick="return doclink('link-48', 'COLOR_BACKGROUND', 'link-48');">COLOR_BACKGROUND</a></tt>    <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">black</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt id="link-49" class="py-name" targets="Variable Config.creatures.COLOR_FOREGROUND=Config.creatures-module.html#COLOR_FOREGROUND,Variable Config.game.COLOR_FOREGROUND=Config.game-module.html#COLOR_FOREGROUND,Variable Config.items.COLOR_FOREGROUND=Config.items-module.html#COLOR_FOREGROUND,Variable Config.tiles.COLOR_FOREGROUND=Config.tiles-module.html#COLOR_FOREGROUND,Variable GUI.control.COLOR_FOREGROUND=GUI.control-module.html#COLOR_FOREGROUND,Variable GUI.menu.COLOR_FOREGROUND=GUI.menu-module.html#COLOR_FOREGROUND,Variable GUI.panel.COLOR_FOREGROUND=GUI.panel-module.html#COLOR_FOREGROUND,Variable GUI.plain_text.COLOR_FOREGROUND=GUI.plain_text-module.html#COLOR_FOREGROUND,Variable GUI.text.COLOR_FOREGROUND=GUI.text-module.html#COLOR_FOREGROUND,Variable Mixins.action.COLOR_FOREGROUND=Mixins.action-module.html#COLOR_FOREGROUND,Variable Mixins.ai.COLOR_FOREGROUND=Mixins.ai-module.html#COLOR_FOREGROUND,Variable Mixins.effect.COLOR_FOREGROUND=Mixins.effect-module.html#COLOR_FOREGROUND,Variable Mixins.fight.COLOR_FOREGROUND=Mixins.fight-module.html#COLOR_FOREGROUND,Variable Mixins.fighter.COLOR_FOREGROUND=Mixins.fighter-module.html#COLOR_FOREGROUND,Variable Mixins.stat.COLOR_FOREGROUND=Mixins.stat-module.html#COLOR_FOREGROUND,Variable Mixins.stats.COLOR_FOREGROUND=Mixins.stats-module.html#COLOR_FOREGROUND,Variable Objects.aim.COLOR_FOREGROUND=Objects.aim-module.html#COLOR_FOREGROUND,Variable Objects.base_object.COLOR_FOREGROUND=Objects.base_object-module.html#COLOR_FOREGROUND,Variable Objects.creature.COLOR_FOREGROUND=Objects.creature-module.html#COLOR_FOREGROUND,Variable Objects.item.COLOR_FOREGROUND=Objects.item-module.html#COLOR_FOREGROUND,Variable Objects.object.COLOR_FOREGROUND=Objects.object-module.html#COLOR_FOREGROUND,Variable Objects.player.COLOR_FOREGROUND=Objects.player-module.html#COLOR_FOREGROUND,Variable Objects.test.COLOR_FOREGROUND=Objects.test-module.html#COLOR_FOREGROUND,Variable Objects.tile.COLOR_FOREGROUND=Objects.tile-module.html#COLOR_FOREGROUND,Variable game.COLOR_FOREGROUND=game-module.html#COLOR_FOREGROUND,Variable initialize.COLOR_FOREGROUND=initialize-module.html#COLOR_FOREGROUND"><a title="Config.creatures.COLOR_FOREGROUND
+Config.game.COLOR_FOREGROUND
+Config.items.COLOR_FOREGROUND
+Config.tiles.COLOR_FOREGROUND
+GUI.control.COLOR_FOREGROUND
+GUI.menu.COLOR_FOREGROUND
+GUI.panel.COLOR_FOREGROUND
+GUI.plain_text.COLOR_FOREGROUND
+GUI.text.COLOR_FOREGROUND
+Mixins.action.COLOR_FOREGROUND
+Mixins.ai.COLOR_FOREGROUND
+Mixins.effect.COLOR_FOREGROUND
+Mixins.fight.COLOR_FOREGROUND
+Mixins.fighter.COLOR_FOREGROUND
+Mixins.stat.COLOR_FOREGROUND
+Mixins.stats.COLOR_FOREGROUND
+Objects.aim.COLOR_FOREGROUND
+Objects.base_object.COLOR_FOREGROUND
+Objects.creature.COLOR_FOREGROUND
+Objects.item.COLOR_FOREGROUND
+Objects.object.COLOR_FOREGROUND
+Objects.player.COLOR_FOREGROUND
+Objects.test.COLOR_FOREGROUND
+Objects.tile.COLOR_FOREGROUND
+game.COLOR_FOREGROUND
+initialize.COLOR_FOREGROUND" class="py-name" href="#" onclick="return doclink('link-49', 'COLOR_FOREGROUND', 'link-49');">COLOR_FOREGROUND</a></tt>    <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">white</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt id="link-50" class="py-name" targets="Variable Config.creatures.COLOR_BLOOD=Config.creatures-module.html#COLOR_BLOOD,Variable Config.game.COLOR_BLOOD=Config.game-module.html#COLOR_BLOOD,Variable Config.items.COLOR_BLOOD=Config.items-module.html#COLOR_BLOOD,Variable Config.tiles.COLOR_BLOOD=Config.tiles-module.html#COLOR_BLOOD,Variable GUI.control.COLOR_BLOOD=GUI.control-module.html#COLOR_BLOOD,Variable GUI.menu.COLOR_BLOOD=GUI.menu-module.html#COLOR_BLOOD,Variable GUI.panel.COLOR_BLOOD=GUI.panel-module.html#COLOR_BLOOD,Variable GUI.plain_text.COLOR_BLOOD=GUI.plain_text-module.html#COLOR_BLOOD,Variable GUI.text.COLOR_BLOOD=GUI.text-module.html#COLOR_BLOOD,Variable Mixins.action.COLOR_BLOOD=Mixins.action-module.html#COLOR_BLOOD,Variable Mixins.ai.COLOR_BLOOD=Mixins.ai-module.html#COLOR_BLOOD,Variable Mixins.effect.COLOR_BLOOD=Mixins.effect-module.html#COLOR_BLOOD,Variable Mixins.fight.COLOR_BLOOD=Mixins.fight-module.html#COLOR_BLOOD,Variable Mixins.fighter.COLOR_BLOOD=Mixins.fighter-module.html#COLOR_BLOOD,Variable Mixins.stat.COLOR_BLOOD=Mixins.stat-module.html#COLOR_BLOOD,Variable Mixins.stats.COLOR_BLOOD=Mixins.stats-module.html#COLOR_BLOOD,Variable Objects.aim.COLOR_BLOOD=Objects.aim-module.html#COLOR_BLOOD,Variable Objects.base_object.COLOR_BLOOD=Objects.base_object-module.html#COLOR_BLOOD,Variable Objects.creature.COLOR_BLOOD=Objects.creature-module.html#COLOR_BLOOD,Variable Objects.item.COLOR_BLOOD=Objects.item-module.html#COLOR_BLOOD,Variable Objects.object.COLOR_BLOOD=Objects.object-module.html#COLOR_BLOOD,Variable Objects.player.COLOR_BLOOD=Objects.player-module.html#COLOR_BLOOD,Variable Objects.test.COLOR_BLOOD=Objects.test-module.html#COLOR_BLOOD,Variable Objects.tile.COLOR_BLOOD=Objects.tile-module.html#COLOR_BLOOD,Variable game.COLOR_BLOOD=game-module.html#COLOR_BLOOD,Variable initialize.COLOR_BLOOD=initialize-module.html#COLOR_BLOOD"><a title="Config.creatures.COLOR_BLOOD
+Config.game.COLOR_BLOOD
+Config.items.COLOR_BLOOD
+Config.tiles.COLOR_BLOOD
+GUI.control.COLOR_BLOOD
+GUI.menu.COLOR_BLOOD
+GUI.panel.COLOR_BLOOD
+GUI.plain_text.COLOR_BLOOD
+GUI.text.COLOR_BLOOD
+Mixins.action.COLOR_BLOOD
+Mixins.ai.COLOR_BLOOD
+Mixins.effect.COLOR_BLOOD
+Mixins.fight.COLOR_BLOOD
+Mixins.fighter.COLOR_BLOOD
+Mixins.stat.COLOR_BLOOD
+Mixins.stats.COLOR_BLOOD
+Objects.aim.COLOR_BLOOD
+Objects.base_object.COLOR_BLOOD
+Objects.creature.COLOR_BLOOD
+Objects.item.COLOR_BLOOD
+Objects.object.COLOR_BLOOD
+Objects.player.COLOR_BLOOD
+Objects.test.COLOR_BLOOD
+Objects.tile.COLOR_BLOOD
+game.COLOR_BLOOD
+initialize.COLOR_BLOOD" class="py-name" href="#" onclick="return doclink('link-50', 'COLOR_BLOOD', 'link-50');">COLOR_BLOOD</a></tt>         <tt class="py-op">=</tt> <tt class="py-name">libtcod</tt><tt class="py-op">.</tt><tt class="py-name">dark_red</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-comment">### Game states</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt id="link-51" class="py-name" targets="Variable Config.creatures.GAME_STATES=Config.creatures-module.html#GAME_STATES,Variable Config.game.GAME_STATES=Config.game-module.html#GAME_STATES,Variable Config.items.GAME_STATES=Config.items-module.html#GAME_STATES,Variable Config.tiles.GAME_STATES=Config.tiles-module.html#GAME_STATES,Variable GUI.control.GAME_STATES=GUI.control-module.html#GAME_STATES,Variable GUI.menu.GAME_STATES=GUI.menu-module.html#GAME_STATES,Variable GUI.panel.GAME_STATES=GUI.panel-module.html#GAME_STATES,Variable GUI.plain_text.GAME_STATES=GUI.plain_text-module.html#GAME_STATES,Variable GUI.text.GAME_STATES=GUI.text-module.html#GAME_STATES,Variable Mixins.action.GAME_STATES=Mixins.action-module.html#GAME_STATES,Variable Mixins.ai.GAME_STATES=Mixins.ai-module.html#GAME_STATES,Variable Mixins.effect.GAME_STATES=Mixins.effect-module.html#GAME_STATES,Variable Mixins.fight.GAME_STATES=Mixins.fight-module.html#GAME_STATES,Variable Mixins.fighter.GAME_STATES=Mixins.fighter-module.html#GAME_STATES,Variable Mixins.stat.GAME_STATES=Mixins.stat-module.html#GAME_STATES,Variable Mixins.stats.GAME_STATES=Mixins.stats-module.html#GAME_STATES,Variable Objects.aim.GAME_STATES=Objects.aim-module.html#GAME_STATES,Variable Objects.base_object.GAME_STATES=Objects.base_object-module.html#GAME_STATES,Variable Objects.creature.GAME_STATES=Objects.creature-module.html#GAME_STATES,Variable Objects.item.GAME_STATES=Objects.item-module.html#GAME_STATES,Variable Objects.object.GAME_STATES=Objects.object-module.html#GAME_STATES,Variable Objects.player.GAME_STATES=Objects.player-module.html#GAME_STATES,Variable Objects.test.GAME_STATES=Objects.test-module.html#GAME_STATES,Variable Objects.tile.GAME_STATES=Objects.tile-module.html#GAME_STATES,Variable game.GAME_STATES=game-module.html#GAME_STATES,Variable initialize.GAME_STATES=initialize-module.html#GAME_STATES"><a title="Config.creatures.GAME_STATES
+Config.game.GAME_STATES
+Config.items.GAME_STATES
+Config.tiles.GAME_STATES
+GUI.control.GAME_STATES
+GUI.menu.GAME_STATES
+GUI.panel.GAME_STATES
+GUI.plain_text.GAME_STATES
+GUI.text.GAME_STATES
+Mixins.action.GAME_STATES
+Mixins.ai.GAME_STATES
+Mixins.effect.GAME_STATES
+Mixins.fight.GAME_STATES
+Mixins.fighter.GAME_STATES
+Mixins.stat.GAME_STATES
+Mixins.stats.GAME_STATES
+Objects.aim.GAME_STATES
+Objects.base_object.GAME_STATES
+Objects.creature.GAME_STATES
+Objects.item.GAME_STATES
+Objects.object.GAME_STATES
+Objects.player.GAME_STATES
+Objects.test.GAME_STATES
+Objects.tile.GAME_STATES
+game.GAME_STATES
+initialize.GAME_STATES" class="py-name" href="#" onclick="return doclink('link-51', 'GAME_STATES', 'link-51');">GAME_STATES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">  <tt class="py-string">'PLAYING'</tt><tt class="py-op">,</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">  <tt class="py-string">'EXIT'</tt><tt class="py-op">,</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">  <tt class="py-string">'AIM'</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-op">]</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt id="link-52" class="py-name" targets="Variable Config.creatures.PLAYER_STATES=Config.creatures-module.html#PLAYER_STATES,Variable Config.game.PLAYER_STATES=Config.game-module.html#PLAYER_STATES,Variable Config.items.PLAYER_STATES=Config.items-module.html#PLAYER_STATES,Variable Config.tiles.PLAYER_STATES=Config.tiles-module.html#PLAYER_STATES,Variable GUI.control.PLAYER_STATES=GUI.control-module.html#PLAYER_STATES,Variable GUI.menu.PLAYER_STATES=GUI.menu-module.html#PLAYER_STATES,Variable GUI.panel.PLAYER_STATES=GUI.panel-module.html#PLAYER_STATES,Variable GUI.plain_text.PLAYER_STATES=GUI.plain_text-module.html#PLAYER_STATES,Variable GUI.text.PLAYER_STATES=GUI.text-module.html#PLAYER_STATES,Variable Mixins.action.PLAYER_STATES=Mixins.action-module.html#PLAYER_STATES,Variable Mixins.ai.PLAYER_STATES=Mixins.ai-module.html#PLAYER_STATES,Variable Mixins.effect.PLAYER_STATES=Mixins.effect-module.html#PLAYER_STATES,Variable Mixins.fight.PLAYER_STATES=Mixins.fight-module.html#PLAYER_STATES,Variable Mixins.fighter.PLAYER_STATES=Mixins.fighter-module.html#PLAYER_STATES,Variable Mixins.stat.PLAYER_STATES=Mixins.stat-module.html#PLAYER_STATES,Variable Mixins.stats.PLAYER_STATES=Mixins.stats-module.html#PLAYER_STATES,Variable Objects.aim.PLAYER_STATES=Objects.aim-module.html#PLAYER_STATES,Variable Objects.base_object.PLAYER_STATES=Objects.base_object-module.html#PLAYER_STATES,Variable Objects.creature.PLAYER_STATES=Objects.creature-module.html#PLAYER_STATES,Variable Objects.item.PLAYER_STATES=Objects.item-module.html#PLAYER_STATES,Variable Objects.object.PLAYER_STATES=Objects.object-module.html#PLAYER_STATES,Variable Objects.player.PLAYER_STATES=Objects.player-module.html#PLAYER_STATES,Variable Objects.test.PLAYER_STATES=Objects.test-module.html#PLAYER_STATES,Variable Objects.tile.PLAYER_STATES=Objects.tile-module.html#PLAYER_STATES,Variable game.PLAYER_STATES=game-module.html#PLAYER_STATES,Variable initialize.PLAYER_STATES=initialize-module.html#PLAYER_STATES"><a title="Config.creatures.PLAYER_STATES
+Config.game.PLAYER_STATES
+Config.items.PLAYER_STATES
+Config.tiles.PLAYER_STATES
+GUI.control.PLAYER_STATES
+GUI.menu.PLAYER_STATES
+GUI.panel.PLAYER_STATES
+GUI.plain_text.PLAYER_STATES
+GUI.text.PLAYER_STATES
+Mixins.action.PLAYER_STATES
+Mixins.ai.PLAYER_STATES
+Mixins.effect.PLAYER_STATES
+Mixins.fight.PLAYER_STATES
+Mixins.fighter.PLAYER_STATES
+Mixins.stat.PLAYER_STATES
+Mixins.stats.PLAYER_STATES
+Objects.aim.PLAYER_STATES
+Objects.base_object.PLAYER_STATES
+Objects.creature.PLAYER_STATES
+Objects.item.PLAYER_STATES
+Objects.object.PLAYER_STATES
+Objects.player.PLAYER_STATES
+Objects.test.PLAYER_STATES
+Objects.tile.PLAYER_STATES
+game.PLAYER_STATES
+initialize.PLAYER_STATES" class="py-name" href="#" onclick="return doclink('link-52', 'PLAYER_STATES', 'link-52');">PLAYER_STATES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">  <tt class="py-string">'ALIVE'</tt><tt class="py-op">,</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">  <tt class="py-string">'DEAD'</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-op">]</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-comment">### Stats</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt id="link-53" class="py-name" targets="Variable Config.creatures.STATS=Config.creatures-module.html#STATS,Variable Config.game.STATS=Config.game-module.html#STATS,Variable Config.items.STATS=Config.items-module.html#STATS,Variable Config.tiles.STATS=Config.tiles-module.html#STATS,Variable GUI.control.STATS=GUI.control-module.html#STATS,Variable GUI.menu.STATS=GUI.menu-module.html#STATS,Variable GUI.panel.STATS=GUI.panel-module.html#STATS,Variable GUI.plain_text.STATS=GUI.plain_text-module.html#STATS,Variable GUI.text.STATS=GUI.text-module.html#STATS,Variable Mixins.action.STATS=Mixins.action-module.html#STATS,Variable Mixins.ai.STATS=Mixins.ai-module.html#STATS,Variable Mixins.effect.STATS=Mixins.effect-module.html#STATS,Variable Mixins.fight.STATS=Mixins.fight-module.html#STATS,Variable Mixins.fighter.STATS=Mixins.fighter-module.html#STATS,Variable Mixins.stat.STATS=Mixins.stat-module.html#STATS,Variable Mixins.stats.STATS=Mixins.stats-module.html#STATS,Variable Objects.aim.STATS=Objects.aim-module.html#STATS,Variable Objects.base_object.STATS=Objects.base_object-module.html#STATS,Variable Objects.creature.STATS=Objects.creature-module.html#STATS,Variable Objects.item.STATS=Objects.item-module.html#STATS,Variable Objects.object.STATS=Objects.object-module.html#STATS,Variable Objects.player.STATS=Objects.player-module.html#STATS,Variable Objects.test.STATS=Objects.test-module.html#STATS,Variable Objects.tile.STATS=Objects.tile-module.html#STATS,Variable game.STATS=game-module.html#STATS,Variable initialize.STATS=initialize-module.html#STATS"><a title="Config.creatures.STATS
+Config.game.STATS
+Config.items.STATS
+Config.tiles.STATS
+GUI.control.STATS
+GUI.menu.STATS
+GUI.panel.STATS
+GUI.plain_text.STATS
+GUI.text.STATS
+Mixins.action.STATS
+Mixins.ai.STATS
+Mixins.effect.STATS
+Mixins.fight.STATS
+Mixins.fighter.STATS
+Mixins.stat.STATS
+Mixins.stats.STATS
+Objects.aim.STATS
+Objects.base_object.STATS
+Objects.creature.STATS
+Objects.item.STATS
+Objects.object.STATS
+Objects.player.STATS
+Objects.test.STATS
+Objects.tile.STATS
+game.STATS
+initialize.STATS" class="py-name" href="#" onclick="return doclink('link-53', 'STATS', 'link-53');">STATS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">  <tt class="py-string">'HP'</tt><tt class="py-op">:</tt><tt class="py-op">{</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt><tt class="py-string">'Health'</tt><tt class="py-op">,</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">    <tt class="py-string">'UPDATABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-string">'RESTORABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">  <tt class="py-op">}</tt><tt class="py-op">,</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">  <tt class="py-string">'XP'</tt><tt class="py-op">:</tt><tt class="py-op">{</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt><tt class="py-string">'Expirience'</tt><tt class="py-op">,</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-string">'UPDATABLE'</tt><tt class="py-op">:</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-string">'RESTORABLE'</tt><tt class="py-op">:</tt><tt class="py-name">None</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">  <tt class="py-op">}</tt><tt class="py-op">,</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">  <tt class="py-string">'MP'</tt><tt class="py-op">:</tt><tt class="py-op">{</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt><tt class="py-string">'Mana'</tt><tt class="py-op">,</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-string">'UPDATABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">    <tt class="py-string">'RESTORABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">  <tt class="py-op">}</tt><tt class="py-op">,</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">  <tt class="py-string">'SP'</tt><tt class="py-op">:</tt><tt class="py-op">{</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">    <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt><tt class="py-string">'Strength'</tt><tt class="py-op">,</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">    <tt class="py-string">'UPDATABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-string">'RESTORABLE'</tt><tt class="py-op">:</tt><tt class="py-name">None</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">  <tt class="py-op">}</tt><tt class="py-op">,</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">  <tt class="py-string">'DP'</tt><tt class="py-op">:</tt><tt class="py-op">{</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">    <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt><tt class="py-string">'Defence'</tt><tt class="py-op">,</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-string">'UPDATABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">    <tt class="py-string">'RESTORABLE'</tt><tt class="py-op">:</tt><tt class="py-name">None</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">  <tt class="py-op">}</tt><tt class="py-op">,</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">  <tt class="py-string">'AP'</tt><tt class="py-op">:</tt><tt class="py-op">{</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt class="py-string">'NAME'</tt><tt class="py-op">:</tt><tt class="py-string">'Attack'</tt><tt class="py-op">,</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">    <tt class="py-string">'UPDATABLE'</tt><tt class="py-op">:</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-string">'RESTORABLE'</tt><tt class="py-op">:</tt><tt class="py-name">None</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">  <tt class="py-op">}</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a href="https://github.com/honeytree">Simple-Roguelike</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Jan 29 22:53:27 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
