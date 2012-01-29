@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import pdb
 class Game(object):
   def __init__(self):
     self.__initialize()
