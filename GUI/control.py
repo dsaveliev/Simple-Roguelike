@@ -2,6 +2,9 @@
 from modules import *
 
 class Control(object):
+  """
+  Класс - обработчик пользовательского ввода.
+  """
   def __init__(self, game):
     self.game = game
     self.key = libtcod.Key()
@@ -9,6 +12,11 @@ class Control(object):
     self.agent = None
 
   def handle_input(self):
+    """
+    Обработка пользовательского ввода. 
+    В зависимости от состояния игры, объектом управления может быть 
+    либо сам игрок @ либо прицел X.
+    """
     libtcod.sys_check_for_event(libtcod.EVENT_KEY_PRESS | libtcod.EVENT_MOUSE, 
       self.key, self.mouse)
     if self.game.state == 'AIM':
@@ -20,19 +28,31 @@ class Control(object):
 
   ### Mouse ###################################################################
   def handle_mouse(self):
+    """
+    Обработка событий мыши.
+    """
     self.show_objects_under_mouse()
 
   def get_mouse_position(self):
+    """
+    Получение координат курсора.
+    """
     (x, y) = (self.mouse.cx - MAP['X'], self.mouse.cy - MAP['Y'])
     return (x, y)
 
   def show_objects_under_mouse(self):
+    """
+    Отображение объектов под курсором.
+    """
     (x, y) = self.get_mouse_position()
     self.game.render_names_at_position(x, y)
   #############################################################################
 
   ### Keyboard ################################################################
   def handle_menu_keys(self):
+    """
+    Обработка клавиш, не связанных с игровым процессом.
+    """
     if self.key.vk == libtcod.KEY_ENTER and self.key.lalt:
       libtcod.console_set_fullscreen(not libtcod.console_is_fullscreen())
     elif self.key.vk == libtcod.KEY_ESCAPE:
@@ -41,6 +61,9 @@ class Control(object):
       libtcod.sys_save_screenshot('./Images/screenshot.png')
       
   def handle_move_keys(self):
+    """
+    Обработка клавиш, связанных с передвижением.
+    """
     if self.key.c == KEY_UP:
       self.agent.move_or_attack(0, -1)
     elif self.key.c == KEY_DOWN:
@@ -62,6 +85,9 @@ class Control(object):
     return True
 
   def handle_aim_keys(self):
+    """
+    Обработка клавиш, связанных с дистанционной атакой.
+    """
     if self.key.c == KEY_FIRE:
       self.agent.aim()
     else:
@@ -69,6 +95,9 @@ class Control(object):
     return True
   
   def handle_action_keys(self):
+    """
+    Обработка клавиш, связанных с игровым процессом.
+    """
     if self.key.c == KEY_PICK_UP:
       self.agent.pick_up()
     elif self.key.c == KEY_INVENTORY:
@@ -80,6 +109,9 @@ class Control(object):
     return True
 
   def handle_keyboard(self):
+    """
+    Обработка событий клавиатуры.
+    """
     if self.agent.state != 'DEAD':
       state = self.handle_move_keys()
       if self.game.state == 'AIM':
