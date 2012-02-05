@@ -2,12 +2,24 @@
 from modules import *
 
 class PlainText(object):
-  """docstring for Menu"""
+  """
+  Вывод произвольного текста из заданного файла.
+  Текст выводится на полупрозрачную панель произвольного
+  размера. Выход - любая клавиша.
+  """
   def __init__(self, file):
+    """
+    В конструкторе задается путь к файлу, из которого будет 
+    производится чтение текста.
+    """
     self.file = file
     self.window = None
 
   def show(self, position = (None, None, None, None)):
+    """
+    Отображение текста в панели.
+    @position - (x, y, ширина, высота)
+    """
     if not self.window:
       self.window = libtcod.console_new(position[2], position[3])
     libtcod.console_clear(self.window)

@@ -2,8 +2,14 @@
 from modules import *
 
 class Panel(object):
-  """docstring for Panel"""
+  """
+  Игровая панель, отображает события и характеристики игрока.
+  """
   def __init__(self, game):
+    """
+    Создаем отдельную libtcod консоль, и инициализируем класс Text,
+    ответственный за все текстовые константы.
+    """
     self.panel = libtcod.console_new(PANEL['WIDTH'], PANEL['HEIGHT'])
     self.game = game
     self.messages = []
@@ -12,6 +18,10 @@ class Panel(object):
     Text.panel = self
 
   def message(self, msg, color = libtcod.lighter_grey):
+    """
+    Сохранение нового сообщения в общий стэк. Если количество
+    сообщений превышает лимит, удаляем старые сообщения.
+    """
     multiline_msg = textwrap.wrap(msg, MSG['WIDTH'])
     for line in multiline_msg:
       if len(self.messages) == MSG['HEIGHT']:
